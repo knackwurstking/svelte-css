@@ -1,0 +1,13 @@
+.row {
+    display: flex;
+}
+
+.col {
+    flex: 1;
+}
+
+.col > .card {
+    margin: calc(var(--spacing) / 4);
+    width: calc(100% - (var(--spacing) / 2));
+    height: calc(100% - (var(--spacing) / 2));
+}

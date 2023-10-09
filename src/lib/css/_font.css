@@ -1,0 +1,27 @@
+@font-face {
+    font-family: "Roboto Serif";
+    font-style: normal;
+    src: url("/assets/fonts/RobotoSerif-VariableFont_GRAD,opsz,wdth,wght.ttf")
+        format("truetype");
+}
+
+@font-face {
+    font-family: "Roboto Serif";
+    font-style: italic;
+    src: url("/assets/fonts/RobotoSerif-Italic-VariableFont_GRAD,opsz,wdth,wght.ttf")
+        format("truetype");
+}
+
+@font-face {
+    font-family: "Roboto Mono";
+    font-style: normal;
+    src: url("/assets/fonts/RobotoMono-VariableFont_wght.ttf")
+        format("truetype");
+}
+
+@font-face {
+    font-family: "Roboto Mono";
+    font-style: italic;
+    src: url("/assets/fonts/RobotoMono-Italic-VariableFont_wght.ttf")
+        format("truetype");
+}

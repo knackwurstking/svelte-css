@@ -1,0 +1,109 @@
+.button {
+    padding: var(--spacing) calc(var(--spacing) * 3);
+    border: var(--border-width) solid var(--border-color);
+    border-radius: var(--border-radius);
+    box-shadow: none;
+    transition: background-color .2s ease;
+    cursor: pointer;
+}
+
+.button.primary:not(.outline, .none) {
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    border: none;
+}
+
+.button.secondary:not(.outline, .none) {
+    background-color: var(--color-secondary);
+    color: var(--color-text);
+    border: none;
+}
+
+/* variant: outline */
+
+.button.outline {
+    border-color: var(--color-text);
+    background-color: transparent;
+}
+
+.button.primary.outline {
+    color: var(--color-primary-text);
+    border-color: var(--color-primary);
+}
+
+.button.secondary.outline {
+    color: var(--color-secondary-text);
+    border-color: var(--color-secondary);
+}
+
+/* variant: none */
+
+.button.none {
+    border: none;
+    background-color: transparent;
+}
+
+.button.primary.none {
+    color: var(--color-primary-text);
+}
+
+.button.secondary.none {
+    color: var(--color-secondary-text);
+}
+
+/* :hover */
+
+.button:hover {
+    transition: background-color .5s ease;
+}
+
+.button.primary:hover {
+    background-color: var(--color-primary-hover);
+}
+
+.button.secondary:hover {
+    background-color: var(--color-secondary-hover);
+}
+
+.button.primary.outline:hover,
+.button.primary.none:hover {
+    background-color: var(--color-primary-hover-alpha);
+}
+
+.button.secondary.outline:hover,
+.button.secondary.none:hover {
+    background-color: var(--color-secondary-hover-alpha);
+}
+
+/* :active */
+
+.button:active {
+    transition: background-color .1s ease;
+}
+
+
+.button.primary:active {
+    background-color: var(--color-primary-active);
+}
+
+.button.secondary:active {
+    background-color: var(--color-secondary-active);
+}
+
+.button.primary.outline:active,
+.button.primary.none:active {
+    background-color: var(--color-primary-active-alpha);
+}
+
+.button.secondary.outline:active,
+.button.secondary.none:active {
+    background-color: var(--color-secondary-active-alpha);
+}
+
+/* :disabled */
+
+.button:disabled {
+    background-color: transparent;
+    opacity: 0.25;
+    cursor: default;
+}

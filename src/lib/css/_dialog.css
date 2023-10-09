@@ -1,0 +1,86 @@
+dialog {
+    position: fixed;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    max-width: 100%;
+    max-height: 100%;
+
+    padding: var(--spacing);
+
+    border: none;
+    border-radius: var(--border-radius);
+
+    background-color: transparent;
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+dialog::-webkit-scrollbar {
+    display: none;
+}
+
+dialog.fullscreen {
+    width: 100%;
+    height: 100%;
+}
+
+dialog::backdrop {
+    background-color: hsl(0, 0%, 0%, 0.5);
+}
+
+dialog article {
+    padding: 0;
+    background-color: var(--color-bg-color);
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 .3px var(--color-grey), 0 0 .35rem var(--color-grey);
+}
+
+dialog.fullscreen article {
+    width: 100%;
+    height: 100%;
+}
+
+dialog article > header {
+    height: calc(2.5rem + var(--spacing));
+    background-color: var(--color-bg-color);
+    padding: var(--spacing);
+    padding-right: calc(var(--spacing) * 5);
+    margin-bottom: var(--spacing);
+    border-top-right-radius: var(--border-radius);
+    border-top-left-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+}
+
+dialog .close-button {
+    position: absolute;
+    top: calc(var(--spacing) / 4);
+    right: calc(var(--spacing) / 4);
+}
+
+dialog article > section {
+    padding-left: calc(var(--spacing) * 2);
+    padding-right: calc(var(--spacing) * 2);
+}
+
+dialog article > footer {
+    background-color: var(--color-bg-secondary-color);
+    padding: var(--spacing);
+    margin-top: var(--spacing);
+    border-bottom-right-radius: var(--border-radius);
+    border-bottom-left-radius: var(--border-radius);
+    display: flex;
+    justify-content: flex-end;
+}
+
+dialog article > footer * {
+    margin: auto calc(var(--spacing) / 2);
+}
+
+dialog article > footer *:last-child {
+    margin-right: 0;
+}
