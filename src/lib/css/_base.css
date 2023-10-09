@@ -1,3 +1,16 @@
+html {
+    font-size: calc(15px + 0.390625vw);
+}
+
+body {
+    background-color: var(--color-bg-color);
+    color: var(--color-text);
+    font-family: "RobotoSerif";
+    font-size: 1rem;
+    line-height: 1.5;
+    box-sizing: border-box;
+}
+
 *,
 *::before,
 *::after {
@@ -8,19 +21,6 @@
     font-family: inherit;
     font-weight: inherit;
     color: inherit;
-}
-
-html {
-    font-size: calc(15px + 0.390625vw);
-}
-
-body {
-    background-color: var(--color-bg-color);
-    color: var(--color-text);
-    font-family: "Roboto Sans";
-    font-size: 1rem;
-    line-height: 1.5;
-    box-sizing: border-box;
 }
 
 h1,
@@ -77,7 +77,7 @@ input, select, textarea {
 }
 
 input, textarea, code, pre, var, kbd, samp {
-    font-family: "Roboto Mono";
+    font-family: "RobotoMono";
 }
 
 input {

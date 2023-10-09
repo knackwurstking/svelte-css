@@ -1,27 +1,27 @@
 @font-face {
-    font-family: "Roboto Serif";
+    font-family: "RobotoSerif";
     font-style: normal;
-    src: url("/assets/fonts/RobotoSerif-VariableFont_GRAD,opsz,wdth,wght.ttf")
+    src: local(""), url("/assets/fonts/RobotoSerif-VariableFont_GRAD,opsz,wdth,wght.ttf")
         format("truetype");
 }
 
 @font-face {
-    font-family: "Roboto Serif";
+    font-family: "RobotoSerif";
     font-style: italic;
-    src: url("/assets/fonts/RobotoSerif-Italic-VariableFont_GRAD,opsz,wdth,wght.ttf")
+    src: local(""), url("/assets/fonts/RobotoSerif-Italic-VariableFont_GRAD,opsz,wdth,wght.ttf")
         format("truetype");
 }
 
 @font-face {
-    font-family: "Roboto Mono";
+    font-family: "RobotoMono";
     font-style: normal;
-    src: url("/assets/fonts/RobotoMono-VariableFont_wght.ttf")
+    src: local(""), url("/assets/fonts/RobotoMono-VariableFont_wght.ttf")
         format("truetype");
 }
 
 @font-face {
-    font-family: "Roboto Mono";
+    font-family: "RobotoMono";
     font-style: italic;
-    src: url("/assets/fonts/RobotoMono-Italic-VariableFont_wght.ttf")
+    src: local(""), url("/assets/fonts/RobotoMono-Italic-VariableFont_wght.ttf")
         format("truetype");
 }
