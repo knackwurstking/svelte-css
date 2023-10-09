@@ -3,12 +3,20 @@ html {
 }
 
 body {
+    box-sizing: border-box;
+
     background-color: var(--color-bg-color);
     color: var(--color-text);
-    font-family: system-ui;
-    font-size: 1rem;
+    
     line-height: 1.5;
-    box-sizing: border-box;
+
+    font-family: system-ui;
+    font-family: "RobotoSerif";
+    font-size: 1rem;
+
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 *,
@@ -30,7 +38,7 @@ h4,
 h5,
 h6 {
     color: var(--color-secondary-text);
-    text-shadow: 0 0 .05em var(--color-grey), 0 0 .1em var(--color-grey);
+    text-shadow: 0 0 0.05em var(--color-grey), 0 0 0.1em var(--color-grey);
 }
 
 h1 {
@@ -65,19 +73,28 @@ hr {
 }
 
 button {
-    font-size: .85rem;
+    font-size: 0.85rem;
 }
 
 button:focus {
     outline: none;
 }
 
-input, select, textarea {
-    font-size: .85rem;
+input,
+select,
+textarea {
+    font-size: 0.85rem;
 }
 
-input, textarea, code, pre, var, kbd, samp {
+input,
+textarea,
+code,
+pre,
+var,
+kbd,
+samp {
     font-family: system-ui;
+    font-family: "RobotoMono";
 }
 
 input {
@@ -89,21 +106,21 @@ input {
     background-color: var(--color-bg-input);
 }
 
-input[type=number] {
+input[type="number"] {
     -moz-appearance: textfield;
 }
 
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
 
-input[type=checkbox] {
+input[type="checkbox"] {
     display: inline-block;
 }
 
-input[type=color] {
+input[type="color"] {
     height: calc(var(--spacing) * 2 + 1.5rem);
     padding: var(--spacing) var(--spacing);
 }
@@ -165,6 +182,7 @@ table tbody {
     font-size: 0.8rem;
 }
 
-div.spacer, span.spacer {
+div.spacer,
+span.spacer {
     margin: var(--spacing);
 }
