@@ -1,7 +1,7 @@
 <script>
     import "./main.css";
 
-    import { Dark, Light } from "./themes";
+    import { CSSThemeDark, CSSThemeLight } from "./themes";
 
     /** @type {"light" | "dark"} */
     export let theme = "light";
@@ -9,8 +9,8 @@
 
 <svelte:head>
     {#if theme === "light"}
-        <Light />
+        <CSSThemeLight />
     {:else if theme === "dark"}
-        <Dark />
+        <CSSThemeDark />
     {/if}
 </svelte:head>
