@@ -5,7 +5,7 @@ html {
 body {
     background-color: var(--color-bg-color);
     color: var(--color-text);
-    font-family: "RobotoSerif";
+    font-family: system-ui;
     font-size: 1rem;
     line-height: 1.5;
     box-sizing: border-box;
@@ -77,7 +77,7 @@ input, select, textarea {
 }
 
 input, textarea, code, pre, var, kbd, samp {
-    font-family: "RobotoMono";
+    font-family: system-ui;
 }
 
 input {

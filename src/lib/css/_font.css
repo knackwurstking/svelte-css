@@ -1,6 +1,7 @@
 @font-face {
     font-family: "RobotoSerif";
     font-style: normal;
+    font-display: swap;
     src: local(""), url("/assets/fonts/RobotoSerif-VariableFont_GRAD,opsz,wdth,wght.ttf")
         format("truetype");
 }
@@ -8,6 +9,7 @@
 @font-face {
     font-family: "RobotoSerif";
     font-style: italic;
+    font-display: swap;
     src: local(""), url("/assets/fonts/RobotoSerif-Italic-VariableFont_GRAD,opsz,wdth,wght.ttf")
         format("truetype");
 }
@@ -15,6 +17,7 @@
 @font-face {
     font-family: "RobotoMono";
     font-style: normal;
+    font-display: swap;
     src: local(""), url("/assets/fonts/RobotoMono-VariableFont_wght.ttf")
         format("truetype");
 }
@@ -22,6 +25,7 @@
 @font-face {
     font-family: "RobotoMono";
     font-style: italic;
+    font-display: swap;
     src: local(""), url("/assets/fonts/RobotoMono-Italic-VariableFont_wght.ttf")
         format("truetype");
 }
