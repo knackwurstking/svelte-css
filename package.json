@@ -2,7 +2,6 @@
 	"name": "svelte-css",
 	"version": "0.0.1",
 	"scripts": {
-		"prepare": "npm run package",
 		"dev": "vite dev",
 		"build": "vite build && npm run package",
 		"preview": "vite preview",
