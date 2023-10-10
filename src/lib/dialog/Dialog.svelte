@@ -17,8 +17,8 @@
     }
 </script>
 
-<dialog bind:this={dialog} class:fullscreen>
-    <article {...$$restProps}>
+<dialog bind:this={dialog} class:fullscreen {...$$restProps}>
+    <article>
         <slot name="header" />
         <slot />
         <slot name="footer" />
