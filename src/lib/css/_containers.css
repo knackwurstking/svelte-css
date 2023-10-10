@@ -1,8 +1,8 @@
 .container {
     max-width: 65rem;
-    width: 100%;
-    padding: var(--spacing);
     margin: 0 auto;
+    width: 96%;
+    padding: var(--spacing);
 }
 
 .card {
