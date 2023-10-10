@@ -1,0 +1,183 @@
+html {
+    font-size: calc(15px + 0.390625vw);
+}
+
+body {
+    box-sizing: border-box;
+
+    background-color: var(--color-bg-color);
+    color: var(--color-text);
+    
+    line-height: 1.5;
+
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1rem;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-family: inherit;
+    font-weight: inherit;
+    color: inherit;
+    -webkit-tap-highlight-color: transparent;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--color-secondary-text);
+    text-shadow: 0 0 0.05em var(--color-grey), 0 0 0.1em var(--color-grey);
+}
+
+h1 {
+    font-size: calc(1rem * 2);
+}
+
+h2 {
+    font-size: calc(1rem * 1.75);
+}
+
+h3 {
+    font-size: calc(1rem * 1.5);
+}
+
+h4 {
+    font-size: calc(1rem * 1.25);
+}
+
+h5 {
+    font-size: calc(1rem * 1);
+}
+
+h6 {
+    font-size: calc(1rem * 0.75);
+}
+
+hr {
+    border: none;
+    background-color: var(--border-color);
+    height: var(--border-width);
+    margin: var(--spacing) 0;
+}
+
+button {
+    font-size: 0.85rem;
+}
+
+button:focus {
+    outline: none;
+}
+
+input,
+select,
+textarea {
+    font-size: 0.85rem;
+}
+
+input,
+textarea,
+code,
+pre,
+var,
+kbd,
+samp {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+input {
+    display: block;
+    border: var(--border-width) solid var(--border-color);
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 0, 0 0 0;
+    padding: var(--spacing) calc(var(--spacing) * 1.5);
+    background-color: var(--color-bg-input);
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="checkbox"] {
+    display: inline-block;
+}
+
+input[type="color"] {
+    height: calc(var(--spacing) * 2 + 1.5rem);
+    padding: var(--spacing) var(--spacing);
+}
+
+input:focus {
+    border-color: var(--color-primary);
+    outline: none;
+}
+
+input[aria-invalid="true"] {
+    border-color: var(--color-error);
+}
+
+input:disabled {
+    opacity: 0.25;
+}
+
+textarea {
+    display: block;
+    border: var(--border-width) solid var(--border-color);
+    border-radius: var(--border-radius);
+    outline: none;
+    padding: var(--spacing) var(--spacing);
+    background-color: var(--color-bg-input);
+}
+
+textarea:focus {
+    border-color: var(--color-primary);
+}
+
+select {
+    display: block;
+    padding: var(--spacing);
+    background-color: var(--color-bg-input);
+    border: var(--border-width) solid var(--border-color);
+    border-radius: var(--border-radius);
+    outline: none;
+}
+
+select:focus {
+    border-color: var(--color-primary);
+}
+
+figure {
+    overflow: auto;
+}
+
+label {
+    display: block;
+    font-size: 0.85rem;
+}
+
+table thead {
+    font-size: 0.9rem;
+    font-weight: 900;
+}
+
+table tbody {
+    font-size: 0.8rem;
+}
+
+div.spacer,
+span.spacer {
+    margin: var(--spacing);
+}

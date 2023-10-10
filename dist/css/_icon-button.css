@@ -1,0 +1,63 @@
+.icon-button {
+    position: relative;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: var(--spacing);
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    box-shadow: none;
+
+    transition: background-color .2s ease;
+}
+
+.icon-button > svg {
+    width: 100%;
+    height: 100%;
+}
+
+.icon-button.primary {
+    color: var(--color-primary-text);
+}
+
+.icon-button.secondary {
+    color: var(--color-secondary-text);
+}
+
+/* :hover */
+
+.icon-button:hover {
+    background-color: var(--color-grey-hover-alpha);
+    transition: background-color .5s ease;
+}
+
+.icon-button.primary:hover {
+    background-color: var(--color-primary-hover-alpha);
+}
+
+.icon-button.secondary:hover {
+    background-color: var(--color-secondary-hover-alpha);
+}
+
+/* :active */
+
+.icon-button:active {
+    background-color: var(--color-grey-active-alpha);
+    transition: background-color .1s ease;
+}
+
+.icon-button.primary:active {
+    background-color: var(--color-primary-active-alpha);
+}
+
+.icon-button.secondary:active {
+    background-color: var(--color-secondary-active-alpha);
+}
+
+/* :disabled */
+
+.icon-button:disabled {
+    background-color: transparent;
+    opacity: 0.25;
+}
