@@ -1,4 +1,6 @@
 <script>
+    export let fullscreen = false;
+
     /** @type {HTMLDialogElement} */
     let dialog;
 
@@ -15,8 +17,8 @@
     }
 </script>
 
-<dialog bind:this={dialog}>
-    <article>
+<dialog bind:this={dialog} class:fullscreen>
+    <article {...$$restProps}>
         <slot name="header" />
         <slot />
         <slot name="footer" />
