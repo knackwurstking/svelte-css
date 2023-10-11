@@ -18,8 +18,6 @@ article {
 }
 
 article.card {
-    padding: var(--spacing);
-    background-color: var(--color-bg-color);
     margin: calc(var(--spacing) * 2) 0;
 }
 
