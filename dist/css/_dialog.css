@@ -58,8 +58,8 @@ dialog article > header {
 
 dialog .close-button {
     position: absolute;
-    top: calc(var(--spacing) / 4);
-    right: calc(var(--spacing) / 4);
+    top: calc(var(--spacing) / 2);
+    right: calc(var(--spacing) / 2);
 }
 
 dialog article > section {
