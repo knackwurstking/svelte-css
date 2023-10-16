@@ -4,6 +4,7 @@
 export default class Card extends SvelteComponent<{
     [x: string]: any;
     class?: string;
+    noShadow?: boolean;
 }, {
     [evt: string]: CustomEvent<any>;
 }, {
@@ -18,6 +19,7 @@ declare const __propDef: {
     props: {
         [x: string]: any;
         class?: string;
+        noShadow?: boolean;
     };
     events: {
         [evt: string]: CustomEvent<any>;
