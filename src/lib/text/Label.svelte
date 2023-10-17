@@ -7,30 +7,55 @@
 
     export let primaryText = "";
     export let secondaryText = "";
+    export let useLabel = false;
     export let row = false;
 </script>
 
-<span {...$$restProps} class={"label " + _class} class:row>
-    <span
-        class="col"
-        style="display: flex; flex-direction: column; justify-content: center;"
-    >
-        <PrimaryText>
-            {primaryText}
-            <slot name="primaryText" />
-        </PrimaryText>
-        {#if !!secondaryText || !!$$slots.secondaryText}
-            <SecondaryText>
-                {secondaryText}
-                <slot name="secondaryText" />
-            </SecondaryText>
-        {/if}
-    </span>
+{#if useLabel}
+    <label {...$$restProps} class={"label " + _class} class:row>
+        <span
+            class="col"
+            style="display: flex; flex-direction: column; justify-content: center;"
+        >
+            <PrimaryText style="user-select: none;">
+                {primaryText}
+                <slot name="primaryText" />
+            </PrimaryText>
+            {#if !!secondaryText || !!$$slots.secondaryText}
+                <SecondaryText style="user-select: none;">
+                    {secondaryText}
+                    <slot name="secondaryText" />
+                </SecondaryText>
+            {/if}
+        </span>
 
-    <span style="display: flex; align-items: center;">
-        <slot />
+        <span style="display: flex; align-items: center;">
+            <slot />
+        </span>
+    </label>
+{:else}
+    <span {...$$restProps} class={"label " + _class} class:row>
+        <span
+            class="col"
+            style="display: flex; flex-direction: column; justify-content: center;"
+        >
+            <PrimaryText style="user-select: none;">
+                {primaryText}
+                <slot name="primaryText" />
+            </PrimaryText>
+            {#if !!secondaryText || !!$$slots.secondaryText}
+                <SecondaryText style="user-select: none;">
+                    {secondaryText}
+                    <slot name="secondaryText" />
+                </SecondaryText>
+            {/if}
+        </span>
+
+        <span style="display: flex; align-items: center;">
+            <slot />
+        </span>
     </span>
-</span>
+{/if}
 
 <style>
     .label {

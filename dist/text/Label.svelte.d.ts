@@ -6,6 +6,7 @@ export default class Label extends SvelteComponent<{
     class?: string;
     primaryText?: string;
     secondaryText?: string;
+    useLabel?: boolean;
     row?: boolean;
 }, {
     [evt: string]: CustomEvent<any>;
@@ -25,6 +26,7 @@ declare const __propDef: {
         class?: string;
         primaryText?: string;
         secondaryText?: string;
+        useLabel?: boolean;
         row?: boolean;
     };
     events: {
