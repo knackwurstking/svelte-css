@@ -16,15 +16,6 @@
             0 0 0.1em var(--color-grey);
 }
 
-.no-shadow {
-    box-shadow: none;
-    text-shadow: none;
-}
-
-.no-border {
-    border: none;
-}
-
 article {
     padding: var(--spacing);
 }
