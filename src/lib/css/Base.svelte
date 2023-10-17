@@ -5,7 +5,6 @@
     import "./_css/_button.css";
     import "./_css/_icon-button.css";
     import "./_css/_table.css";
-    import "./_css/_dialog.css";
     import "./_css/_utils.css";
 
     import { onDestroy } from "svelte";

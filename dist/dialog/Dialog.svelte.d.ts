@@ -4,6 +4,7 @@
 export default class Dialog extends SvelteComponent<{
     [x: string]: any;
     close?: () => Promise<void>;
+    style?: string;
     fullscreen?: boolean;
     show?: () => Promise<void>;
     showModal?: () => Promise<void>;
@@ -26,6 +27,7 @@ declare const __propDef: {
     props: {
         [x: string]: any;
         close?: () => Promise<void>;
+        style?: string;
         fullscreen?: boolean;
         show?: () => Promise<void>;
         showModal?: () => Promise<void>;

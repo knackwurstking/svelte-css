@@ -2,7 +2,9 @@
 /** @typedef {typeof __propDef.events}  DialogHeaderEvents */
 /** @typedef {typeof __propDef.slots}  DialogHeaderSlots */
 export default class DialogHeader extends SvelteComponent<{
+    [x: string]: any;
     title: any;
+    style?: string;
 }, {
     close: CustomEvent<any>;
 } & {
@@ -15,7 +17,9 @@ export type DialogHeaderSlots = typeof __propDef.slots;
 import { SvelteComponent } from "svelte";
 declare const __propDef: {
     props: {
+        [x: string]: any;
         title: any;
+        style?: string;
     };
     events: {
         close: CustomEvent<any>;
