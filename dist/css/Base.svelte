@@ -1,6 +1,14 @@
 <script>
+    import "./_css/_base.css";
+    import "./_css/_grid.css";
+    import "./_css/_containers.css";
+    import "./_css/_button.css";
+    import "./_css/_icon-button.css";
+    import "./_css/_table.css";
+    import "./_css/_dialog.css";
+    import "./_css/_utils.css";
+
     import { onDestroy } from "svelte";
-    import "./main.css";
 
     import { CSSThemeDark, CSSThemeLight } from "./themes";
 

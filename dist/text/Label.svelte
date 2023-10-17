@@ -12,7 +12,11 @@
 </script>
 
 {#if useLabel}
-    <label {...$$restProps} class={"label " + _class} class:row>
+    <label
+        {...$$restProps}
+        class={"label " + _class}
+        class:row
+    >
         <span
             class="col"
             style={`
