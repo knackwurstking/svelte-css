@@ -15,14 +15,22 @@
     <label {...$$restProps} class={"label " + _class} class:row>
         <span
             class="col"
-            style="display: flex; flex-direction: column; justify-content: center;"
+            style={`
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                user-select: none;
+            `}
         >
-            <PrimaryText style="user-select: none;">
-                {primaryText}
-                <slot name="primaryText" />
-            </PrimaryText>
+            {#if !!primaryText}
+                <PrimaryText>
+                    {primaryText}
+                    <slot name="primaryText" />
+                </PrimaryText>
+            {/if}
+
             {#if !!secondaryText || !!$$slots.secondaryText}
-                <SecondaryText style="user-select: none;">
+                <SecondaryText>
                     {secondaryText}
                     <slot name="secondaryText" />
                 </SecondaryText>
@@ -37,14 +45,22 @@
     <span {...$$restProps} class={"label " + _class} class:row>
         <span
             class="col"
-            style="display: flex; flex-direction: column; justify-content: center;"
+            style={`
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                user-select: none;
+            `}
         >
-            <PrimaryText style="user-select: none;">
+            {#if !!primaryText}
+            <PrimaryText>
                 {primaryText}
                 <slot name="primaryText" />
             </PrimaryText>
+            {/if}
+
             {#if !!secondaryText || !!$$slots.secondaryText}
-                <SecondaryText style="user-select: none;">
+                <SecondaryText>
                     {secondaryText}
                     <slot name="secondaryText" />
                 </SecondaryText>
