@@ -10,6 +10,8 @@ export default class Label extends SvelteComponent<{
 }, {
     [evt: string]: CustomEvent<any>;
 }, {
+    primaryText: {};
+    secondaryText: {};
     default: {};
 }> {
 }
@@ -29,6 +31,8 @@ declare const __propDef: {
         [evt: string]: CustomEvent<any>;
     };
     slots: {
+        primaryText: {};
+        secondaryText: {};
         default: {};
     };
 };
