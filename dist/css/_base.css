@@ -96,7 +96,7 @@ input {
     display: block;
     border: var(--border-width) solid var(--border-color);
     border-radius: var(--border-radius);
-    box-shadow: 0 0 0, 0 0 0;
+    box-shadow: none;
     padding: var(--spacing) calc(var(--spacing) * 1.5);
     background-color: var(--color-bg-input);
 }
@@ -113,6 +113,8 @@ input[type="number"]::-webkit-outer-spin-button {
 
 input[type="checkbox"] {
     display: inline-block;
+    accent-color: var(--color-primary);
+    cursor: pointer;
 }
 
 input[type="color"] {
