@@ -2,7 +2,7 @@
 /** @typedef {typeof __propDef.events}  DialogFooterEvents */
 /** @typedef {typeof __propDef.slots}  DialogFooterSlots */
 export default class DialogFooter extends SvelteComponent<{
-    style?: string;
+    [x: string]: never;
 }, {
     [evt: string]: CustomEvent<any>;
 }, {
@@ -15,7 +15,7 @@ export type DialogFooterSlots = typeof __propDef.slots;
 import { SvelteComponent } from "svelte";
 declare const __propDef: {
     props: {
-        style?: string;
+        [x: string]: never;
     };
     events: {
         [evt: string]: CustomEvent<any>;

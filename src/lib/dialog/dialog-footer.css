@@ -1,0 +1,18 @@
+
+dialog footer {
+    background-color: var(--color-bg-secondary-color);
+    padding: var(--spacing);
+    margin-top: var(--spacing);
+    border-bottom-right-radius: var(--border-radius);
+    border-bottom-left-radius: var(--border-radius);
+    display: flex;
+    justify-content: flex-end;
+}
+
+dialog footer * {
+    margin: auto calc(var(--spacing) / 2);
+}
+
+dialog footer *:last-child {
+    margin-right: 0;
+}
