@@ -1,7 +1,10 @@
-<style>
-    span {
-        font-size: 1.2rem;
-    }
-</style>
+<script>
+    export let style = "";
+</script>
 
-<span {...$$restProps}><slot /></span>
+<span
+    {...$$restProps}
+    style={"font-size: 1.2em;" + style}
+>
+    <slot />
+</span>

@@ -16,6 +16,12 @@
         {...$$restProps}
         class={"label " + _class}
         class:row
+        style={`
+            width: 100%;
+            padding: calc(var(--spacing, 0.5rem) / 2) var(--spacing, 0.5rem);
+        `}
+        style:display={!row && "flex"}
+        style:flex-direction={!row && "column"}
     >
         <span
             class="col"
@@ -25,6 +31,8 @@
                 justify-content: center;
                 user-select: none;
             `}
+            style:margin-right={row && "margin-right: var(--spacing, 0.5rem)"}
+            style:width={row && "100%"}
         >
             {#if !!primaryText}
                 <PrimaryText>
@@ -46,7 +54,17 @@
         </span>
     </label>
 {:else}
-    <span {...$$restProps} class={"label " + _class} class:row>
+    <span
+        {...$$restProps}
+        class={"label " + _class}
+        class:row
+        style={`
+            width: 100%;
+            padding: calc(var(--spacing, 0.5rem) / 2) var(--spacing, 0.5rem);
+        `}
+        style:display={!row && "flex"}
+        style:flex-direction={!row && "column"}
+    >
         <span
             class="col"
             style={`
@@ -55,6 +73,8 @@
                 justify-content: center;
                 user-select: none;
             `}
+            style:margin-right={row && "margin-right: var(--spacing, 0.5rem)"}
+            style:width={row && "100%"}
         >
             {#if !!primaryText}
             <PrimaryText>
@@ -76,23 +96,3 @@
         </span>
     </span>
 {/if}
-
-<style>
-    .label {
-        width: 100%;
-        padding: calc(var(--spacing, 0.5rem) / 2) var(--spacing, 0.5rem);
-    }
-
-    .label:not(.row) {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .label:not(.row) > span:first-child {
-        width: 100%;
-    }
-
-    .label.row > span:first-child {
-        margin-right: var(--spacing, 0.5rem);
-    }
-</style>

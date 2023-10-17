@@ -3,6 +3,7 @@
 /** @typedef {typeof __propDef.slots}  SecondaryTextSlots */
 export default class SecondaryText extends SvelteComponent<{
     [x: string]: any;
+    style?: string;
 }, {
     [evt: string]: CustomEvent<any>;
 }, {
@@ -16,6 +17,7 @@ import { SvelteComponent } from "svelte";
 declare const __propDef: {
     props: {
         [x: string]: any;
+        style?: string;
     };
     events: {
         [evt: string]: CustomEvent<any>;
