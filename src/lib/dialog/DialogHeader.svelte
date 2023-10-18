@@ -15,12 +15,12 @@
     {...$$restProps}
     style={`
         height: calc(2.5rem + var(--spacing));
-        background-color: var(--color-bg-color);
+        background-color: hsl(var(--background));
         padding: var(--spacing);
         padding-right: calc(2.5rem + var(--spacing));
         margin-bottom: var(--spacing);
-        border-top-right-radius: var(--border-radius);
-        border-top-left-radius: var(--border-radius);
+        border-top-right-radius: var(--radius);
+        border-top-left-radius: var(--radius);
         display: flex;
         align-items: center;
     ` + style}

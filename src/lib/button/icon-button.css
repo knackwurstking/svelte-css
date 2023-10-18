@@ -4,11 +4,11 @@
     height: 2.5em;
     padding: var(--spacing);
     background-color: transparent;
-    border: var(--border-width) solid currentColor;
+    border: .1em solid currentColor;
     outline: none;
-    border-radius: var(--border-radius);
+    border-radius: var(--radius);
     box-shadow: none;
-
+    cursor: pointer;
     transition: background-color .2s ease;
 }
 
@@ -18,69 +18,54 @@
 }
 
 .icon-button.primary {
-    color: var(--color-primary);
-    border-color: var(--color-primary);
+    color: hsl(var(--primary));
+    border-color: hsl(var(--primary));
 }
 
 .icon-button.secondary {
-    color: var(--color-secondary);
-    border-color: var(--color-secondary);
+    color: hsl(var(--secondary));
+    border-color: hsl(var(--secondary));
 }
 
-.icon-button.error {
-    color: var(--color-error);
-    border-color: var(--color-error);
-}
-
-.icon-button.success {
-    color: var(--color-success);
-    border-color: var(--color-success);
+.icon-button.destructive {
+    color: hsl(var(--destructive));
+    border-color: hsl(var(--destructive));
 }
 
 /* :hover */
 
 .icon-button:hover {
-    background-color: var(--color-grey-hover-alpha);
     transition: background-color .5s ease;
 }
 
 .icon-button.primary:hover {
-    background-color: var(--color-primary-hover-alpha);
+    background-color: hsla(var(--primary), .2);
 }
 
 .icon-button.secondary:hover {
-    background-color: var(--color-secondary-hover-alpha);
+    background-color: hsla(var(--secondary), .2);
 }
 
-.icon-button.error:hover {
-    background-color: var(--color-error-hover-alpha);
-}
-
-.icon-button.success:hover {
-    background-color: var(--color-success-hover-alpha);
+.icon-button.destructive:hover {
+    background-color: hsla(var(--destructive), .2);
 }
 
 /* :active */
 
 .icon-button:active {
-    background-color: var(--color-grey-active-alpha);
     transition: background-color .1s ease;
 }
 
 .icon-button.primary:active {
-    background-color: var(--color-primary-active-alpha);
+    background-color: hsla(var(--primary), .4);
 }
 
 .icon-button.secondary:active {
-    background-color: var(--color-secondary-active-alpha);
+    background-color: hsla(var(--secondary), .4);
 }
 
-.icon-button.error:active {
-    background-color: var(--color-error-active-alpha);
-}
-
-.icon-button.success:active {
-    background-color: var(--color-success-active-alpha);
+.icon-button.destructive:active {
+    background-color: hsla(var(--destructive), .4);
 }
 
 /* :disabled */
@@ -88,4 +73,5 @@
 .icon-button:disabled {
     background-color: transparent;
     opacity: 0.25;
+    cursor: default;
 }

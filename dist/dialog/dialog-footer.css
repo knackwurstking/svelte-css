@@ -1,10 +1,9 @@
-
 dialog footer {
-    background-color: var(--color-bg-secondary-color);
+    background-color: hsl(var(--background));
     padding: var(--spacing);
     margin-top: var(--spacing);
-    border-bottom-right-radius: var(--border-radius);
-    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--radius);
+    border-bottom-left-radius: var(--radius);
     display: flex;
     justify-content: flex-end;
 }

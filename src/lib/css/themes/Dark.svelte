@@ -5,40 +5,26 @@
         const style = document.createElement("style");
         style.innerText = `
             :root {
-                --color-bg-color: hsl(205, 10%, 0%);
-                --color-bg-input: hsl(205, 0%, 5%);
-                --color-text: hsla(240, 10%, 90%, .9);
-
-                --color-primary: hsl(105, 50%, 50%);
-                --color-primary-hover: hsl(105, 60%, 60%);
-                --color-primary-hover-alpha: hsla(105, 50%, 50%, .25);
-                --color-primary-active: hsl(105, 70%, 70%);
-                --color-primary-active-alpha: hsla(105, 50%, 50%, .6);
-
-                --color-secondary: hsl(240, 13%, 42%);
-                --color-secondary-hover: hsl(240, 13%, 62%);
-                --color-secondary-hover-alpha: hsla(240, 13%, 42%, .25);
-                --color-secondary-active: hsl(240, 13%, 72%);
-                --color-secondary-active-alpha: hsla(240, 13%, 42%, .6);
-
-                --color-grey: hsl(0, 0%, 30%);
-                --color-grey-hover: hsl(0, 0%, 40%);
-                --color-grey-hover-alpha: hsla(0, 0%, 30%, .25);
-                --color-grey-active: hsl(0, 0%, 50%);
-                --color-grey-active-alpha: hsla(0, 0%, 30%, .6);
-
-                --color-error: hsl(0, 100%, 50%);
-                --color-error-hover-alpha: hsla(0, 100%, 50%, .25);
-                --color-error-active-alpha: hsla(0, 100%, 50%, .6);
-
-                --color-success: hsl(120, 100%, 50%);
-                --color-success-hover-alpha: hsla(120, 100%, 50%, .25);
-                --color-success-active-alpha: hsla(120, 100%, 50%, .6);
-
-                --border-radius: 2pt;
-                --border-width: 1px;
-                --border-color: var(--color-grey-active-alpha);
-
+                --background: 240, 10%, 3.9%;
+                --foreground: 0, 0%, 98%;
+                --card: 240, 10%, 3.9%;
+                --card-foreground: 0, 0%, 98%;
+                --popover: 240, 10%, 3.9%;
+                --popover-foreground: 0, 0%, 98%;
+                --primary: 0, 0%, 98%;
+                --primary-foreground: 240, 5.9%, 10%;
+                --secondary: 240, 3.7%, 15.9%;
+                --secondary-foreground: 0, 0%, 98%;
+                --muted: 240, 3.7%, 15.9%;
+                --muted-foreground: 240, 5%, 64.9%;
+                --accent: 240, 3.7%, 15.9%;
+                --accent-foreground: 0, 0%, 98%;
+                --destructive: 0, 62.8%, 30.6%;
+                --destructive-foreground: 0, 0%, 98%;
+                --border: 240, 3.7%, 15.9%;
+                --input: 240, 3.7%, 15.9%;
+                --ring: 240, 4.9%, 83.9%;
+                --radius: 0.5rem;
                 --spacing: 0.5em;
             }
         `;

@@ -5,12 +5,12 @@ table {
 }
 
 thead th {
-    background-color: var(--border-color);
+    background-color: hsl(var(--border));
 }
 
 th, td {
     padding: var(--spacing);
-    border: var(--border-width) solid var(--border-color);
+    border: 0.1em solid hsl(var(--border));
 }
 
 td {

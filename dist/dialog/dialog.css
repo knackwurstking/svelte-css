@@ -11,7 +11,7 @@ dialog {
     padding: var(--spacing);
 
     border: none;
-    border-radius: var(--border-radius);
+    border-radius: var(--radius);
 
     background-color: transparent;
 
@@ -24,7 +24,8 @@ dialog::-webkit-scrollbar {
 }
 
 dialog::backdrop {
-    background-color: hsl(0, 0%, 0%, 0.5);
+    background-color: hsl(0, 0%, 0%, 0.4);
+    backdrop-filter: blur(.5rem);
 }
 
 dialog > section,
@@ -35,7 +36,6 @@ dialog article > section {
 
 dialog article {
     padding: 0;
-    background-color: var(--color-bg-color);
-    border-radius: var(--border-radius);
-    box-shadow: 0 0 .3px var(--color-grey), 0 0 .35em var(--color-grey);
+    background-color: hsl(var(--background));
+    border-radius: var(--radius);
 }

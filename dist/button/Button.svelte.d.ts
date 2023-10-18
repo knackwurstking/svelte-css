@@ -4,8 +4,8 @@
 export default class Button extends SvelteComponent<{
     [x: string]: any;
     class?: string;
-    color?: "" | "primary" | "secondary";
-    variant?: "" | "outline" | "none";
+    color?: "primary" | "secondary" | "destructive";
+    variant?: "full" | "outline" | "ghost";
 }, {
     click: MouseEvent;
 } & {
@@ -22,8 +22,8 @@ declare const __propDef: {
     props: {
         [x: string]: any;
         class?: string;
-        color?: "" | "primary" | "secondary";
-        variant?: "" | "outline" | "none";
+        color?: "primary" | "secondary" | "destructive";
+        variant?: "full" | "outline" | "ghost";
     };
     events: {
         click: MouseEvent;

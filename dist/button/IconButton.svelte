@@ -3,8 +3,8 @@
 
     let _class = "";
     export { _class as class };
-    /** @type {"" | "primary" | "secondary" | "error" | "success"} */
-    export let color = "";
+    /** @type {"primary" | "secondary" | "destructive"} */
+    export let color = "primary";
 </script>
 
 <button

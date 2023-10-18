@@ -1,110 +1,134 @@
 .button {
     padding: var(--spacing) calc(var(--spacing) * 3);
-    border: var(--border-width) solid currentColor;
-    border-radius: var(--border-radius);
+    border: .1em solid currentColor;
+    border-radius: var(--radius);
     box-shadow: none;
     transition: background-color .2s ease;
     cursor: pointer;
 }
 
-.button:not(.outline, .none) {
-    background-color: var(--color-grey);
-    color: var(--color-text);
-}
+/* variant: full */
 
-.button.primary:not(.outline, .none) {
-    background-color: var(--color-primary);
-    color: white;
+.button.full.primary:not(.outline, .none) {
+    background-color: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
     border: none;
 }
 
-.button.secondary:not(.outline, .none) {
-    background-color: var(--color-secondary);
-    color: white;
+.button.full.secondary:not(.outline, .none) {
+    background-color: hsl(var(--secondary));
+    color: hsl(var(--secondary-foreground));
+    border: none;
+}
+
+.button.full.destructive:not(.outline, .none) {
+    background-color: hsl(var(--destructive));
+    color: hsl(var(--destructive-foreground));
     border: none;
 }
 
 /* variant: outline */
 
 .button.outline {
-    border-color: var(--color-text);
+    border-color: currentColor;
     background-color: transparent;
 }
 
-.button.primary.outline {
-    color: var(--color-primary);
-    border-color: var(--color-primary);
+.button.outline.primary {
+    color: hsl(var(--primary));
 }
 
-.button.secondary.outline {
-    color: var(--color-secondary);
-    border-color: var(--color-secondary);
+.button.outline.secondary {
+    color: hsl(var(--secondary));
 }
 
-/* variant: none */
+.button.outline.destructive {
+    color: hsl(var(--destructive));
+}
 
-.button.none {
-    border: none;
+/* variant: ghost */
+
+.button.ghost {
+    border-color: transparent;
     background-color: transparent;
 }
 
-.button.primary.none {
-    color: var(--color-primary);
+.button.ghost.primary {
+    color: hsl(var(--primary));
 }
 
-.button.secondary.none {
-    color: var(--color-secondary);
+.button.ghost.secondary {
+    color: hsl(var(--secondary));
+}
+
+.button.ghost.destructive {
+    color: hsl(var(--destructive));
 }
 
 /* :hover */
 
 .button:hover {
-    background-color: var(--color-grey-hover);
     transition: background-color .5s ease;
 }
 
-.button.primary:hover {
-    background-color: var(--color-primary-hover);
+.button.full.primary:hover {
+    background-color: hsla(var(--primary), .8);
 }
 
-.button.secondary:hover {
-    background-color: var(--color-secondary-hover);
+.button.outline.primary:hover,
+.button.ghost.primary:hover {
+    background-color: hsla(var(--primary), .2);
 }
 
-.button.primary.outline:hover,
-.button.primary.none:hover {
-    background-color: var(--color-primary-hover-alpha);
+.button.full.secondary:hover {
+    background-color: hsla(var(--secondary), .8);
 }
 
-.button.secondary.outline:hover,
-.button.secondary.none:hover {
-    background-color: var(--color-secondary-hover-alpha);
+.button.outline.secondary:hover,
+.button.ghost.secondary:hover {
+    background-color: hsla(var(--secondary), .2);
+}
+
+.button.full.destructive:hover {
+    background-color: hsla(var(--destructive), .8);
+}
+
+.button.outline.destructive:hover,
+.button.ghost.destructive:hover {
+    background-color: hsla(var(--destructive), .2);
 }
 
 /* :active */
 
 .button:active {
-    background-color: var(--color-grey-active);
     transition: background-color .1s ease;
 }
 
-
-.button.primary:active {
-    background-color: var(--color-primary-active);
+.button.full.primary:active {
+    background-color: hsla(var(--primary), .6);
 }
 
-.button.secondary:active {
-    background-color: var(--color-secondary-active);
+.button.outline.primary:active,
+.button.ghost.primary:active {
+    background-color: hsla(var(--primary), .4);
 }
 
-.button.primary.outline:active,
-.button.primary.none:active {
-    background-color: var(--color-primary-active-alpha);
+.button.full.secondary:active {
+    background-color: hsla(var(--secondary), .6);
 }
 
-.button.secondary.outline:active,
-.button.secondary.none:active {
-    background-color: var(--color-secondary-active-alpha);
+.button.outline.secondary:active,
+.button.ghost.secondary:active {
+    background-color: hsla(var(--secondary), .4);
+}
+
+.button.full.destructive:active {
+    background-color: hsla(var(--destructive), .6);
+}
+
+.button.outline.destructive:active,
+.button.ghost.destructive:active {
+    background-color: hsla(var(--destructive), .4);
 }
 
 /* :disabled */

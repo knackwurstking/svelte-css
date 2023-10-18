@@ -7,13 +7,10 @@
 
 .card {
     padding: var(--spacing);
-    background-color: var(--color-bg-color);
-    border: var(--border-width) solid var(--border-color);
-    border-radius: var(--border-radius);
+    background-color: hsl(var(--background));
+    border: 0.1em solid hsl(var(--border));
+    border-radius: var(--radius);
     overflow: hidden;
-    box-shadow:
-            0 0 0.05em var(--color-grey),
-            0 0 0.1em var(--color-grey);
 }
 
 article {

@@ -4,10 +4,10 @@
     let _class = "";
     export { _class as class };
 
-    /** @type {"" | "primary" | "secondary"} */
-    export let color = "";
-    /** @type {"" | "outline" | "none"} */
-    export let variant = "";
+    /** @type {"primary" | "secondary" | "destructive"} */
+    export let color = "primary";
+    /** @type {"full" | "outline" | "ghost"} */
+    export let variant = "full";
 </script>
 
 <button
