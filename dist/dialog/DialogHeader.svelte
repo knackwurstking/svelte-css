@@ -33,6 +33,7 @@
             position: absolute;
             top: calc(var(--spacing) / 2);
             right: calc(var(--spacing) / 2);
+            border: none;
         `}
     >
         <Close />

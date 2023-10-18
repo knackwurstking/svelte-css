@@ -4,9 +4,9 @@
     height: 2.5em;
     padding: var(--spacing);
     background-color: transparent;
-    border: none;
+    border: var(--border-width) solid var(--border-color);
     outline: none;
-    border-radius: 50%;
+    border-radius: var(--border-radius);
     box-shadow: none;
 
     transition: background-color .2s ease;
@@ -19,10 +19,12 @@
 
 .icon-button.primary {
     color: var(--color-primary-text);
+    border-color: var(--color-primary);
 }
 
 .icon-button.secondary {
     color: var(--color-secondary-text);
+    border-color: var(--color-secondary);
 }
 
 /* :hover */

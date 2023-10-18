@@ -33,7 +33,7 @@
                 --color-error: hsl(0, 100%, 50%);
                 --color-success: hsl(120, 100%, 50%);
 
-                --border-radius: 5px;
+                --border-radius: 2pt;
                 --border-width: 1px;
                 --border-color: var(--color-grey-active-alpha);
 

@@ -122,11 +122,6 @@ input[type="color"] {
     padding: var(--spacing) var(--spacing);
 }
 
-input:focus {
-    border-color: var(--color-primary);
-    outline: none;
-}
-
 input[aria-invalid="true"] {
     border-color: var(--color-error);
 }
@@ -144,8 +139,21 @@ textarea {
     background-color: var(--color-bg-input);
 }
 
+input,
+textarea {
+    outline-offset: -.25em;
+    outline: .15em solid transparent;
+    margin: calc(.25em + var(--border-width));
+}
+
+input:focus,
 textarea:focus {
-    border-color: var(--color-primary);
+    outline-offset: .25em;
+    outline: var(--border-width) solid var(--border-color);
+}
+
+input[aria-invalid="true"] {
+    outline-color: var(--color-error);
 }
 
 select {
@@ -155,10 +163,6 @@ select {
     border: var(--border-width) solid var(--border-color);
     border-radius: var(--border-radius);
     outline: none;
-}
-
-select:focus {
-    border-color: var(--color-primary);
 }
 
 figure {

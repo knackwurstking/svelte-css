@@ -49,7 +49,12 @@
             {/if}
         </span>
 
-        <span style="display: flex; align-items: center;">
+        <span
+            style={`
+                display: flex;
+                align-items: center;
+            `}
+        >
             <slot />
         </span>
     </label>
@@ -91,7 +96,12 @@
             {/if}
         </span>
 
-        <span style="display: flex; align-items: center;">
+        <span
+            style={`
+                display: flex;
+                align-items: center;
+            `}
+        >
             <slot />
         </span>
     </span>
