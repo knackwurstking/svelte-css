@@ -31,8 +31,8 @@
         on:click={() => dispatch("close")}
         style={`
             position: absolute;
-            top: calc(var(--spacing) / 2);
-            right: calc(var(--spacing) / 2);
+            top: var(--spacing);
+            right: var(--spacing);
             border: none;
         `}
     >
