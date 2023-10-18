@@ -3,7 +3,7 @@
 
     let _class = "";
     export { _class as class };
-    /** @type {"" | "primary" | "secondary"} */
+    /** @type {"" | "primary" | "secondary" | "error" | "success"} */
     export let color = "";
 </script>
 

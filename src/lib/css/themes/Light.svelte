@@ -16,11 +16,11 @@
                 --color-primary-active: hsl(105, 75%, 70%);
                 --color-primary-active-alpha: hsla(105, 50%, 50%, .4);
 
-                --color-secondary: hsl(240, 50%, 50%);
-                --color-secondary-hover: hsl(240, 50%, 60%);
-                --color-secondary-hover-alpha: hsla(240, 50%, 50%, .25);
-                --color-secondary-active: hsl(240, 50%, 70%);
-                --color-secondary-active-alpha: hsla(240, 50%, 50%, .4);
+                --color-secondary: var(--color-grey);
+                --color-secondary-hover: var(--color-grey-hover);
+                --color-secondary-hover-alpha: var(--color-grey-hover-alpha);
+                --color-secondary-active: var(--color-grey-active);
+                --color-secondary-active-alpha: var(--color-grey-active-alpha);
 
                 --color-grey: hsl(0, 0%, 70%);
                 --color-grey-hover: hsl(0, 0%, 55%);
@@ -29,10 +29,15 @@
                 --color-grey-active-alpha: hsla(0, 0%, 70%, .6);
 
                 --color-primary-text: hsla(105, 50%, 50%, .85);
-                --color-secondary-text: hsla(240, 50%, 50%, .85);
+                --color-secondary-text: hsla(0, 0%, 70%, .85);
 
                 --color-error: hsl(0, 100%, 50%);
+                --color-error-hover-alpha: hsla(0, 100%, 50%, .25);
+                --color-error-active-alpha: hsla(0, 100%, 50%, .6);
+
                 --color-success: hsl(120, 100%, 50%);
+                --color-success-hover-alpha: hsla(120, 100%, 50%, .25);
+                --color-success-active-alpha: hsla(120, 100%, 50%, .6);
 
                 --border-radius: 2pt;
                 --border-width: 1px;

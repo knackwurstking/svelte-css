@@ -2,7 +2,7 @@
     import "./button.css";
 
     let _class = "";
-    export {_class as class};
+    export { _class as class };
 
     /** @type {"" | "primary" | "secondary"} */
     export let color = "";
@@ -12,10 +12,8 @@
 
 <button
     {...$$restProps}
-
     class={`button ${color || ""} ${variant || ""}` + _class}
-
     on:click
 >
-    <slot></slot>
+    <slot />
 </button>

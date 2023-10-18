@@ -27,6 +27,16 @@
     border-color: var(--color-secondary);
 }
 
+.icon-button.error {
+    color: var(--color-error);
+    border-color: var(--color-error);
+}
+
+.icon-button.success {
+    color: var(--color-success);
+    border-color: var(--color-success);
+}
+
 /* :hover */
 
 .icon-button:hover {
@@ -42,6 +52,14 @@
     background-color: var(--color-secondary-hover-alpha);
 }
 
+.icon-button.error:hover {
+    background-color: var(--color-error-hover-alpha);
+}
+
+.icon-button.success:hover {
+    background-color: var(--color-success-hover-alpha);
+}
+
 /* :active */
 
 .icon-button:active {
@@ -55,6 +73,14 @@
 
 .icon-button.secondary:active {
     background-color: var(--color-secondary-active-alpha);
+}
+
+.icon-button.error:active {
+    background-color: var(--color-error-active-alpha);
+}
+
+.icon-button.success:active {
+    background-color: var(--color-success-active-alpha);
 }
 
 /* :disabled */

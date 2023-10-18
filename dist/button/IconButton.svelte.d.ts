@@ -4,7 +4,7 @@
 export default class IconButton extends SvelteComponent<{
     [x: string]: any;
     class?: string;
-    color?: "" | "primary" | "secondary";
+    color?: "" | "primary" | "secondary" | "error" | "success";
 }, {
     click: MouseEvent;
 } & {
@@ -21,7 +21,7 @@ declare const __propDef: {
     props: {
         [x: string]: any;
         class?: string;
-        color?: "" | "primary" | "secondary";
+        color?: "" | "primary" | "secondary" | "error" | "success";
     };
     events: {
         click: MouseEvent;
