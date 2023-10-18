@@ -19,7 +19,7 @@
     let media;
 
     function enableAutoThemeSwitcher() {
-        if (auto) {
+        if (auto && !!window) {
             if (window.matchMedia) {
                 const media = window.matchMedia("(prefers-color-scheme: dark)");
                 theme = media.matches ? "dark" : "light";

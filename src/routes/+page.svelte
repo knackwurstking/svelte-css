@@ -1,3 +1,20 @@
-<h1>Welcome to your library project</h1>
-<p>Create your package using @sveltejs/package and preview/showcase your work with SvelteKit</p>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+    import { Select, Option, CSSBase } from "$lib";
+</script>
+
+<CSSBase auto />
+
+<main class="container">
+    <div class="row">
+        <Select
+            values={[
+                { id: 0 },
+                { id: 1 },
+                { id: 2 },
+                { id: 3 },
+                { id: 4 },
+                { id: 5 },
+            ]}
+        />
+    </div>
+</main>
