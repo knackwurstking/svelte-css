@@ -38,7 +38,7 @@
                 --border-width: 1px;
                 --border-color: var(--color-grey-active-alpha);
 
-                --spacing: 0.5rem;
+                --spacing: 0.5em;
             }
         `;
         const toRemove = document.head.querySelector("style.theme");

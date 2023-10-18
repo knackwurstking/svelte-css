@@ -37,5 +37,5 @@ dialog article {
     padding: 0;
     background-color: var(--color-bg-color);
     border-radius: var(--border-radius);
-    box-shadow: 0 0 .3px var(--color-grey), 0 0 .35rem var(--color-grey);
+    box-shadow: 0 0 .3px var(--color-grey), 0 0 .35em var(--color-grey);
 }

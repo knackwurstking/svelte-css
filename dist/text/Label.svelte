@@ -18,7 +18,7 @@
         class:row
         style={`
             width: 100%;
-            padding: calc(var(--spacing, 0.5rem) / 2) var(--spacing, 0.5rem);
+            padding: calc(var(--spacing, 0.5em) / 2) var(--spacing, 0.5em);
         `}
         style:display={!row && "flex"}
         style:flex-direction={!row && "column"}
@@ -31,7 +31,7 @@
                 justify-content: center;
                 user-select: none;
             `}
-            style:margin-right={row && "margin-right: var(--spacing, 0.5rem)"}
+            style:margin-right={row && "margin-right: var(--spacing, 0.5em)"}
             style:width={row && "100%"}
         >
             {#if !!primaryText}
@@ -60,7 +60,7 @@
         class:row
         style={`
             width: 100%;
-            padding: calc(var(--spacing, 0.5rem) / 2) var(--spacing, 0.5rem);
+            padding: calc(var(--spacing, 0.5em) / 2) var(--spacing, 0.5em);
         `}
         style:display={!row && "flex"}
         style:flex-direction={!row && "column"}
@@ -73,14 +73,14 @@
                 justify-content: center;
                 user-select: none;
             `}
-            style:margin-right={row && "margin-right: var(--spacing, 0.5rem)"}
+            style:margin-right={row && "margin-right: var(--spacing, 0.5em)"}
             style:width={row && "100%"}
         >
             {#if !!primaryText}
-            <PrimaryText>
-                {primaryText}
-                <slot name="primaryText" />
-            </PrimaryText>
+                <PrimaryText>
+                    {primaryText}
+                    <slot name="primaryText" />
+                </PrimaryText>
             {/if}
 
             {#if !!secondaryText || !!$$slots.secondaryText}
