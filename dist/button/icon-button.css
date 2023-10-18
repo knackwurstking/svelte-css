@@ -4,7 +4,7 @@
     height: 2.5em;
     padding: var(--spacing);
     background-color: transparent;
-    border: var(--border-width) solid var(--border-color);
+    border: var(--border-width) solid currentColor;
     outline: none;
     border-radius: var(--border-radius);
     box-shadow: none;

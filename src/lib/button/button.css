@@ -1,6 +1,6 @@
 .button {
     padding: var(--spacing) calc(var(--spacing) * 3);
-    border: var(--border-width) solid var(--border-color);
+    border: var(--border-width) solid currentColor;
     border-radius: var(--border-radius);
     box-shadow: none;
     transition: background-color .2s ease;
@@ -14,13 +14,13 @@
 
 .button.primary:not(.outline, .none) {
     background-color: var(--color-primary);
-    color: var(--color-text);
+    color: white;
     border: none;
 }
 
 .button.secondary:not(.outline, .none) {
     background-color: var(--color-secondary);
-    color: var(--color-text);
+    color: white;
     border: none;
 }
 
