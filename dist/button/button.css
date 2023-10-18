@@ -32,12 +32,12 @@
 }
 
 .button.primary.outline {
-    color: var(--color-primary-text);
+    color: var(--color-primary);
     border-color: var(--color-primary);
 }
 
 .button.secondary.outline {
-    color: var(--color-secondary-text);
+    color: var(--color-secondary);
     border-color: var(--color-secondary);
 }
 
@@ -49,11 +49,11 @@
 }
 
 .button.primary.none {
-    color: var(--color-primary-text);
+    color: var(--color-primary);
 }
 
 .button.secondary.none {
-    color: var(--color-secondary-text);
+    color: var(--color-secondary);
 }
 
 /* :hover */

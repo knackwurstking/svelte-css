@@ -33,7 +33,7 @@ h3,
 h4,
 h5,
 h6 {
-    color: var(--color-secondary-text);
+    color: var(--color-secondary);
     text-shadow: 0 0 0.05em var(--color-grey), 0 0 0.1em var(--color-grey);
 }
 

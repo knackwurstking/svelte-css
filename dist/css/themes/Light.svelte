@@ -28,9 +28,6 @@
                 --color-grey-active: hsl(0, 0%, 45%);
                 --color-grey-active-alpha: hsla(0, 0%, 70%, .6);
 
-                --color-primary-text: hsla(105, 50%, 50%, .85);
-                --color-secondary-text: hsla(0, 0%, 70%, .85);
-
                 --color-error: hsl(0, 100%, 50%);
                 --color-error-hover-alpha: hsla(0, 100%, 50%, .25);
                 --color-error-active-alpha: hsla(0, 100%, 50%, .6);
