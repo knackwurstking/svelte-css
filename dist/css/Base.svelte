@@ -3,7 +3,8 @@
     import "./_css/_grid.css";
     import "./_css/_containers.css";
     import "./_css/_table.css";
-    import "./_css/_utils.css";
+    import "./_css/_no-utils.css";
+    import "./_css/_is-utils.css";
 
     import { onDestroy } from "svelte";
 
@@ -13,7 +14,7 @@
     export let theme = "light";
     /** @type {boolean} */
     export let auto = false;
-    $: auto && enableAutoThemeSwitcher();
+    $: typeof auto === "boolean" && enableAutoThemeSwitcher();
 
     /** @type {MediaQueryList} */
     let media;
@@ -24,6 +25,10 @@
                 const media = window.matchMedia("(prefers-color-scheme: dark)");
                 theme = media.matches ? "dark" : "light";
                 media.addEventListener("change", onDarkChange);
+            }
+        } else {
+            if (window.matchMedia && media) {
+                media.removeEventListener("change", onDarkChange);
             }
         }
     }
