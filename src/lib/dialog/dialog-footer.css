@@ -1,5 +1,4 @@
 dialog footer {
-    background-color: hsl(var(--background));
     padding: var(--spacing);
     margin-top: var(--spacing);
     border-bottom-right-radius: var(--radius);

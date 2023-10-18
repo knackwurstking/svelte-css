@@ -7,7 +7,7 @@
 
 .card {
     padding: var(--spacing);
-    background-color: hsl(var(--background));
+    background-color: hsl(var(--card));
     border: 0.1em solid hsl(var(--border));
     border-radius: var(--radius);
     overflow: hidden;

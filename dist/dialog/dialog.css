@@ -36,6 +36,6 @@ dialog article > section {
 
 dialog article {
     padding: 0;
-    background-color: hsl(var(--background));
+    background-color: hsl(var(--card));
     border-radius: var(--radius);
 }
