@@ -6,7 +6,7 @@
     <CSSBase auto />
 </svelte:head>
 
-<Container class="is-debug">
+<Container>
     <Row style="width: 8rem;">
         <Select
             items={[
