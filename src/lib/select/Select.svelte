@@ -15,24 +15,35 @@
      * @type {Item[]}
      */
     export let items = [];
+
     /**
      * @type {Item | null}
      */
     export let selectedItem = null;
+
     /**
      * @type {boolean}
      */
     export let visible = false;
+
     /**
      * @type {string}
      */
     export let width = "";
 
     $: !width && items.length && setWidth();
+    $: !!visible &&
+        !!items &&
+        !!optionsContainer &&
+        setOptionsContainerPosition();
+    $: !visible && resetOptionsContainerPosition();
 
     const dispatch = createEventDispatcher();
 
+    /** @type {HTMLSpanElement} */
+    let optionsContainer;
     let autoWidth = "100%";
+    let optionsOnTop = false;
 
     async function setWidth() {
         let charsCount = 0;
@@ -42,6 +53,27 @@
             }
         }
         autoWidth = `calc((${charsCount} * 1em) + 1em)`;
+    }
+
+    async function setOptionsContainerPosition() {
+        if (!optionsContainer) return;
+
+        const parent = optionsContainer.parentElement;
+        const r = parent.getBoundingClientRect();
+
+        if (
+            window.innerHeight -
+                optionsContainer.getBoundingClientRect().bottom <=
+            0
+        ) {
+            optionsOnTop = true;
+        } else {
+            optionsOnTop = false;
+        }
+    }
+
+    async function resetOptionsContainerPosition() {
+        optionsOnTop = false;
     }
 </script>
 
@@ -56,17 +88,23 @@
         {selectedItem?.label || selectedItem?.value || ""}
     </span>
 
-    <span class="options" class:visible>
-        {#each items as item}
-            <Option
-                {...item}
-                on:click={({ detail }) => {
-                    selectedItem = item;
-                    dispatch("change", detail);
-                }}
-            />
-        {/each}
-    </span>
+    {#if visible}
+        <span
+            bind:this={optionsContainer}
+            class="options"
+            class:top={optionsOnTop}
+        >
+            {#each items as item}
+                <Option
+                    {...item}
+                    on:click={({ detail }) => {
+                        selectedItem = item;
+                        dispatch("change", detail);
+                    }}
+                />
+            {/each}
+        </span>
+    {/if}
 </div>
 
 <style>
@@ -90,20 +128,23 @@
 
     .select .options {
         z-index: 10;
-        display: none;
+        display: block;
+        height: fit-content;
         position: absolute;
-        top: 100%;
-        margin-top: var(--spacing);
         left: 0;
         width: 100%;
-        height: 0;
         background-color: hsl(var(--background));
         border: 0.1em solid hsl(var(--border, currentColor));
         border-radius: var(--radius, 0);
     }
 
-    .select .options.visible {
-        display: block;
-        height: fit-content;
+    .select .options:not(.top) {
+        margin-top: var(--spacing);
+        top: 100%;
+    }
+
+    .select .options.top {
+        margin-bottom: var(--spacing);
+        bottom: 100%;
     }
 </style>

@@ -6,7 +6,7 @@
     <CSSBase auto />
 </svelte:head>
 
-<Container>
+<Container style="position: absolute; top: 90%; left: 0%;">
     <Row style="width: 8rem;">
         <Select
             items={[
@@ -21,3 +21,10 @@
         />
     </Row>
 </Container>
+
+<style>
+    :global(html, body, #app) {
+        width: 100%;
+        height: 100%;
+    }
+</style>
