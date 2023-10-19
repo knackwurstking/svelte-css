@@ -1,4 +1,4 @@
-<!--script>
+<script>
     import { CSSBase, Container, Row, Select } from "./lib";
 </script>
 
@@ -6,11 +6,18 @@
     <CSSBase auto />
 </svelte:head>
 
-<Container>
-    <Row>
+<Container class="is-debug">
+    <Row style="width: 8rem;">
         <Select
-            values={[{ text: 0 }, { text: 1 }, { text: 2 }, { text: 3 }]}
-            selectedIndex={0}
+            items={[
+                { value: "one", label: "One" },
+                { value: "two", label: "Two" },
+                { value: "three", label: "Three" },
+                { value: "four" },
+            ]}
+            on:change={({ detail }) => {
+                console.debug("value:", detail);
+            }}
         />
     </Row>
-</Container-->
+</Container>
