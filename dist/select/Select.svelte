@@ -58,13 +58,18 @@
     async function setOptionsContainerPosition() {
         if (!optionsContainer) return;
 
-        if (
-            window.innerHeight -
-                optionsContainer.getBoundingClientRect().bottom <=
-            0
-        ) {
+        const pR = optionsContainer.parentElement.getBoundingClientRect();
+        const cR = optionsContainer.getBoundingClientRect();
+
+        if (window.innerHeight - cR.bottom <= 0) {
+            optionsContainer.style.left = `${pR.left}px`;
+            optionsContainer.style.top = `${pR.top - cR.height}px`;
+            optionsContainer.style.width = `${pR.width}px`;
             optionsOnTop = true;
         } else {
+            optionsContainer.style.left = `${pR.left}px`;
+            optionsContainer.style.top = `${pR.bottom}px`;
+            optionsContainer.style.width = `${pR.width}px`;
             optionsOnTop = false;
         }
     }
@@ -97,8 +102,7 @@
                 <Option
                     {...item}
                     on:click={({ detail }) => {
-                        selectedItem = item;
-                        dispatch("change", detail);
+                        dispatch("change", (selectedItem = detail));
                     }}
                 />
             {/each}
@@ -111,7 +115,7 @@
         border: 0.1em solid hsl(var(--border, currentColor));
         border-radius: var(--radius, 0);
         width: 100%;
-        height: calc(1em + (var(--spacing) * 2));
+        height: calc(1em + (var(--spacing, 0.5em) * 2));
         display: flex;
         justify-content: center;
         align-items: center;
@@ -122,28 +126,24 @@
 
     .select .selected {
         width: 100%;
-        padding: var(--spacing, 0.5em) calc(var(--spacing, 0.5) * 1.5);
+        padding: var(--spacing, 0.5em) calc(var(--spacing, 0.5em) * 1.5);
     }
 
     .select .options {
         z-index: 10;
         display: block;
         height: fit-content;
-        position: absolute;
-        left: 0;
-        width: 100%;
+        position: fixed;
         background-color: hsl(var(--background));
         border: 0.1em solid hsl(var(--border, currentColor));
         border-radius: var(--radius, 0);
     }
 
     .select .options:not(.top) {
-        margin-top: var(--spacing);
-        top: 100%;
+        margin-top: var(--spacing, 0.5em);
     }
 
     .select .options.top {
-        margin-bottom: var(--spacing);
-        bottom: 100%;
+        margin-top: calc(0em - var(--spacing, 0.5em));
     }
 </style>

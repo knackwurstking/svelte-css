@@ -1,4 +1,5 @@
 <script>
+    // TODO: adding onclick (and hover?) effects
     import { createEventDispatcher } from "svelte";
 
     /** @type {string} */
@@ -15,7 +16,7 @@
     {...$$restProps}
     class={"option " + ($$restProps.class || "")}
     on:click={() => {
-        dispatch("click", value);
+        dispatch("click", { value, label });
     }}
 >
     {label || value}
@@ -24,6 +25,6 @@
 <style>
     .option {
         width: 100%;
-        padding: var(--spacing, 0.5em) calc(var(--spacing, 0.5) * 1.5);
+        padding: var(--spacing, 0.5em) calc(var(--spacing, 0.5em) * 1.5);
     }
 </style>
