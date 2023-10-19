@@ -1,13 +1,8 @@
 <script>
-    export let style = "";
+    let _class = "";
+    export { _class as class };
 </script>
 
-<span
-    {...$$restProps}
-    style={`
-        font-size: 1.2em;
-        font-weight: 400;
-    ` + style}
->
+<span {...$$restProps} class={"primary-text " + _class}>
     <slot />
 </span>

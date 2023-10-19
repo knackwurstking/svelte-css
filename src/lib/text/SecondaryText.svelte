@@ -1,14 +1,8 @@
 <script>
-    export let style = "";
+    let _class = "";
+    export { _class as class };
 </script>
 
-<span
-    {...$$restProps}
-    style={`
-        font-size: 0.85em;
-        font-style: italic;
-        font-weight: 300;
-    ` + style}
->
+<span {...$$restProps} class={"secondary-text " + _class}>
     <slot />
 </span>

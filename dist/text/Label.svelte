@@ -12,28 +12,8 @@
 </script>
 
 {#if useLabel}
-    <label
-        {...$$restProps}
-        class={"label " + _class}
-        class:row
-        style={`
-            width: 100%;
-            padding: calc(var(--spacing, 0.5em) / 2) var(--spacing, 0.5em);
-        `}
-        style:display={!row && "flex"}
-        style:flex-direction={!row && "column"}
-    >
-        <span
-            class="col"
-            style={`
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                user-select: none;
-            `}
-            style:margin-right={row && "margin-right: var(--spacing, 0.5em)"}
-            style:width={row && "100%"}
-        >
+    <label {...$$restProps} class={"label " + _class} class:row>
+        <span class="col">
             {#if !!primaryText}
                 <PrimaryText>
                     {primaryText}
@@ -49,38 +29,13 @@
             {/if}
         </span>
 
-        <span
-            style={`
-                display: flex;
-                align-items: center;
-            `}
-        >
+        <span>
             <slot />
         </span>
     </label>
 {:else}
-    <span
-        {...$$restProps}
-        class={"label " + _class}
-        class:row
-        style={`
-            width: 100%;
-            padding: calc(var(--spacing, 0.5em) / 2) var(--spacing, 0.5em);
-        `}
-        style:display={!row && "flex"}
-        style:flex-direction={!row && "column"}
-    >
-        <span
-            class="col"
-            style={`
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                user-select: none;
-            `}
-            style:margin-right={row && "margin-right: var(--spacing, 0.5em)"}
-            style:width={row && "100%"}
-        >
+    <span {...$$restProps} class={"label " + _class} class:row>
+        <span class="col">
             {#if !!primaryText}
                 <PrimaryText>
                     {primaryText}
@@ -96,12 +51,7 @@
             {/if}
         </span>
 
-        <span
-            style={`
-                display: flex;
-                align-items: center;
-            `}
-        >
+        <span>
             <slot />
         </span>
     </span>

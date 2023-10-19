@@ -1,6 +1,4 @@
 <script>
-    import "./button.css";
-
     let _class = "";
     export { _class as class };
 

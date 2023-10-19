@@ -1,6 +1,4 @@
 <script>
-    import "./icon-button.css";
-
     let _class = "";
     export { _class as class };
     /** @type {"primary" | "secondary" | "destructive"} */

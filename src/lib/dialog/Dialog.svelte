@@ -1,6 +1,4 @@
 <script>
-    import "./dialog.css";
-
     export let fullscreen = false;
 
     /** @type {HTMLDialogElement} */
@@ -19,16 +17,8 @@
     }
 </script>
 
-<dialog
-    {...$$restProps}
-    bind:this={dialog}
-    style:width={fullscreen && "100%"}
-    style:height={fullscreen && "100%"}
->
-    <article
-        style:width={fullscreen && "100%"}
-        style:height={fullscreen && "100%"}
-    >
+<dialog {...$$restProps} bind:this={dialog} class:fullscreen>
+    <article>
         <slot name="header" />
         <slot />
         <slot name="footer" />

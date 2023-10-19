@@ -4,7 +4,6 @@
 export default class DialogHeader extends SvelteComponent<{
     [x: string]: any;
     title: any;
-    style?: string;
 }, {
     close: CustomEvent<any>;
 } & {
@@ -19,7 +18,6 @@ declare const __propDef: {
     props: {
         [x: string]: any;
         title: any;
-        style?: string;
     };
     events: {
         close: CustomEvent<any>;
