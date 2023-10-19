@@ -13,6 +13,7 @@ export default class Select extends SvelteComponent<{
     };
     visible?: boolean;
     width?: string;
+    optionsOnTop?: boolean;
 }, {
     change: CustomEvent<any>;
 } & {
@@ -36,6 +37,7 @@ declare const __propDef: {
         };
         visible?: boolean;
         width?: string;
+        optionsOnTop?: boolean;
     };
     events: {
         change: CustomEvent<any>;

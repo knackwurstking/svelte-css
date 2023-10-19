@@ -31,19 +31,16 @@
      */
     export let width = "";
 
-    $: !width && items.length && setWidth();
-    $: !!visible &&
-        !!items &&
-        !!optionsContainer &&
-        setOptionsContainerPosition();
-    $: !visible && resetOptionsContainerPosition();
+    /**
+     * @type {boolean}
+     */
+    export let optionsOnTop = false;
+
+    $: !width && setWidth();
 
     const dispatch = createEventDispatcher();
 
-    /** @type {HTMLSpanElement} */
-    let optionsContainer;
     let autoWidth = "100%";
-    let optionsOnTop = false;
 
     async function setWidth() {
         let charsCount = 0;
@@ -52,30 +49,7 @@
                 charsCount = (item.label || item.value).length;
             }
         }
-        autoWidth = `calc((${charsCount} * 1em) + 1em)`;
-    }
-
-    async function setOptionsContainerPosition() {
-        if (!optionsContainer) return;
-
-        const pR = optionsContainer.parentElement.getBoundingClientRect();
-        const cR = optionsContainer.getBoundingClientRect();
-
-        if (window.innerHeight - cR.bottom <= 0) {
-            optionsContainer.style.left = `${pR.left}px`;
-            optionsContainer.style.top = `${pR.top - cR.height}px`;
-            optionsContainer.style.width = `${pR.width}px`;
-            optionsOnTop = true;
-        } else {
-            optionsContainer.style.left = `${pR.left}px`;
-            optionsContainer.style.top = `${pR.bottom}px`;
-            optionsContainer.style.width = `${pR.width}px`;
-            optionsOnTop = false;
-        }
-    }
-
-    async function resetOptionsContainerPosition() {
-        optionsOnTop = false;
+        autoWidth = `${charsCount}em`;
     }
 </script>
 
@@ -93,11 +67,7 @@
     </span>
 
     {#if visible}
-        <span
-            bind:this={optionsContainer}
-            class="options"
-            class:top={optionsOnTop}
-        >
+        <span class="options" class:top={optionsOnTop}>
             {#each items as item}
                 <Option
                     {...item}
@@ -130,20 +100,23 @@
     }
 
     .select .options {
-        z-index: 10;
+        z-index: 999;
         display: block;
+        width: 100%;
         height: fit-content;
-        position: fixed;
+        position: absolute;
         background-color: hsl(var(--background));
         border: 0.1em solid hsl(var(--border, currentColor));
         border-radius: var(--radius, 0);
     }
 
     .select .options:not(.top) {
+        top: 100%;
         margin-top: var(--spacing, 0.5em);
     }
 
     .select .options.top {
-        margin-top: calc(0em - var(--spacing, 0.5em));
+        bottom: 100%;
+        margin-bottom: var(--spacing, 0.5em);
     }
 </style>

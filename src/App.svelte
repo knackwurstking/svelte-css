@@ -1,4 +1,4 @@
-<script>
+<!--script>
     import { CSSBase, Container, Row, Select } from "./lib";
 </script>
 
@@ -15,6 +15,7 @@
                 { value: "three", label: "Three" },
                 { value: "four" },
             ]}
+            optionsOnTop
             on:change={({ detail }) => {
                 console.debug("value:", detail);
             }}
@@ -27,4 +28,4 @@
         width: 100%;
         height: 100%;
     }
-</style>
+</style-->
