@@ -58,6 +58,7 @@
         align-items: center;
         background-color: hsl(var(--background));
         cursor: pointer;
+        user-select: none;
     }
 
     .select .selected {
