@@ -23,13 +23,35 @@
      * @type {boolean}
      */
     export let visible = false;
+    /**
+     * @type {string}
+     */
+    export let width = "";
+
+    $: !width && items.length && setWidth();
 
     const dispatch = createEventDispatcher();
+
+    let autoWidth = "100%";
+
+    async function setWidth() {
+        let charsCount = 0;
+        for (const item of items) {
+            if ((item.label || item.value).length > charsCount) {
+                charsCount = (item.label || item.value).length;
+            }
+        }
+        autoWidth = `calc((${charsCount} * 1em) + 1em)`;
+    }
 </script>
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <!-- svelte-ignore a11y-no-static-element-interactions -->
-<div class="select" on:click={() => (visible = !visible)}>
+<div
+    class="select"
+    style:width={width || autoWidth}
+    on:click={() => (visible = !visible)}
+>
     <span class="selected">
         {selectedItem?.label || selectedItem?.value || ""}
     </span>
@@ -63,7 +85,7 @@
 
     .select .selected {
         width: 100%;
-        padding: var(--spacing, 0.5em);
+        padding: var(--spacing, 0.5em) calc(var(--spacing, 0.5) * 1.5);
     }
 
     .select .options {
