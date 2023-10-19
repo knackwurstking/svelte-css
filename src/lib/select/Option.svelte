@@ -23,6 +23,6 @@
 <style>
     .option {
         width: 100%;
-        padding: var(--spacing, 0.5em);
+        padding: var(--spacing, 0.5em) calc(var(--spacing, 0.5) * 1.5);
     }
 </style>
