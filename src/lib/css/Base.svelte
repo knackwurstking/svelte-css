@@ -3,14 +3,14 @@
     import "./_css/_grid.css";
     import "./_css/_containers.css";
     import "./_css/_table.css";
-    import "./_css/_no-utils.css";
-    import "./_css/_is-utils.css";
     import "../button/button.css";
     import "../button/icon-button.css";
     import "../dialog/dialog.css";
     import "../text/label.css";
     import "../text/primary-text.css";
     import "../text/secondary-text.css";
+    import "./_css/_utils-is.css";
+    import "./_css/_utils-no.css";
 
     import { onDestroy } from "svelte";
 
