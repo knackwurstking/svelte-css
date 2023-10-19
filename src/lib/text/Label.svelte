@@ -35,7 +35,11 @@
         </span>
     </label>
 {:else}
-    <span {...$$restProps} class={"label " + _class} class:row>
+    <span
+        {...$$restProps}
+        class={"label " + ($$restProps.class || "")}
+        class:row
+    >
         <span class="col">
             {#if !!primaryText}
                 <PrimaryText>
