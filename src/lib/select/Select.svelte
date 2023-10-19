@@ -56,6 +56,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        background-color: hsl(var(--background));
+        cursor: pointer;
     }
 
     .select .selected {
@@ -68,9 +70,13 @@
         display: none;
         position: absolute;
         top: 100%;
+        margin-top: var(--spacing);
         left: 0;
         width: 100%;
         height: 0;
+        background-color: hsl(var(--background));
+        border: 0.1em solid hsl(var(--border, currentColor));
+        border-radius: var(--radius, 0);
     }
 
     .select .options.visible {
