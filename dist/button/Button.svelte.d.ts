@@ -3,7 +3,6 @@
 /** @typedef {typeof __propDef.slots}  ButtonSlots */
 export default class Button extends SvelteComponent<{
     [x: string]: any;
-    class?: string;
     color?: "primary" | "secondary" | "destructive";
     variant?: "full" | "outline" | "ghost";
 }, {
@@ -21,7 +20,6 @@ import { SvelteComponent } from "svelte";
 declare const __propDef: {
     props: {
         [x: string]: any;
-        class?: string;
         color?: "primary" | "secondary" | "destructive";
         variant?: "full" | "outline" | "ghost";
     };

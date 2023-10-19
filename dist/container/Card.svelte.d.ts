@@ -3,7 +3,6 @@
 /** @typedef {typeof __propDef.slots}  CardSlots */
 export default class Card extends SvelteComponent<{
     [x: string]: any;
-    class?: string;
     noShadow?: boolean;
 }, {
     [evt: string]: CustomEvent<any>;
@@ -18,7 +17,6 @@ import { SvelteComponent } from "svelte";
 declare const __propDef: {
     props: {
         [x: string]: any;
-        class?: string;
         noShadow?: boolean;
     };
     events: {

@@ -3,7 +3,6 @@
 /** @typedef {typeof __propDef.slots}  LabelSlots */
 export default class Label extends SvelteComponent<{
     [x: string]: any;
-    class?: string;
     primaryText?: string;
     secondaryText?: string;
     useLabel?: boolean;
@@ -23,7 +22,6 @@ import { SvelteComponent } from "svelte";
 declare const __propDef: {
     props: {
         [x: string]: any;
-        class?: string;
         primaryText?: string;
         secondaryText?: string;
         useLabel?: boolean;

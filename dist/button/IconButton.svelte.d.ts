@@ -3,7 +3,6 @@
 /** @typedef {typeof __propDef.slots}  IconButtonSlots */
 export default class IconButton extends SvelteComponent<{
     [x: string]: any;
-    class?: string;
     color?: "primary" | "secondary" | "destructive";
 }, {
     click: MouseEvent;
@@ -20,7 +19,6 @@ import { SvelteComponent } from "svelte";
 declare const __propDef: {
     props: {
         [x: string]: any;
-        class?: string;
         color?: "primary" | "secondary" | "destructive";
     };
     events: {

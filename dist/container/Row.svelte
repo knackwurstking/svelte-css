@@ -1,8 +1,3 @@
-<script>
-    let _class = "";
-    export { _class as class };
-</script>
-
-<div {...$$restProps} class={"row " + _class}>
+<div {...$$restProps} class={"row " + ($$restProps.class || "")}>
     <slot />
 </div>
