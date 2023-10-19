@@ -58,9 +58,6 @@
     async function setOptionsContainerPosition() {
         if (!optionsContainer) return;
 
-        const parent = optionsContainer.parentElement;
-        const r = parent.getBoundingClientRect();
-
         if (
             window.innerHeight -
                 optionsContainer.getBoundingClientRect().bottom <=
@@ -80,7 +77,9 @@
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <div
-    class="select"
+    {...$$restProps}
+    class={"select " + $$restProps.class}
+    style={$$restProps.style}
     style:width={width || autoWidth}
     on:click={() => (visible = !visible)}
 >

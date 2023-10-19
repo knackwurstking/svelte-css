@@ -12,7 +12,8 @@
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <div
-    class="option"
+    {...$$restProps}
+    class={"option " + $$restProps.class}
     on:click={() => {
         dispatch("click", value);
     }}
