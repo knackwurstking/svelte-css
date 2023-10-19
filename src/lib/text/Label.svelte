@@ -2,9 +2,6 @@
     import PrimaryText from "./PrimaryText.svelte";
     import SecondaryText from "./SecondaryText.svelte";
 
-    let _class = "";
-    export { _class as class };
-
     export let primaryText = "";
     export let secondaryText = "";
     export let useLabel = false;
@@ -12,7 +9,11 @@
 </script>
 
 {#if useLabel}
-    <label {...$$restProps} class={"label " + _class} class:row>
+    <label
+        {...$$restProps}
+        class={"label " + ($$restProps.class || "")}
+        class:row
+    >
         <span class="col">
             {#if !!primaryText}
                 <PrimaryText>

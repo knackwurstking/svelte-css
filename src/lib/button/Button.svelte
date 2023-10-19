@@ -1,7 +1,4 @@
 <script>
-    let _class = "";
-    export { _class as class };
-
     /** @type {"primary" | "secondary" | "destructive"} */
     export let color = "primary";
     /** @type {"full" | "outline" | "ghost"} */
@@ -10,7 +7,7 @@
 
 <button
     {...$$restProps}
-    class={`button ${color || ""} ${variant || ""}` + _class}
+    class={`button ${color || ""} ${variant || ""}` + ($$restProps.class || "")}
     on:click
 >
     <slot />

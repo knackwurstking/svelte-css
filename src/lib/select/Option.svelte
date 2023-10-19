@@ -13,7 +13,7 @@
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <div
     {...$$restProps}
-    class={"option " + $$restProps.class}
+    class={"option " + ($$restProps.class || "")}
     on:click={() => {
         dispatch("click", value);
     }}

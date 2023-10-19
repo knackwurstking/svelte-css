@@ -78,7 +78,7 @@
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <div
     {...$$restProps}
-    class={"select " + $$restProps.class}
+    class={"select " + ($$restProps.class || "")}
     style={$$restProps.style}
     style:width={width || autoWidth}
     on:click={() => (visible = !visible)}
