@@ -133,7 +133,9 @@
 
 /* :disabled */
 
-.button:disabled {
+.button:disabled,
+.button:disabled:hover,
+.button:disabled:active {
     background-color: transparent;
     opacity: 0.25;
     cursor: default;

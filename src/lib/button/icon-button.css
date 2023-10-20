@@ -70,7 +70,9 @@
 
 /* :disabled */
 
-.icon-button:disabled {
+.icon-button:disabled,
+.icon-button:disabled:hover,
+.icon-button:disabled:active {
     background-color: transparent;
     opacity: 0.25;
     cursor: default;
