@@ -27,6 +27,7 @@
                 --ring: 240, 5.9%, 10%;
                 --radius: 0.5rem;
                 --spacing: 0.5em;
+                --line-height: 1.15;
             }
         `;
         const toRemove = document.head.querySelector("style.theme");
