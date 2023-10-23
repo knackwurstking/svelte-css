@@ -34,6 +34,7 @@
 
 /* :hover */
 
+/*
 .icon-button:hover {
     transition: background-color .5s ease;
 }
@@ -49,9 +50,11 @@
 .icon-button.destructive:hover {
     background-color: hsla(var(--destructive), .2);
 }
+*/
 
 /* :active */
 
+/*
 .icon-button:active {
     transition: background-color .1s ease;
 }
@@ -67,6 +70,7 @@
 .icon-button.destructive:active {
     background-color: hsla(var(--destructive), .4);
 }
+*/
 
 /* :disabled */
 
