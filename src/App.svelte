@@ -1,6 +1,6 @@
 <script>
     import "./app.css";
-    import { CSSBase, Button, Label } from "./lib";
+    import { CSSBase, Button, Label, Select } from "./lib";
 </script>
 
 <svelte:head>
@@ -60,6 +60,24 @@
                 row
             >
                 <input type="checkbox" checked />
+            </Label>
+        </div>
+    </div>
+
+    <div class="row" style="justify-content: center;">
+        <div class="col has-margin" style="max-width: 20rem;">
+            <Label
+                primaryText="New select component test"
+            >
+                <Select
+                    on:change={() => {
+                        /** @type {import("./lib/select").SelectItem} */
+                        const item = ev.detail;
+                        if (!item) return;
+
+                        console.debug("selected", item);
+                    }}
+                />
             </Label>
         </div>
     </div>
