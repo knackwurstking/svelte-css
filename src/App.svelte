@@ -1,5 +1,5 @@
-<!--script>
-    import { CSSBase, Container, Row, Select } from "./lib";
+<script>
+    import { CSSBase, Container, Row, Col, Button } from "./lib";
 </script>
 
 <svelte:head>
@@ -7,19 +7,20 @@
 </svelte:head>
 
 <Container style="position: absolute; top: 90%; left: 0%;">
-    <Row style="width: 8rem;">
-        <Select
-            items={[
-                { value: "one", label: "One" },
-                { value: "two", label: "Two" },
-                { value: "three", label: "Three" },
-                { value: "four" },
-            ]}
-            optionsOnTop
-            on:change={({ detail }) => {
-                console.debug("value:", detail);
-            }}
-        />
+    <Row style="width: 100%;">
+        <Col>
+            <Button variant="full" color="primary" noRipple>No Ripple</Button>
+            <Button
+                variant="full"
+                color="primary"
+                ripple={{ color: "hsl(var(--primary))" }}
+            >
+                Ripple Test
+            </Button>
+            <Button variant="full" color="primary">Ripple Test</Button>
+            <Button variant="full" color="secondary">Ripple Test</Button>
+            <Button variant="full" color="destructive">Ripple Test</Button>
+        </Col>
     </Row>
 </Container>
 
@@ -28,4 +29,4 @@
         width: 100%;
         height: 100%;
     }
-</style-->
+</style>
