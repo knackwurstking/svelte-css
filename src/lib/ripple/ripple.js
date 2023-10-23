@@ -21,7 +21,7 @@ export function Ripple(el, options = {}) {
     };
 
     const _rippleStop = () => {
-        if (!!ripple) rippleStop(ripple);
+        rippleStop(ripple);
     };
 
     // Setup ...
@@ -37,13 +37,15 @@ export function Ripple(el, options = {}) {
 
     const destroy = () => {
         el.classList.remove("ripple-container");
+
         el.removeEventListener("pointerdown", _rippleStart);
         el.removeEventListener("pointerup", _rippleStop);
         el.removeEventListener("pointerleave", _rippleStop);
+
         destroyed = true;
     }
 
-    setup()
+    if (options) setup()
 
     return {
         /**

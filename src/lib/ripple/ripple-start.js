@@ -1,19 +1,23 @@
+const defaultOptions = {
+    color: "currentColor",
+    opacity: 0.1,
+    centered: false,
+    spreadDuration: ".4s",
+    spreadTiming: "linear",
+    clearDuration: "1s",
+    clearTiming: "ease-in-out",
+};
+
 /**
  * @param {PointerEvent & { currentTarget: HTMLElement }} ev
+ * @param {import(".").RippleOptions} options 
  * @returns {HTMLElement}
  */
 export function rippleStart(
     ev,
-    {
-        color = "currentColor",
-        opacity = 0.1,
-        centered = false,
-        spreadDuration = ".4s",
-        spreadTiming = "linear",
-        clearDuration = "1s",
-        clearTiming = "ease-in-out"
-    }
+    options,
 ) {
+    options = { ...defaultOptions, ...options }
     const ripple = document.createElement("div");
 
     ripple.classList.add("ripple");
@@ -25,19 +29,16 @@ export function rippleStart(
     ripple.style.height = "100px";
     ripple.style.marginTop = "-50px";
     ripple.style.marginLeft = "-50px";
-
-    ripple.style.opacity = `${opacity}`;
-
-    ripple.style.transition = `transform ${spreadDuration} ${spreadTiming} 0s,` +
-        `opacity ${clearDuration} ${clearTiming} 0s,`;
-
+    ripple.style.opacity = `${options.opacity}`;
+    ripple.style.backgroundColor = options.color;
     ripple.style.transform = `scale(0) translate(0, 0)`;
-    ripple.style.backgroundColor = color;
+    ripple.style.transition = `transform ${options.spreadDuration} ${options.spreadTiming} 0s,` +
+        `opacity ${options.clearDuration} ${options.clearTiming} 0s`;
 
     ev.currentTarget.appendChild(ripple);
 
     const tR = ev.currentTarget.getBoundingClientRect();
-    if (centered) {
+    if (options.centered) {
         ripple.style.top = `${tR.height / 2}px`;
         ripple.style.left = `${tR.width / 2}px`;
     } else {
