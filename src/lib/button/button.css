@@ -5,6 +5,8 @@
     box-shadow: none;
     transition: background-color .2s ease;
     cursor: pointer;
+    position: relative;
+    overflow: hidden;
 }
 
 /* variant: full */
@@ -67,6 +69,7 @@
 
 /* :hover */
 
+/*
 .button:hover {
     transition: background-color .5s ease;
 }
@@ -97,9 +100,11 @@
 .button.ghost.destructive:hover {
     background-color: hsla(var(--destructive), .2);
 }
+*/
 
 /* :active */
 
+/*
 .button:active {
     transition: background-color .1s ease;
 }
@@ -130,6 +135,7 @@
 .button.ghost.destructive:active {
     background-color: hsla(var(--destructive), .4);
 }
+*/
 
 /* :disabled */
 
