@@ -1,6 +1,6 @@
 <script>
     import "./app.css";
-    import { CSSBase, Button } from "./lib";
+    import { CSSBase, Button, Label } from "./lib";
 </script>
 
 <svelte:head>
@@ -47,5 +47,20 @@
         <Button class="col has-small-margin" variant="full" color="destructive"
             >Ripple Test</Button
         >
+    </div>
+
+    <br />
+
+    <div class="row" style="justify-content: center;">
+        <div class="col has-margin" style="max-width: 20rem;">
+            <Label
+                primaryText="Checkbox"
+                secondaryText="This is just a test"
+                useLabel
+                row
+            >
+                <input type="checkbox" checked />
+            </Label>
+        </div>
     </div>
 </div>
