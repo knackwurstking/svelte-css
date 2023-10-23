@@ -8,33 +8,12 @@ import { rippleStop } from "./ripple-stop";
 
 /**
  * @param {Element} el
+ * @param {RippleOptions} options 
  */
-export function ripple(
-    el,
-    {
-        color = "currentColor",
-        opacity = 0.1,
-        centered = false,
-        spreadDuration = ".4s",
-        spreadTiming = "linear",
-        clearDuration = "1s",
-        clearTiming = "ease-in-out"
-    } = {}
-) {
+export function Ripple(el, options = {}) {
     /** @type {HTMLElement} */
     let ripple;
     let destroyed = false;
-
-    /** @type {RippleOptions} */
-    let options = {
-        color,
-        opacity,
-        centered,
-        spreadDuration,
-        spreadTiming,
-        clearDuration,
-        clearTiming,
-    }
 
     /** @param {PointerEvent & { currentTarget: HTMLElement }} ev */
     const _rippleStart = (ev) => {
