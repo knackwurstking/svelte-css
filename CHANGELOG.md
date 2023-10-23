@@ -3,4 +3,4 @@
 ## v0.4.0
 
 - Add Ripple component (use:Ripple)
-- Buttons: adding ripple (:hover and :active removed)
+- Add ripple to svelte buttons (:hover and :active removed from css)
