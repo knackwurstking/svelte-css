@@ -1,0 +1,11 @@
+.has-small-margin {
+    margin: calc(var(--spacing) / 2);
+}
+
+.has-margin {
+    margin: var(--spacing);
+}
+
+.has-big-margin {
+    margin: calc(var(--spacing) * 2);
+}
