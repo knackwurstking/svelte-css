@@ -1,4 +1,5 @@
 <script>
+    import "./app.css";
     import { CSSBase, Button } from "./lib";
 </script>
 
@@ -43,10 +44,3 @@
         >
     </div>
 </div>
-
-<style>
-    :global(html, body, #app) {
-        width: 100%;
-        height: 100%;
-    }
-</style>
