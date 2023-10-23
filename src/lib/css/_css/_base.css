@@ -170,7 +170,7 @@ textarea {
     margin: calc(.25em + .1em);
 }
 
-input:focus,
+input:focus:not([type=checkbox]),
 textarea:focus {
     outline: .1em solid hsl(var(--border));
 }
