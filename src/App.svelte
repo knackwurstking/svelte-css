@@ -17,6 +17,7 @@
         >
             No Ripple
         </Button>
+
         <Button
             class="col has-small-margin"
             variant="full"
@@ -25,6 +26,7 @@
         >
             1s Spread Ripple Test
         </Button>
+
         <Button
             class="col has-margin"
             variant="full"
@@ -33,12 +35,15 @@
         >
             Green Ripple Test
         </Button>
+
         <Button class="col has-small-margin" variant="full" color="primary"
             >Ripple Test</Button
         >
+
         <Button class="col has-big-margin" variant="full" color="secondary"
             >Ripple Test</Button
         >
+
         <Button class="col has-small-margin" variant="full" color="destructive"
             >Ripple Test</Button
         >
