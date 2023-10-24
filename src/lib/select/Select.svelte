@@ -54,11 +54,7 @@
         {#each items as item}
             <div
                 class="option"
-                style:display={
-                    (open || item.value === selected?.value)
-                        ? "block"
-                        : "none"
-                }
+                class:selected={(item.value === selected?.value)}
                 on:click={() => clickOption(item)}
             >
                 <span>
@@ -75,18 +71,31 @@
         background-color: hsl(var(--input));
         border: .1em solid hsl(var(--border));
         border-radius: var(--radius);
-        padding: var(--spacing);
         width: 100%;
         overflow: hidden;
     }
 
     .select .options {
         cursor: pointer;
+        display: block;
+    }
+
+    .select:not(.open) .options .option:not(.selected) {
+        display: none;
     }
 
     .select .options .option {
-        padding: calc(var(--spacing)) 0;
+        padding: calc(var(--spacing));
         user-select: none;
         height: 100%;
+    }
+
+    .select.open .options .option.selected {
+        background-color: hsl(var(--primary));
+        color: hsl(var(--primary-foreground));
+    }
+
+    .select.open .options .option:not(.selected):hover {
+        background-color: hsl(var(--foreground), .1);
     }
 </style>
