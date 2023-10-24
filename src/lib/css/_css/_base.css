@@ -90,13 +90,25 @@ article {
 
 code,
 pre {
+    display: block;
     background-color: hsl(var(--muted));
     color: hsl(var(--muted-foreground));
+    font-size: 0.9em;
 }
 
-code {
-    display: block;
-    border: .1em solid hsl(var(--border));
+pre {
+    padding: var(--spacing);
+    border-radius: var(--radius);
+}
+
+input,
+textarea,
+code,
+pre,
+var,
+kbd,
+samp {
+    font-family: 'Courier New', Courier, monospace;
 }
 
 input,
@@ -109,16 +121,6 @@ textarea {
     border: 0.1em solid hsl(var(--border));
     border-radius: var(--radius);
     box-shadow: none;
-}
-
-input,
-textarea,
-code,
-pre,
-var,
-kbd,
-samp {
-    font-family: 'Courier New', Courier, monospace;
 }
 
 input {
@@ -151,14 +153,12 @@ input[aria-invalid="true"] {
     border-color: hsl(var(--destructive));
 }
 
-input:disabled {
-    opacity: 0.25;
+input[aria-invalid="true"] {
+    outline-color: hsl(var(--destructive));
 }
 
-textarea {
-    display: block;
-    outline: none;
-    padding: var(--spacing) var(--spacing);
+input:disabled {
+    opacity: 0.25;
 }
 
 input,
@@ -173,8 +173,10 @@ textarea:focus {
     outline: .1em solid hsl(var(--border));
 }
 
-input[aria-invalid="true"] {
-    outline-color: hsl(var(--destructive));
+textarea {
+    display: block;
+    outline: none;
+    padding: var(--spacing) var(--spacing);
 }
 
 select {
