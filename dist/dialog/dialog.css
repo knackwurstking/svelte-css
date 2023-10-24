@@ -41,15 +41,15 @@ dialog > article > section {
 }
 
 dialog > article {
-    padding: 0;
-    background-color: hsl(var(--card));
+    background-color: hsl(var(--popover));
+    color: hsl(var(--popover-foreground));
+    border: .1em solid hsl(var(--border));
     border-radius: var(--radius);
 }
 
 dialog > header,
 dialog > article > header {
     height: calc(2.5rem + var(--spacing));
-    background-color: hsl(var(--background));
     padding: var(--spacing);
     padding-right: calc(2.5rem + var(--spacing));
     margin-bottom: var(--spacing);

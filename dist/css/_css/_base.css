@@ -83,26 +83,17 @@ button:focus {
     outline: none;
 }
 
-article {
-    background-color: hsl(var(--card));
-    color: hsl(var(--card-foreground));
-}
-
 code,
 pre {
+    display: block;
     background-color: hsl(var(--muted));
     color: hsl(var(--muted-foreground));
+    font-size: 0.9em;
 }
 
-code {
-    display: block;
-    border: .1em solid hsl(var(--border));
-}
-
-input,
-select,
-textarea {
-    font-size: 0.85em;
+pre {
+    padding: var(--spacing);
+    border-radius: var(--radius);
 }
 
 input,
@@ -115,13 +106,20 @@ samp {
     font-family: 'Courier New', Courier, monospace;
 }
 
-input {
+input,
+select,
+textarea {
     display: block;
+    font-size: 0.85em;
+    background-color: inherit;
+    color: inherit;
     border: 0.1em solid hsl(var(--border));
     border-radius: var(--radius);
     box-shadow: none;
+}
+
+input {
     padding: var(--spacing) calc(var(--spacing) * 1.5);
-    background-color: hsl(var(--background));
 }
 
 input[type="number"] {
@@ -138,6 +136,7 @@ input[type="checkbox"] {
     display: inline-block;
     accent-color: hsl(var(--primary));
     cursor: pointer;
+    transform: scale(1.4);
 }
 
 input[type="color"] {
@@ -149,42 +148,35 @@ input[aria-invalid="true"] {
     border-color: hsl(var(--destructive));
 }
 
+input[aria-invalid="true"] {
+    outline-color: hsl(var(--destructive));
+}
+
 input:disabled {
     opacity: 0.25;
 }
 
-textarea {
-    display: block;
-    border: .1em solid hsl(var(--border));
-    border-radius: var(--radius);
-    outline: none;
-    padding: var(--spacing) var(--spacing);
-    background-color: hsl(var(--background));
-}
-
 input,
 textarea {
-    outline-offset: -.25em;
-    outline: .15em solid transparent;
-    margin: calc(.25em + .1em);
+    outline-offset: .1em;
+    outline: .1em solid transparent;
+    margin: .2em;
 }
 
-input:focus,
+input:focus:not([type=checkbox]),
 textarea:focus {
-    outline-offset: .25em;
     outline: .1em solid hsl(var(--border));
 }
 
-input[aria-invalid="true"] {
-    outline-color: hsl(var(--destructive));
+textarea {
+    display: block;
+    outline: none;
+    padding: var(--spacing) var(--spacing);
 }
 
 select {
     display: block;
     padding: var(--spacing);
-    background-color: hsl(var(--background));
-    border: .1em solid hsl(var(--border));
-    border-radius: var(--radius);
     outline: none;
 }
 
@@ -204,6 +196,21 @@ table thead {
 
 table tbody {
     font-size: 0.8em;
+}
+
+article {
+    padding: var(--spacing);
+}
+
+section {
+    padding: var(--spacing) 0;
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+section::-webkit-scrollbar {
+    display: none;
 }
 
 div.spacer,

@@ -21,7 +21,7 @@
 }
 
 .label:not(.row) > span:nth-child(1) {
-    margin-left: var(--spacing);
+    margin-left: calc(var(--spacing) / 2);
 }
 
 .label > span:nth-child(2) {

@@ -22,8 +22,6 @@
                 --destructive: 0, 62.8%, 30.6%;
                 --destructive-foreground: 0, 0%, 98%;
                 --border: 240, 3.7%, 15.9%;
-                --input: 240, 3.7%, 15.9%;
-                --ring: 240, 4.9%, 83.9%;
                 --radius: 0.5rem;
                 --spacing: 0.5em;
                 --line-height: 1.15;
