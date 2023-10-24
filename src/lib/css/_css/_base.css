@@ -101,11 +101,9 @@ code {
 
 input,
 select,
-.select,
 textarea, {
     font-size: 0.85em;
-    color: hsl(var(--input));
-    background-color: hsl(var(--background));
+    background-color: hsl(var(--input));
 }
 
 input,
@@ -124,7 +122,6 @@ input {
     border-radius: var(--radius);
     box-shadow: none;
     padding: var(--spacing) calc(var(--spacing) * 1.5);
-    background-color: hsl(var(--background));
 }
 
 input[type="number"] {
@@ -163,7 +160,6 @@ textarea {
     border-radius: var(--radius);
     outline: none;
     padding: var(--spacing) var(--spacing);
-    background-color: hsl(var(--background));
 }
 
 input,

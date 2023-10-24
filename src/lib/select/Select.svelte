@@ -45,12 +45,11 @@
     {...$$restProps}
     class={"select " + ($$restProps.class || "")}
     class:open
-    style:height={`calc(((var(--line-height)em + (var(--spacing) * 2)) * ${items.length || 1}) + (var(--spacing) * 2))`}
-    on:click={() => clickSelect()}
 >
     <div
         class="options"
         style:display={(!open && !selected) ? "none" : "block"}
+        on:click={() => clickSelect()}
     >
         {#each items as item}
             <div
@@ -62,7 +61,7 @@
                 }
                 on:click={() => clickOption(item)}
             >
-                <span class="label">
+                <span>
                     {item.label}
                 </span>
             </div>
@@ -72,15 +71,22 @@
 
 <style>
     .select {
+        font-size: 0.85em;
+        background-color: hsl(var(--input));
         border: .1em solid hsl(var(--border));
         border-radius: var(--radius);
         padding: var(--spacing);
         width: 100%;
+        overflow: hidden;
+    }
+
+    .select .options {
         cursor: pointer;
     }
 
     .select .options .option {
-        padding: calc(var(--spacing) / 2) 0;
+        padding: calc(var(--spacing)) 0;
         user-select: none;
+        height: 100%;
     }
 </style>
