@@ -1,6 +1,12 @@
 <script>
     import "./app.css";
-    import { CSSBase, Button, Label, Select } from "./lib";
+    import {
+        CSSBase,
+        Button,
+        Label,
+        Select,
+        ButtonGroup
+    } from "./lib";
 </script>
 
 <svelte:head>
@@ -125,5 +131,21 @@
                 <input value="Just some test input" />
             </Label>
         </div>
+    </div>
+
+    <div class="row" style="width: 100%;">
+        <ButtonGroup>
+            <Button class="col" variant="full" color="primary">
+                Ripple Test
+            </Button>
+
+            <Button class="col" variant="full" color="secondary">
+                Ripple Test
+            </Button>
+
+            <Button class="col" variant="full" color="destructive">
+                Ripple Test
+            </Button>
+        </ButtonGroup>
     </div>
 </div>
