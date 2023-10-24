@@ -13,14 +13,14 @@
     /** @type {SelectItem[]} */
     export let items = [];
 
+    /** @type {SelectItem | null} */
+    export let selected = null;
+
     /***********************
      * Variable Definitions
      ***********************/
 
     const dispatch = createEventDispatcher();
-
-    /** @type {SelectItem | null} */
-    let selected = null;
 
     let open = false;
 
@@ -45,19 +45,26 @@
     {...$$restProps}
     class={"select " + ($$restProps.class || "")}
     class:open
+    style:height={`calc(((var(--line-height)em + (var(--spacing) * 2)) * ${items.length || 1}) + (var(--spacing) * 2))`}
     on:click={() => clickSelect()}
 >
-    <div class="options">
+    <div
+        class="options"
+        style:display={(!open && !selected) ? "none" : "block"}
+    >
         {#each items as item}
             <div
                 class="option"
-                class:display={
-                    (open && item.value === selected?.value)
+                style:display={
+                    (open || item.value === selected?.value)
                         ? "block"
                         : "none"
                 }
+                on:click={() => clickOption(item)}
             >
-                <span class="label" on:click={() => clickOption(item)}></span>
+                <span class="label">
+                    {item.label}
+                </span>
             </div>
         {/each}
     </div>
@@ -69,14 +76,11 @@
         border-radius: var(--radius);
         padding: var(--spacing);
         width: 100%;
-        height: fit-content;
-        transition: height .25s ease;
-        cursor: pointer; 
+        cursor: pointer;
     }
 
-    .select .options {}
-
-    .select .options .option {}
-
-    .select .options .option .label {}
+    .select .options .option {
+        padding: calc(var(--spacing) / 2) 0;
+        user-select: none;
+    }
 </style>

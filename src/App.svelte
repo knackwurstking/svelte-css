@@ -78,7 +78,8 @@
                         { value: "option-3", label: "Option 3" },
                         { value: "option-4", label: "Option 4" },
                     ]}
-                    on:change={() => {
+                    selected={{ value: "option-1", label: "Option 1" }}
+                    on:change={(ev) => {
                         /** @type {import("./lib/select").SelectItem} */
                         const item = ev.detail;
                         if (!item) return;
