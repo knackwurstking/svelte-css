@@ -1,6 +1,8 @@
 <script>
     import { createEventDispatcher } from "svelte";
 
+    import ChevronDown from "svelte-material-icons/ChevronDown.svelte";
+
     /**
      * @typedef SelectItem
      * @type {import(".").SelectItem}
@@ -53,6 +55,8 @@
         style:display={(!open && !selected) ? "none" : "block"}
         on:click={!alwaysOpen ? () => clickSelect() : undefined}
     >
+        <div class="icon"><ChevronDown height="100%" width="100%" /></div>
+
         {#each items as item}
             <div
                 class="option"
@@ -81,8 +85,28 @@
         display: block;
     }
 
+    .select .options .icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 2.5em;
+        color: hsl(var(--primary));
+    }
+
+    .select.open .options .icon {
+        display: none;
+    }
+
     .select:not(.open) .options .option:not(.selected) {
         display: none;
+    }
+
+    .select:not(.open) .options .option.selected {
+        margin-right: 2.5em;
     }
 
     .select .options .option {
