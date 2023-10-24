@@ -89,6 +89,7 @@
         padding: calc(var(--spacing));
         user-select: none;
         height: 100%;
+        transition: background-color .25s linear;
     }
 
     .select.open .options .option.selected {
