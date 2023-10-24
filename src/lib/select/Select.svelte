@@ -6,24 +6,76 @@
      * @type {import(".").SelectItem}
      */
 
+    /******************************
+     * Variable Export Definitions
+     ******************************/
+
     /** @type {SelectItem[]} */
     export let items = [];
 
-    /** @type {SelectItem | SelectItem[] | null} */
-    let selected = null;
+    /***********************
+     * Variable Definitions
+     ***********************/
 
     const dispatch = createEventDispatcher();
+
+    /** @type {SelectItem | null} */
+    let selected = null;
+
+    let open = false;
+
+    /***********************
+     * Function Definitions
+     ***********************/
+
+    async function clickSelect() {
+        open = !open;
+    }
+
+    /**
+     * @param {SelectItem} item
+     */
+    async function clickOption(item) {
+        selected = item;
+        dispatch("change", item);
+    }
 </script>
 
-<div class="select">
+<div
+    {...$$restProps}
+    class={"select " + ($$restProps.class || "")}
+    class:open
+    on:click={() => clickSelect()}
+>
     <div class="options">
         {#each items as item}
-            <div class="option">
-                <!-- TODO: create the options -->
+            <div
+                class="option"
+                class:display={
+                    (open && item.value === selected?.value)
+                        ? "block"
+                        : "none"
+                }
+            >
+                <span class="label" on:click={() => clickOption(item)}></span>
             </div>
         {/each}
     </div>
 </div>
 
 <style>
+    .select {
+        border: .1em solid hsl(var(--border));
+        border-radius: var(--radius);
+        padding: var(--spacing);
+        width: 100%;
+        height: fit-content;
+        transition: height .25s ease;
+    }
+
+    .select .options {}
+
+    .select .options .option {}
+
+    .select .options .option .label {}
 </style>
