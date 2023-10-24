@@ -64,12 +64,20 @@
         </div>
     </div>
 
+    <br />
+
     <div class="row" style="justify-content: center;">
         <div class="col has-margin" style="max-width: 20rem;">
             <Label
                 primaryText="New select component test"
             >
                 <Select
+                    items={[
+                        { value: "option-1", label: "Option 1" },
+                        { value: "option-2", label: "Option 2" },
+                        { value: "option-3", label: "Option 3" },
+                        { value: "option-4", label: "Option 4" },
+                    ]}
                     on:change={() => {
                         /** @type {import("./lib/select").SelectItem} */
                         const item = ev.detail;
