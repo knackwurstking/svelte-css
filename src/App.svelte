@@ -168,4 +168,17 @@
             </Button>
         </Group>
     </div>
+
+    <br />
+
+    <div class="row" style="justify-content: center;">
+        <pre>
+package main
+
+func main() dsfj
+    Just a test code block
+kfals</pre>
+    </div>
+
+    <br />
 </div>
