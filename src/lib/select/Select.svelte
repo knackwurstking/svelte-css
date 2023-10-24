@@ -71,6 +71,7 @@
         width: 100%;
         height: fit-content;
         transition: height .25s ease;
+        cursor: pointer; 
     }
 
     .select .options {}
