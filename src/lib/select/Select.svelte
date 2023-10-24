@@ -16,13 +16,15 @@
     /** @type {SelectItem | null} */
     export let selected = null;
 
+    export let alwaysOpen = false;
+
     /***********************
      * Variable Definitions
      ***********************/
 
     const dispatch = createEventDispatcher();
 
-    let open = false;
+    let open = alwaysOpen;
 
     /***********************
      * Function Definitions
@@ -49,7 +51,7 @@
     <div
         class="options"
         style:display={(!open && !selected) ? "none" : "block"}
-        on:click={() => clickSelect()}
+        on:click={!alwaysOpen ? () => clickSelect() : undefined}
     >
         {#each items as item}
             <div
@@ -68,7 +70,6 @@
 <style>
     .select {
         font-size: 0.85em;
-        background-color: hsl(var(--input));
         border: .1em solid hsl(var(--border));
         border-radius: var(--radius);
         width: 100%;

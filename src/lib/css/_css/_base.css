@@ -102,9 +102,13 @@ code {
 input,
 select,
 textarea {
+    display: block;
     font-size: 0.85em;
-    background-color: hsl(var(--input));
-    color: hsl(var(--foreground));
+    background-color: inherit;
+    color: inherit;
+    border: 0.1em solid hsl(var(--border));
+    border-radius: var(--radius);
+    box-shadow: none;
 }
 
 input,
@@ -118,10 +122,6 @@ samp {
 }
 
 input {
-    display: block;
-    border: 0.1em solid hsl(var(--border));
-    border-radius: var(--radius);
-    box-shadow: none;
     padding: var(--spacing) calc(var(--spacing) * 1.5);
 }
 
@@ -157,27 +157,20 @@ input:disabled {
 
 textarea {
     display: block;
-    border: .1em solid hsl(var(--border));
-    border-radius: var(--radius);
     outline: none;
     padding: var(--spacing) var(--spacing);
 }
 
-/*
 input,
 textarea {
-    outline-offset: .25em;
+    outline-offset: .1em;
     outline: .1em solid transparent;
-    margin: calc(.25em + .1em);
+    margin: .2em;
 }
-*/
 
 input:focus:not([type=checkbox]),
 textarea:focus {
-/*
     outline: .1em solid hsl(var(--border));
-*/
-    outline: none;
 }
 
 input[aria-invalid="true"] {
@@ -187,8 +180,6 @@ input[aria-invalid="true"] {
 select {
     display: block;
     padding: var(--spacing);
-    border: .1em solid hsl(var(--border));
-    border-radius: var(--radius);
     outline: none;
 }
 

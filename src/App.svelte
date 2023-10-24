@@ -89,6 +89,30 @@
                 />
             </Label>
         </div>
+
+        <div class="col has-margin" style="max-width: 20rem;">
+            <Label
+                secondaryText="Always open"
+            >
+                <Select
+                    items={[
+                        { value: "option-1", label: "Option 1" },
+                        { value: "option-2", label: "Option 2" },
+                        { value: "option-3", label: "Option 3" },
+                        { value: "option-4", label: "Option 4" },
+                    ]}
+                    selected={{ value: "option-1", label: "Option 1" }}
+                    alwaysOpen
+                    on:change={(ev) => {
+                        /** @type {import("./lib/select").SelectItem} */
+                        const item = ev.detail;
+                        if (!item) return;
+
+                        console.debug("selected", item);
+                    }}
+                />
+            </Label>
+        </div>
     </div>
 
     <br />
