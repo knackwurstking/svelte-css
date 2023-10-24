@@ -5,11 +5,11 @@
     import "./_css/_table.css";
     import "../button/button.css";
     import "../button/icon-button.css";
-    import "../button/button-group.css";
     import "../dialog/dialog.css";
     import "../text/label.css";
     import "../text/primary-text.css";
     import "../text/secondary-text.css";
+    import "../container/group.css";
     import "./_css/_utils-is.css";
     import "./_css/_utils-no.css";
     import "./_css/_utils-has.css";

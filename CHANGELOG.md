@@ -5,3 +5,4 @@
 - Add Ripple component (use:Ripple)
 - Add ripple to svelte buttons (:hover and :active removed from css)
 - Add a custom Select component.
+- Add a group component (for buttons and everything else)

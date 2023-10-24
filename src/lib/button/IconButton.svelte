@@ -1,6 +1,4 @@
 <script>
-    import "./icon-button.css";
-
     import { Ripple } from "../ripple";
 
     /** @type {"primary" | "secondary" | "destructive"} */

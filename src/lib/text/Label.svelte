@@ -1,6 +1,4 @@
 <script>
-    import "./label.css";
-
     import PrimaryText from "./PrimaryText.svelte";
     import SecondaryText from "./SecondaryText.svelte";
 

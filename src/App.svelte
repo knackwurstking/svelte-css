@@ -5,7 +5,7 @@
         Button,
         Label,
         Select,
-        ButtonGroup
+        Group
     } from "./lib";
 </script>
 
@@ -133,19 +133,39 @@
         </div>
     </div>
 
-    <div class="row" style="width: 100%;">
-        <ButtonGroup>
-            <Button class="col" variant="full" color="primary">
+    <br />
+
+    <div class="row" style="justify-content: center;">
+        <Group>
+            <Button variant="full" color="primary">
                 Ripple Test
             </Button>
 
-            <Button class="col" variant="full" color="secondary">
+            <Button variant="full" color="secondary">
                 Ripple Test
             </Button>
 
-            <Button class="col" variant="full" color="destructive">
+            <Button variant="full" color="destructive">
                 Ripple Test
             </Button>
-        </ButtonGroup>
+        </Group>
+    </div>
+
+    <br />
+
+    <div class="row" style="justify-content: center;">
+        <Group column>
+            <Button variant="full" color="primary">
+                Ripple Test
+            </Button>
+
+            <Button variant="full" color="secondary">
+                Ripple Test
+            </Button>
+
+            <Button variant="full" color="destructive">
+                Ripple Test
+            </Button>
+        </Group>
     </div>
 </div>

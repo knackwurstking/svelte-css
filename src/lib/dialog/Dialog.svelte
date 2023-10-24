@@ -1,6 +1,4 @@
 <script>
-    import "./dialog.css";
-
     export let fullscreen = false;
 
     /** @type {HTMLDialogElement} */
