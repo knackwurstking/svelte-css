@@ -90,4 +90,16 @@
             </Label>
         </div>
     </div>
+
+    <br />
+
+    <div class="row" style="justify-content: center;">
+        <div class="col has-margin" style="max-width: 20rem;">
+            <Label
+                secondaryText="Test input"
+            >
+                <input value="Just some test input" />
+            </Label>
+        </div>
+    </div>
 </div>

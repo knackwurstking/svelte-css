@@ -101,9 +101,10 @@ code {
 
 input,
 select,
-textarea, {
+textarea {
     font-size: 0.85em;
     background-color: hsl(var(--input));
+    color: hsl(var(--foreground));
 }
 
 input,
@@ -162,16 +163,21 @@ textarea {
     padding: var(--spacing) var(--spacing);
 }
 
+/*
 input,
 textarea {
     outline-offset: .25em;
     outline: .1em solid transparent;
     margin: calc(.25em + .1em);
 }
+*/
 
 input:focus:not([type=checkbox]),
 textarea:focus {
+/*
     outline: .1em solid hsl(var(--border));
+*/
+    outline: none;
 }
 
 input[aria-invalid="true"] {
@@ -181,7 +187,6 @@ input[aria-invalid="true"] {
 select {
     display: block;
     padding: var(--spacing);
-    background-color: hsl(var(--background));
     border: .1em solid hsl(var(--border));
     border-radius: var(--radius);
     outline: none;
