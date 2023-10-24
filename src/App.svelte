@@ -69,7 +69,7 @@
     <div class="row" style="justify-content: center;">
         <div class="col has-margin" style="max-width: 20rem;">
             <Label
-                primaryText="New select component test"
+                secondaryText="New select component test"
             >
                 <Select
                     items={[
