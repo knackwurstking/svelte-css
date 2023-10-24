@@ -83,11 +83,6 @@ button:focus {
     outline: none;
 }
 
-article {
-    background-color: hsl(var(--card));
-    color: hsl(var(--card-foreground));
-}
-
 code,
 pre {
     display: block;
@@ -201,6 +196,21 @@ table thead {
 
 table tbody {
     font-size: 0.8em;
+}
+
+article {
+    padding: var(--spacing);
+}
+
+section {
+    padding: var(--spacing) 0;
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+section::-webkit-scrollbar {
+    display: none;
 }
 
 div.spacer,

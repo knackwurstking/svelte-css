@@ -12,22 +12,3 @@
     border: 0.1em solid hsl(var(--border));
     border-radius: var(--radius);
 }
-
-article {
-    padding: var(--spacing);
-}
-
-article.card {
-    margin: calc(var(--spacing) * 2) 0;
-}
-
-section {
-    padding: var(--spacing);
-
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
-
-section::-webkit-scrollbar {
-    display: none;
-}
