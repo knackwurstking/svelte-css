@@ -5,8 +5,13 @@
         Button,
         Label,
         Select,
-        Group
+        Group,
+        Dialog,
+        DialogHeader,
+        DialogFooter,
     } from "./lib";
+
+    let dialog;
 </script>
 
 <svelte:head>
@@ -172,6 +177,26 @@
     <br />
 
     <div class="row" style="justify-content: center;">
+        <Button
+            variant="ghost"
+            color="primary"
+            on:click={() => dialog.showModal()}
+        >
+            Modal Dialog
+        </Button>
+
+        <Button
+            variant="outline"
+            color="primary"
+            on:click={() => dialog.show()}
+        >
+            Dialog
+        </Button>
+    </div>
+
+    <br />
+
+    <div class="row" style="justify-content: center;">
         <pre>
 package main
 
@@ -182,3 +207,29 @@ kfals</pre>
 
     <br />
 </div>
+
+<Dialog bind:this={dialog}>
+    <DialogHeader
+        title="Dialog Test"
+        on:close={() => dialog.close()}
+    />
+
+    <section>
+        Test Section ...
+    </section>
+
+    <DialogFooter>
+        <Button
+            color="secondary"
+            on:click={() => dialog.close()}
+        >
+            Cancel 
+        </Button>
+        <Button
+            color="primary"
+            on:click={() => dialog.close()}
+        >
+            OK
+        </Button>
+    </DialogFooter>
+</Dialog>
