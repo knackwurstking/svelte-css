@@ -2,6 +2,7 @@
 /** @typedef {typeof __propDef.events}  GroupEvents */
 /** @typedef {typeof __propDef.slots}  GroupSlots */
 export default class Group extends SvelteComponent<{
+    [x: string]: any;
     column?: boolean;
 }, {
     [evt: string]: CustomEvent<any>;
@@ -15,6 +16,7 @@ export type GroupSlots = typeof __propDef.slots;
 import { SvelteComponent } from "svelte";
 declare const __propDef: {
     props: {
+        [x: string]: any;
         column?: boolean;
     };
     events: {

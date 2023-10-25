@@ -1,7 +1,7 @@
 <script>
-    export let column = false; 
+    export let column = false;
 </script>
 
-<span class="group" class:column>
-    <slot></slot>
+<span {...$$restProps} class={"group " + $$restProps.class || ""} class:column>
+    <slot />
 </span>
