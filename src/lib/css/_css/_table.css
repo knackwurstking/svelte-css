@@ -4,6 +4,15 @@ table {
     user-select: none;
 }
 
+table thead {
+    font-size: 0.9em;
+    font-weight: 900;
+}
+
+table tbody {
+    font-size: 0.8em;
+}
+
 thead th {
     background-color: hsl(var(--border));
 }

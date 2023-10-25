@@ -1,3 +1,21 @@
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-family: inherit;
+    font-weight: inherit;
+    color: inherit;
+    -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+    background-color: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+}
+
 html {
     font-size: calc(15px + 0.390625vw);
 }
@@ -16,23 +34,40 @@ body {
     letter-spacing: 0.01em;
 }
 
-*,
-*::before,
-*::after {
-    box-sizing: inherit;
-    position: relative;
-    margin: 0;
-    padding: 0;
-    font-family: inherit;
-    font-weight: inherit;
-    color: inherit;
-    -webkit-tap-highlight-color: transparent;
+hr {
+    border: none;
+    background-color: hsl(var(--border));
+    height: 0.1em;
+    margin: var(--spacing) 0;
 }
 
-::selection {
-    background-color: hsl(var(--primary));
-    color: hsl(var(--primary-foreground));
+figure {
+    overflow: auto;
 }
+
+label {
+    display: block;
+    font-size: 1em;
+}
+
+article {
+    padding: var(--spacing);
+}
+
+section {
+    padding: var(--spacing) 0;
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+section::-webkit-scrollbar {
+    display: none;
+}
+
+/**
+ * Text html tags
+ */
 
 h1,
 h2,
@@ -68,12 +103,9 @@ h6 {
     font-size: calc(1em * 0.75);
 }
 
-hr {
-    border: none;
-    background-color: hsl(var(--border));
-    height: 0.1em;
-    margin: var(--spacing) 0;
-}
+/**
+ * button
+ */
 
 button {
     font-size: 0.85em;
@@ -82,6 +114,10 @@ button {
 button:focus {
     outline: none;
 }
+
+/**
+ * code, pre, var, kbd, samp
+ */
 
 code,
 pre {
@@ -96,13 +132,20 @@ pre {
     border-radius: var(--radius);
 }
 
-input,
-textarea,
 code,
 pre,
 var,
 kbd,
 samp {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/**
+ * input, textarea, select
+ */
+
+input,
+textarea {
     font-family: 'Courier New', Courier, monospace;
 }
 
@@ -180,40 +223,22 @@ select {
     outline: none;
 }
 
-figure {
-    overflow: auto;
-}
-
-label {
-    display: block;
-    font-size: 1em;
-}
-
-table thead {
-    font-size: 0.9em;
-    font-weight: 900;
-}
-
-table tbody {
-    font-size: 0.8em;
-}
-
-article {
-    padding: var(--spacing);
-}
-
-section {
-    padding: var(--spacing) 0;
-
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
-
-section::-webkit-scrollbar {
-    display: none;
-}
+/**
+ * Special tags (div/span): ".spacer"
+ */
 
 div.spacer,
 span.spacer {
     margin: var(--spacing);
+}
+
+/**
+ * TODO: list styling
+ * List tags: ul, li
+ */
+
+ul {
+}
+
+li {
 }
