@@ -2,13 +2,19 @@
     position: relative;
     width: 2.5em;
     height: 2.5em;
+
     padding: var(--spacing);
+
     background-color: transparent;
-    border: .1em solid currentColor;
+
+    border: none;
+    border-radius: 50%;
+
     outline: none;
-    border-radius: var(--radius);
     box-shadow: none;
     cursor: pointer;
+
+    overflow: hidden;
     transition: background-color .2s ease;
 }
 

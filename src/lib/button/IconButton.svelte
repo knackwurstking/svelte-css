@@ -11,7 +11,7 @@
 <button
     {...$$restProps}
     class={`icon-button ${color || ""} ` + ($$restProps.class || "")}
-    use:Ripple={noRipple ? null : ripple}
+    use:Ripple={noRipple ? null : { centered: true, ...ripple }}
     on:click
 >
     <slot />

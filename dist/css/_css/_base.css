@@ -238,4 +238,21 @@ span.spacer {
 
 ul {
     list-style: none;
+
+    border: .1em solid hsl(var(--border));
+    border-radius: var(--radius);
+
+    overflow: hidden;
+}
+
+ul > * {
+    border-bottom: .1em solid hsl(var(--border));
+}
+
+ul > *:first-child {
+    border-top: none;
+}
+
+ul > *:last-child {
+    border-bottom: none;
 }
