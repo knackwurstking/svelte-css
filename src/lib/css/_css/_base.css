@@ -233,12 +233,9 @@ span.spacer {
 }
 
 /**
- * TODO: list styling
  * List tags: ul, li
  */
 
 ul {
-}
-
-li {
+    list-style: none;
 }
