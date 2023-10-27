@@ -9,3 +9,27 @@
 .is-hidden {
     display: none;
 }
+
+.is-italic {
+    font-style: italic;
+}
+
+.is-text-center {
+    text-align: center;
+}
+
+.is-text-right {
+    text-align: right;
+}
+
+.is-text-left {
+    text-align: left;
+}
+
+.is-text-start {
+    text-align: start;
+}
+
+.is-text-end {
+    text-align: end;
+}
