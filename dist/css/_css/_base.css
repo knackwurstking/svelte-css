@@ -201,9 +201,9 @@ input:disabled {
 
 input,
 textarea {
-    outline-offset: .1em;
+    outline-offset: .15em;
     outline: .1em solid transparent;
-    margin: .2em;
+    margin: .25em;
 }
 
 input:focus:not([type=checkbox]),
