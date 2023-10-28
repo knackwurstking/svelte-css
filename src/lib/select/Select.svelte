@@ -50,6 +50,8 @@
     class={"select " + ($$restProps.class || "")}
     class:open
 >
+    <!-- svelte-ignore a11y-click-events-have-key-events -->
+    <!-- svelte-ignore a11y-no-static-element-interactions -->
     <div
         class="options"
         style:display={(!open && !selected) ? "none" : "block"}
@@ -74,7 +76,7 @@
 <style>
     .select {
         font-size: 0.85em;
-        border: .1em solid hsl(var(--border));
+        border: var(--border-width, .1em) solid hsl(var(--border));
         border-radius: var(--radius);
         width: 100%;
         overflow: hidden;

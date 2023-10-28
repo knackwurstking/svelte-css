@@ -156,7 +156,7 @@ textarea {
     font-size: 0.85em;
     background-color: inherit;
     color: inherit;
-    border: 0.1em solid hsl(var(--border));
+    border: var(--border-width, .1em) solid hsl(var(--border));
     border-radius: var(--radius);
     box-shadow: none;
 }
@@ -208,7 +208,7 @@ textarea {
 
 input:focus:not([type=checkbox]),
 textarea:focus {
-    outline: .1em solid hsl(var(--border));
+    outline: var(--border-width, .1em) solid hsl(var(--border));
 }
 
 textarea {
@@ -239,14 +239,14 @@ span.spacer {
 ul {
     list-style: none;
 
-    border: .1em solid hsl(var(--border));
+    border: var(--border-width, .1em) solid hsl(var(--border));
     border-radius: var(--radius);
 
     overflow: hidden;
 }
 
 ul > * {
-    border-bottom: .1em solid hsl(var(--border));
+    border-bottom: var(--border-width, .1em) solid hsl(var(--border));
 }
 
 ul > *:first-child {
