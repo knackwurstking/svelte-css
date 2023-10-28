@@ -7,15 +7,17 @@
 
     background-color: transparent;
 
-    border: none;
-    border-radius: 50%;
+    border: .1em solid currentColor;
+    border-radius: var(--radius);
 
     outline: none;
-    box-shadow: none;
-    cursor: pointer;
 
     overflow: hidden;
     transition: background-color .2s ease;
+
+    box-shadow: none;
+
+    cursor: pointer;
 }
 
 .icon-button > svg {
