@@ -187,14 +187,6 @@ input[type="color"] {
     padding: var(--spacing) var(--spacing);
 }
 
-input[aria-invalid="true"] {
-    border-color: hsl(var(--destructive));
-}
-
-input[aria-invalid="true"] {
-    outline-color: hsl(var(--destructive));
-}
-
 input:disabled {
     opacity: 0.25;
 }
@@ -209,6 +201,11 @@ textarea {
 input:focus:not([type=checkbox]),
 textarea:focus {
     outline: var(--border-width, .1em) solid hsl(var(--border));
+}
+
+input[aria-invalid="true"] {
+    border-color: hsl(var(--destructive));
+    outline-color: hsl(var(--destructive));
 }
 
 textarea {

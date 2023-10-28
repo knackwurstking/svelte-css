@@ -1,6 +1,6 @@
 .button {
     padding: var(--spacing) calc(var(--spacing) * 3);
-    border: .1em solid currentColor;
+    border: var(--border-width, .1em) solid currentColor;
     border-radius: var(--radius);
     box-shadow: none;
     transition: background-color .2s ease;
