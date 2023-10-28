@@ -1,6 +1,6 @@
 const defaultOptions = {
     color: "currentColor",
-    opacity: 0.1,
+    opacity: 0.2,
     centered: false,
     spreadDuration: ".4s",
     spreadTiming: "linear",
