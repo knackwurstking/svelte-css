@@ -26,8 +26,6 @@ body {
     background-color: hsl(var(--background));
     color: hsl(var(--foreground));
     
-    line-height: var(--line-height);
-
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 1em;
 
@@ -125,6 +123,13 @@ pre {
     background-color: hsl(var(--muted));
     color: hsl(var(--muted-foreground));
     font-size: 0.9em;
+    font-style: normal;
+    border: var(--border-width, .1em) solid hsl(var(--border));
+    border-radius: var(--radius);
+}
+
+code {
+    display: inline-block;
 }
 
 pre {

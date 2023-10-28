@@ -24,9 +24,8 @@
                 --destructive-foreground: 0, 0%, 98%;
                 --border: 240, 5.9%, 90%;
                 --border-width: 1px;
-                --radius: 0.5rem;
+                --radius: 0.5em;
                 --spacing: 0.5em;
-                --line-height: 1.15;
             }
         `;
         const toRemove = document.head.querySelector("style.theme");

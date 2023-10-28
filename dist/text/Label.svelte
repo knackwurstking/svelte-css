@@ -17,15 +17,13 @@
         <span class="col">
             {#if !!primaryText}
                 <PrimaryText>
-                    {primaryText}
-                    <slot name="primaryText" />
+                    <span>{primaryText}</span> <slot name="primaryText" />
                 </PrimaryText>
             {/if}
 
             {#if !!secondaryText || !!$$slots.secondaryText}
                 <SecondaryText>
-                    {secondaryText}
-                    <slot name="secondaryText" />
+                    <span>{secondaryText}</span> <slot name="secondaryText" />
                 </SecondaryText>
             {/if}
         </span>
@@ -43,15 +41,13 @@
         <span class="col">
             {#if !!primaryText}
                 <PrimaryText>
-                    {primaryText}
-                    <slot name="primaryText" />
+                    <span>{primaryText}</span> <slot name="primaryText" />
                 </PrimaryText>
             {/if}
 
             {#if !!secondaryText || !!$$slots.secondaryText}
                 <SecondaryText>
-                    {secondaryText}
-                    <slot name="secondaryText" />
+                    <span>{secondaryText}</span> <slot name="secondaryText" />
                 </SecondaryText>
             {/if}
         </span>
