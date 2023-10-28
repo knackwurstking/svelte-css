@@ -4,6 +4,7 @@
 export default class IconButton extends SvelteComponent<{
     [x: string]: any;
     ripple?: import("../ripple").RippleOptions;
+    ghost?: boolean;
     color?: "primary" | "secondary" | "destructive";
     noRipple?: boolean;
 }, {
@@ -22,6 +23,7 @@ declare const __propDef: {
     props: {
         [x: string]: any;
         ripple?: import("../ripple").RippleOptions;
+        ghost?: boolean;
         color?: "primary" | "secondary" | "destructive";
         noRipple?: boolean;
     };

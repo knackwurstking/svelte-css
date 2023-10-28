@@ -25,6 +25,10 @@
     height: 100%;
 }
 
+.icon-button.ghost {
+    border: none;
+}
+
 .icon-button.primary {
     color: hsl(var(--primary));
     border-color: hsl(var(--primary));
