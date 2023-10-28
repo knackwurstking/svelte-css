@@ -7,3 +7,4 @@
 - Add a custom Select component.
 - Add a group component (for buttons and everything else)
 - Add a border to the dialog
+- Add ghost prop to `<IconButton ghost />`
