@@ -64,8 +64,8 @@
     <div class="row" style="justify-content: center;">
         <div class="col has-margin" style="max-width: 20rem;">
             <Text.Label
-                primaryText="Checkbox"
-                secondaryText="This is just a test"
+                primary="Checkbox"
+                secondary="This is just a test"
                 useLabel
                 row
             >
@@ -79,7 +79,7 @@
     <div class="row" style="justify-content: center;">
         <div class="col has-margin" style="max-width: 20rem;">
             <Text.Label
-                secondaryText="New select component test"
+                secondary="New select component test"
             >
                 <Input.Select
                     items={[
@@ -102,7 +102,7 @@
 
         <div class="col has-margin" style="max-width: 20rem;">
             <Text.Label
-                secondaryText="Always open"
+                secondary="Always open"
             >
                 <Input.Select
                     items={[
@@ -130,7 +130,7 @@
     <div class="row" style="justify-content: center;">
         <div class="col has-margin" style="max-width: 20rem;">
             <Text.Label
-                secondaryText="Test input"
+                secondary="Test input"
             >
                 <input value="Just some test input" />
             </Text.Label>
