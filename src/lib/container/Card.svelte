@@ -1,7 +1,15 @@
 <script>
+    /** @type {string} */
+    export let width = undefined;
+    /** @type {string} */
+    export let height = undefined;
 </script>
 
-<div {...$$restProps}>
+<div
+    {...$$restProps}
+    style:width={width}
+    style:height={height}
+>
     <slot />
 </div>
 

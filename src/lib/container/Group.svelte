@@ -1,11 +1,18 @@
 <script>
     export let column = false;
+
+    /** @type {string} */
+    export let width = undefined;
+    /** @type {string} */
+    export let height = undefined;
 </script>
 
 <span
     {...$$restProps}
     class={"group " + $$restProps.class || ""}
     class:column
+    style:width={width}
+    style:height={height}
 >
     <slot />
 </span>
