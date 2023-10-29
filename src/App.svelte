@@ -1,77 +1,76 @@
 <script>
     import "./app.css";
+
     import {
-        CSSBase,
+        CSS,
         Button,
-        Label,
-        Select,
-        Group,
+        Text,
+        Input,
+        Container,
         Dialog,
-        DialogHeader,
-        DialogFooter,
     } from "./lib";
 
     let dialog;
 </script>
 
 <svelte:head>
-    <CSSBase auto />
+    <CSS.Root auto />
 </svelte:head>
 
 <div class="container">
     <div class="row" style="width: 100%;">
-        <Button
+        <Button.Root
             class="col has-small-margin"
             variant="full"
             color="primary"
             noRipple
         >
             No Ripple
-        </Button>
+        </Button.Root>
 
-        <Button
+        <Button.Root
             class="col has-small-margin"
             variant="full"
             color="primary"
             ripple={{ spreadDuration: "1s" }}
         >
             1s Spread Ripple Test
-        </Button>
+        </Button.Root>
 
-        <Button
+        <Button.Root
             class="col has-margin"
             variant="full"
             color="primary"
             ripple={{ color: "green" }}
         >
             Green Ripple Test
-        </Button>
+        </Button.Root>
 
-        <Button class="col has-small-margin" variant="full" color="primary"
-            >Ripple Test</Button
-        >
+        <Button.Root class="col has-small-margin" variant="full" color="primary">
+            Ripple Test
+        </Button.Root>
 
-        <Button class="col has-big-margin" variant="full" color="secondary"
-            >Ripple Test</Button
-        >
+        <Button.Root class="col has-big-margin" variant="full" color="secondary">
+            Ripple Test
+        </Button.Root>
 
-        <Button class="col has-small-margin" variant="full" color="destructive"
-            >Ripple Test</Button
-        >
+        <Button.Root class="col has-small-margin" variant="full" color="destructive">
+            Ripple Test
+        </Button.Root>
     </div>
 
     <br />
 
     <div class="row" style="justify-content: center;">
         <div class="col has-margin" style="max-width: 20rem;">
-            <Label
+            <Text.Label
                 primaryText="Checkbox"
                 secondaryText="This is just a test"
                 useLabel
                 row
             >
                 <input type="checkbox" checked />
-            </Label>
+            </Text.Label>
         </div>
     </div>
 
@@ -79,10 +78,10 @@
 
     <div class="row" style="justify-content: center;">
         <div class="col has-margin" style="max-width: 20rem;">
-            <Label
+            <Text.Label
                 secondaryText="New select component test"
             >
-                <Select
+                <Input.Select
                     items={[
                         { value: "option-1", label: "Option 1" },
                         { value: "option-2", label: "Option 2" },
@@ -91,21 +90,21 @@
                     ]}
                     selected={{ value: "option-1", label: "Option 1" }}
                     on:change={(ev) => {
-                        /** @type {import("./lib/select").SelectItem} */
+                        /** @type {import("./lib/input/select").SelectItem} */
                         const item = ev.detail;
                         if (!item) return;
 
                         console.debug("selected", item);
                     }}
                 />
-            </Label>
+            </Text.Label>
         </div>
 
         <div class="col has-margin" style="max-width: 20rem;">
-            <Label
+            <Text.Label
                 secondaryText="Always open"
             >
-                <Select
+                <Input.Select
                     items={[
                         { value: "option-1", label: "Option 1" },
                         { value: "option-2", label: "Option 2" },
@@ -115,14 +114,14 @@
                     selected={{ value: "option-1", label: "Option 1" }}
                     alwaysOpen
                     on:change={(ev) => {
-                        /** @type {import("./lib/select").SelectItem} */
+                        /** @type {import("./lib/input/select").SelectItem} */
                         const item = ev.detail;
                         if (!item) return;
 
                         console.debug("selected", item);
                     }}
                 />
-            </Label>
+            </Text.Label>
         </div>
     </div>
 
@@ -130,68 +129,68 @@
 
     <div class="row" style="justify-content: center;">
         <div class="col has-margin" style="max-width: 20rem;">
-            <Label
+            <Text.Label
                 secondaryText="Test input"
             >
                 <input value="Just some test input" />
-            </Label>
+            </Text.Label>
         </div>
     </div>
 
     <br />
 
     <div class="row" style="justify-content: center;">
-        <Group>
-            <Button variant="full" color="primary">
+        <Container.Group>
+            <Button.Root variant="full" color="primary">
                 Ripple Test
-            </Button>
+            </Button.Root>
 
-            <Button variant="full" color="secondary">
+            <Button.Root variant="full" color="secondary">
                 Ripple Test
-            </Button>
+            </Button.Root>
 
-            <Button variant="full" color="destructive">
+            <Button.Root variant="full" color="destructive">
                 Ripple Test
-            </Button>
-        </Group>
+            </Button.Root>
+        </Container.Group>
     </div>
 
     <br />
 
     <div class="row" style="justify-content: center;">
-        <Group column>
-            <Button variant="full" color="primary">
+        <Container.Group column>
+            <Button.Root variant="full" color="primary">
                 Ripple Test
-            </Button>
+            </Button.Root>
 
-            <Button variant="full" color="secondary">
+            <Button.Root variant="full" color="secondary">
                 Ripple Test
-            </Button>
+            </Button.Root>
 
-            <Button variant="full" color="destructive">
+            <Button.Root variant="full" color="destructive">
                 Ripple Test
-            </Button>
-        </Group>
+            </Button.Root>
+        </Container.Group>
     </div>
 
     <br />
 
     <div class="row" style="justify-content: center;">
-        <Button
+        <Button.Root
             variant="ghost"
             color="primary"
             on:click={() => dialog.showModal()}
         >
             Modal Dialog
-        </Button>
+        </Button.Root>
 
-        <Button
+        <Button.Root
             variant="outline"
             color="primary"
             on:click={() => dialog.show()}
         >
             Dialog
-        </Button>
+        </Button.Root>
     </div>
 
     <br />
@@ -208,8 +207,8 @@ kfals</pre>
     <br />
 </div>
 
-<Dialog bind:this={dialog}>
-    <DialogHeader
+<Dialog.Root bind:this={dialog}>
+    <Dialog.Header
         title="Dialog Test"
         on:close={() => dialog.close()}
     />
@@ -218,18 +217,18 @@ kfals</pre>
         Test Section ...
     </section>
 
-    <DialogFooter>
-        <Button
+    <Dialog.Footer>
+        <Button.Root
             color="secondary"
             on:click={() => dialog.close()}
         >
             Cancel 
-        </Button>
-        <Button
+        </Button.Root>
+        <Button.Root
             color="primary"
             on:click={() => dialog.close()}
         >
             OK
-        </Button>
-    </DialogFooter>
-</Dialog>
+        </Button.Root>
+    </Dialog.Footer>
+</Dialog.Root>
