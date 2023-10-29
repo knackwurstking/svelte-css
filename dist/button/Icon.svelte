@@ -23,7 +23,7 @@
 </button>
 
 <style>
-    button, .icon-button {
+    .icon-button {
         position: relative;
         width: 2.5em;
         height: 2.5em;
