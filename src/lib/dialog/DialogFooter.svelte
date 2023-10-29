@@ -1,3 +1,0 @@
-<footer {...$$restProps}>
-    <slot />
-</footer>

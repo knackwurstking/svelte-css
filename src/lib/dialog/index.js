@@ -1,3 +1,5 @@
-export { default as Dialog } from "./Dialog.svelte";
-export { default as DialogHeader } from "./DialogHeader.svelte";
-export { default as DialogFooter } from "./DialogFooter.svelte";
+export { default as Root } from "./Dialog.svelte";
+export { default as Header } from "./Header.svelte";
+export { default as Footer } from "./Footer.svelte";
+
+export { default as CloseButton } from "./CloseButton.svelte";
