@@ -3,15 +3,15 @@
 /** @typedef {typeof __propDef.slots}  LabelSlots */
 export default class Label extends SvelteComponent<{
     [x: string]: any;
-    primaryText?: string;
-    secondaryText?: string;
+    primary?: string;
+    secondary?: string;
     useLabel?: boolean;
     row?: boolean;
 }, {
     [evt: string]: CustomEvent<any>;
 }, {
-    primaryText: {};
-    secondaryText: {};
+    primary: {};
+    secondary: {};
     default: {};
 }> {
 }
@@ -22,8 +22,8 @@ import { SvelteComponent } from "svelte";
 declare const __propDef: {
     props: {
         [x: string]: any;
-        primaryText?: string;
-        secondaryText?: string;
+        primary?: string;
+        secondary?: string;
         useLabel?: boolean;
         row?: boolean;
     };
@@ -31,8 +31,8 @@ declare const __propDef: {
         [evt: string]: CustomEvent<any>;
     };
     slots: {
-        primaryText: {};
-        secondaryText: {};
+        primary: {};
+        secondary: {};
         default: {};
     };
 };

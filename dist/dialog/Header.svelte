@@ -18,7 +18,7 @@
     header {
         height: calc(2.5rem + var(--spacing));
         padding: var(--spacing);
-        padding-right: calc(4rem + var(--spacing));
+        padding-right: calc(3rem + var(--spacing));
         margin-bottom: var(--spacing);
         border-top-right-radius: var(--radius);
         border-top-left-radius: var(--radius);

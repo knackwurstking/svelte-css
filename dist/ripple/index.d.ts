@@ -1,6 +1,6 @@
-export * from "./ripple-start";
-export * from "./ripple-stop";
-export * from "./ripple";
+export { rippleStart as Start } from "./start";
+export { rippleStop as stop } from "./stop";
+export { ripple as Root } from "./ripple";
 export type RippleOptions = {
     color?: string;
     opacity?: number;

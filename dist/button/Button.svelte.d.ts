@@ -3,7 +3,7 @@
 /** @typedef {typeof __propDef.slots}  ButtonSlots */
 export default class Button extends SvelteComponent<{
     [x: string]: any;
-    ripple?: import("../ripple").RippleOptions;
+    ripple?: Ripple.RippleOptions;
     color?: "primary" | "secondary" | "destructive";
     variant?: "full" | "outline" | "ghost";
     noRipple?: boolean;
@@ -18,6 +18,7 @@ export default class Button extends SvelteComponent<{
 export type ButtonProps = typeof __propDef.props;
 export type ButtonEvents = typeof __propDef.events;
 export type ButtonSlots = typeof __propDef.slots;
+import { Ripple } from "..";
 import { SvelteComponent } from "svelte";
 declare const __propDef: {
     props: {

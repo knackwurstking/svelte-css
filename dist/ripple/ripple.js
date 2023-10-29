@@ -1,5 +1,5 @@
-import { rippleStart } from "./ripple-start";
-import { rippleStop } from "./ripple-stop";
+import { rippleStart } from "./start";
+import { rippleStop } from "./stop";
 
 /**
  * @typedef RippleOptions
@@ -10,7 +10,7 @@ import { rippleStop } from "./ripple-stop";
  * @param {Element} el
  * @param {RippleOptions} options 
  */
-export function Ripple(el, options = {}) {
+export function ripple(el, options = {}) {
     /** @type {HTMLElement} */
     let ripple;
     let destroyed = false;

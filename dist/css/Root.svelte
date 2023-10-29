@@ -3,20 +3,13 @@
     import "./_css/_containers.css";
     import "./_css/_grid.css";
     import "./_css/_table.css";
-    import "../button/button.css";
-    import "../button/icon-button.css";
-    import "../text/primary-text.css";
-    import "../text/secondary-text.css";
-    import "../text/label.css";
-    import "../dialog/dialog.css";
-    import "../container/group.css";
     import "./_css/_utils-is.css";
     import "./_css/_utils-no.css";
     import "./_css/_utils-has.css";
 
     import { onDestroy } from "svelte";
 
-    import { CSSThemeDark, CSSThemeLight } from "./themes";
+    import { Dark, Light } from "./themes";
 
     /** @type {"light" | "dark"} */
     export let theme = "light";
@@ -57,8 +50,8 @@
 
 <svelte:head>
     {#if theme === "light"}
-        <CSSThemeLight />
+        <Light />
     {:else if theme === "dark"}
-        <CSSThemeDark />
+        <Dark />
     {/if}
 </svelte:head>

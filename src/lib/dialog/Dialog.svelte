@@ -68,4 +68,12 @@
         border: var(--border-width, .1em) solid hsl(var(--border));
         border-radius: var(--radius);
     }
+
+    :global(
+        dialog > section,
+        dialog > article > section
+    ) {
+        padding-left: calc(var(--spacing) * 2);
+        padding-right: calc(var(--spacing) * 2);
+    }
 </style>

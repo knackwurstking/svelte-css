@@ -6,7 +6,7 @@
  * @param {Element} el
  * @param {RippleOptions} options
  */
-export function Ripple(el: Element, options?: RippleOptions): {
+export function ripple(el: Element, options?: RippleOptions): {
     /**
      * @param {RippleOptions} _options
      */

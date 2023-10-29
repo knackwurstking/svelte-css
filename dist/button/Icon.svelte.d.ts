@@ -1,9 +1,9 @@
-/** @typedef {typeof __propDef.props}  IconButtonProps */
-/** @typedef {typeof __propDef.events}  IconButtonEvents */
-/** @typedef {typeof __propDef.slots}  IconButtonSlots */
-export default class IconButton extends SvelteComponent<{
+/** @typedef {typeof __propDef.props}  IconProps */
+/** @typedef {typeof __propDef.events}  IconEvents */
+/** @typedef {typeof __propDef.slots}  IconSlots */
+export default class Icon extends SvelteComponent<{
     [x: string]: any;
-    ripple?: import("../ripple").RippleOptions;
+    ripple?: Ripple.RippleOptions;
     ghost?: boolean;
     color?: "primary" | "secondary" | "destructive";
     noRipple?: boolean;
@@ -12,12 +12,16 @@ export default class IconButton extends SvelteComponent<{
 } & {
     [evt: string]: CustomEvent<any>;
 }, {
-    default: {};
+    default: {
+        width: string;
+        height: string;
+    };
 }> {
 }
-export type IconButtonProps = typeof __propDef.props;
-export type IconButtonEvents = typeof __propDef.events;
-export type IconButtonSlots = typeof __propDef.slots;
+export type IconProps = typeof __propDef.props;
+export type IconEvents = typeof __propDef.events;
+export type IconSlots = typeof __propDef.slots;
+import { Ripple } from "..";
 import { SvelteComponent } from "svelte";
 declare const __propDef: {
     props: {
@@ -33,7 +37,10 @@ declare const __propDef: {
         [evt: string]: CustomEvent<any>;
     };
     slots: {
-        default: {};
+        default: {
+            width: string;
+            height: string;
+        };
     };
 };
 export {};
