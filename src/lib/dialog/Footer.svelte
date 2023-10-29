@@ -12,11 +12,11 @@
         justify-content: flex-end;
     }
 
-    :global(footer > *) {
+    footer :global(> *) {
         margin: auto calc(var(--spacing) / 2);
     }
 
-    :global(footer *:last-child) {
+    footer :global(*:last-child) {
         margin-right: 0;
     }
 </style>

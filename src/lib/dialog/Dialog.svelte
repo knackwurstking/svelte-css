@@ -69,10 +69,8 @@
         border-radius: var(--radius);
     }
 
-    :global(
-        dialog > section,
-        dialog > article > section
-    ) {
+    dialog :global(> section),
+    dialog > article :global(> section) {
         padding-left: calc(var(--spacing) * 2);
         padding-right: calc(var(--spacing) * 2);
     }
