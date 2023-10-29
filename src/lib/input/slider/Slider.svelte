@@ -7,7 +7,14 @@
     // TODO: simple slider component
 </script>
 
-<span class="slider" style:width style:height>
+<span
+    class="slider"
+    style:position="relative"
+    style:width={width}
+    style:height={height}
+    style:display="flex"
+    style:align-items="center"
+>
     <span class="range-container">
         <span class="range" />
     </span>
