@@ -22,7 +22,7 @@
                 --destructive-foreground: 0, 0%, 98%;
                 --border: 240, 5.9%, 90%;
                 --border-width: 1px;
-                --radius: 0.5em;
+                --radius: 0.25em;
                 --spacing: 0.5em;
             }
         `;

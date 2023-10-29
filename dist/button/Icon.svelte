@@ -45,7 +45,7 @@
         cursor: pointer;
     }
 
-    :global(.icon-button > *) {
+    .icon-button :global(> *) {
         width: 100%;
         height: 100%;
     }
