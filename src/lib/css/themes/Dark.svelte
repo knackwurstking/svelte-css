@@ -17,8 +17,6 @@
                 --secondary-foreground: 0, 0%, 98%;
                 --muted: 240, 3.7%, 15.9%;
                 --muted-foreground: 240, 5%, 64.9%;
-                --accent: 240, 3.7%, 15.9%;
-                --accent-foreground: 0, 0%, 98%;
                 --destructive: 0, 62.8%, 30.6%;
                 --destructive-foreground: 0, 0%, 98%;
                 --border: 240, 3.7%, 15.9%;
@@ -29,6 +27,6 @@
         `;
         const toRemove = document.head.querySelector("style.theme");
         if (toRemove) document.head.removeChild(toRemove);
-        document.head.append(style);
+        document.head.insertBefore(style, document.head.querySelector("style"));
     });
 </script>
