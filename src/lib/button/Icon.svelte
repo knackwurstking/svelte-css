@@ -19,7 +19,7 @@
     use:Ripple.Root={noRipple ? null : { centered: true, ...ripple }}
     on:click
 >
-    <slot width="100%" height="100%" />
+    <slot />
 </button>
 
 <style>
@@ -43,6 +43,11 @@
         box-shadow: none;
 
         cursor: pointer;
+    }
+
+    :global(.icon-button > *) {
+        width: 100%;
+        height: 100%;
     }
 
     .icon-button.ghost {

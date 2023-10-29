@@ -12,10 +12,7 @@ export default class Icon extends SvelteComponent<{
 } & {
     [evt: string]: CustomEvent<any>;
 }, {
-    default: {
-        width: string;
-        height: string;
-    };
+    default: {};
 }> {
 }
 export type IconProps = typeof __propDef.props;
@@ -37,10 +34,7 @@ declare const __propDef: {
         [evt: string]: CustomEvent<any>;
     };
     slots: {
-        default: {
-            width: string;
-            height: string;
-        };
+        default: {};
     };
 };
 export {};
