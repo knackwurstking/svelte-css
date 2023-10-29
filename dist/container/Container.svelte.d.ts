@@ -3,6 +3,8 @@
 /** @typedef {typeof __propDef.slots}  ContainerSlots */
 export default class Container extends SvelteComponent<{
     [x: string]: any;
+    height?: string;
+    width?: string;
 }, {
     [evt: string]: CustomEvent<any>;
 }, {
@@ -16,6 +18,8 @@ import { SvelteComponent } from "svelte";
 declare const __propDef: {
     props: {
         [x: string]: any;
+        height?: string;
+        width?: string;
     };
     events: {
         [evt: string]: CustomEvent<any>;
