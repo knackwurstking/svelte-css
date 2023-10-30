@@ -24,8 +24,10 @@
     export let min = 0;
     /** @type {number} */
     export let max = 100;
+
     /** @type {number} */
     export let value = 0;
+    $: typeof value === "number" && valueChange();
 
     /** @type {string} */
     export let width = "100%";
@@ -41,7 +43,6 @@
     let cleanUp = [];
     let initialized = false;
     let rangeWidth;
-
     let thumbLeft;
 
     /***********************
@@ -57,8 +58,6 @@
          */
         function moveThumb(width, range) {
             value = Math.round(100 / (width / range));
-            rangeWidth = `${100 / (width / range)}%`;
-            thumbLeft = `calc(${(100 / (width / range))}% - (${thumbWidth} / 2))`;
             if (initialized) dispatch("change", value);
         }
 
@@ -108,6 +107,24 @@
         });
 
         initialized = true;
+    }
+
+    function valueChange() {
+        if (!thumb) return;
+        const thumbWidth = getComputedStyle(thumb).fontSize;
+
+        /**
+         * @param {number} width
+         * @param {number} range
+         */
+        function moveThumb(width, range) {
+            console.debug("value change");
+            rangeWidth = `${100 / (width / range)}%`;
+            thumbLeft = `calc(${(100 / (width / range))}% - (${thumbWidth} / 2))`;
+            if (initialized) dispatch("change", value);
+        }
+
+        moveThumb(max-min, value-min);
     }
 
     /********************
