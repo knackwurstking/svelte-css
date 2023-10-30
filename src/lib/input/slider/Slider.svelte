@@ -50,8 +50,6 @@
      ***********************/
 
     async function initializeSlider() {
-        const thumbWidth = getComputedStyle(thumb).fontSize;
-
         /**
          * @param {number} width
          * @param {number} range
