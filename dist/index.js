@@ -1,5 +1,4 @@
 export * as Button from "./button";
-export * as Container from "./container";
 export * as CSS from "./css";
 export * as Dialog from "./dialog";
 export * as Input from "./input";

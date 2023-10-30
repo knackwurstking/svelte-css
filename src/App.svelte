@@ -6,7 +6,6 @@
         Button,
         Text,
         Input,
-        Container,
         Dialog,
     } from "./lib";
 
@@ -140,7 +139,7 @@
     <br />
 
     <div class="row" style="justify-content: center;">
-        <Container.Group>
+        <div class="group">
             <Button.Root variant="full" color="primary">
                 Ripple Test
             </Button.Root>
@@ -152,13 +151,13 @@
             <Button.Root variant="full" color="destructive">
                 Ripple Test
             </Button.Root>
-        </Container.Group>
+        </div>
     </div>
 
     <br />
 
     <div class="row" style="justify-content: center;">
-        <Container.Group column>
+        <div class="group column">
             <Button.Root variant="full" color="primary">
                 Ripple Test
             </Button.Root>
@@ -170,7 +169,7 @@
             <Button.Root variant="full" color="destructive">
                 Ripple Test
             </Button.Root>
-        </Container.Group>
+        </div>
     </div>
 
     <br />
