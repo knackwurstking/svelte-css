@@ -2,11 +2,11 @@
 /** @typedef {typeof __propDef.events}  SliderEvents */
 /** @typedef {typeof __propDef.slots}  SliderSlots */
 export default class Slider extends SvelteComponent<{
+    value: number;
     height?: string;
     width?: string;
     min?: number;
     max?: number;
-    value?: number;
 }, {
     change: CustomEvent<any>;
 } & {
@@ -19,11 +19,11 @@ export type SliderSlots = typeof __propDef.slots;
 import { SvelteComponent } from "svelte";
 declare const __propDef: {
     props: {
+        value: number;
         height?: string;
         width?: string;
         min?: number;
         max?: number;
-        value?: number;
     };
     events: {
         change: CustomEvent<any>;

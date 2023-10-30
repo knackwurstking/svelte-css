@@ -26,7 +26,7 @@
     export let max = 100;
 
     /** @type {number} */
-    export let value = 0;
+    export let value;
     $: typeof value === "number" && valueChange();
 
     /** @type {string} */
@@ -50,15 +50,14 @@
      ***********************/
 
     async function initializeSlider() {
-        const thumbWidth = getComputedStyle(thumb).fontSize;
-
         /**
          * @param {number} width
          * @param {number} range
          */
         function moveThumb(width, range) {
-            value = Math.round(100 / (width / range));
+            value = Math.round(100 / (width / range)) + min;
             if (initialized) dispatch("change", value);
+            console.debug("pointer event:", value, min, max);
         }
 
         /** @param {PointerEvent} ev */
@@ -98,7 +97,6 @@
             move(ev);
         };
 
-        moveThumb(max-min, value-min);
         slider.addEventListener("pointerdown", start);
 
         cleanUp.push(() => {
@@ -118,10 +116,10 @@
          * @param {number} range
          */
         function moveThumb(width, range) {
-            console.debug("value change");
             rangeWidth = `${100 / (width / range)}%`;
             thumbLeft = `calc(${(100 / (width / range))}% - (${thumbWidth} / 2))`;
             if (initialized) dispatch("change", value);
+            console.debug("valueChange:", value, min, max);
         }
 
         moveThumb(max-min, value-min);
