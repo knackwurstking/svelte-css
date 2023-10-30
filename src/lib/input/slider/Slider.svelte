@@ -1,43 +1,86 @@
 <script>
+    import { onDestroy } from "svelte";
+
+    /** @type {HTMLElement} */
+    let slider;
+
+    /** @type {HTMLElement} */
+    let range;
+
+    /** @type {HTMLElement} */
+    let thumb;
+
+    $: slider && thumb && initializeSlider();
+
     /** @type {string} */
-    export let width = "20px"; // TODO: using em instead of px
+    export let width = "100%"; // TODO: using em instead of px
     /** @type {string} */
-    export let height = "200px"; // TODO: using em instead of px
+    export let height = "1.25em"; // TODO: using em instead of px
+
+    let cleanUp = [];
+
+    async function initializeSlider() {
+        const move = async () => {
+            // TODO: moving thumb and range (y-axis)
+        };
+
+        const end = async () => {
+            thumb.style.transform = "scale(1)";
+
+            window.removeEventListener("pointermove", move);
+            window.removeEventListener("pointerup", end);
+            window.removeEventListener("pointercancel", end);
+        };
+
+        const start = async () => {
+            thumb.style.transform = "scale(1.25)";
+
+            window.addEventListener("pointermove", move);
+            window.addEventListener("pointerup", end);
+            window.addEventListener("pointercancel", end);
+        };
+
+        thumb.addEventListener("pointerdown", start);
+        cleanUp.push(() => {
+            thumb.removeEventListener("pointerdown", start);
+            end();
+        });
+    }
+
+    onDestroy(() => cleanUp.forEach(fn => fn()));
 </script>
 
-<span
+<div
+    bind:this={slider}
     class="slider"
     style:position="relative"
     style:width={width}
     style:height={height}
     style:display="flex"
     style:align-items="center"
+    style:cursor="pointer"
 >
-    <span
+    <div
         class="range-container"
-        style:display="block"
         style:width="100%"
-        style:height="3px"
-        style:background-color="black"
+        style:height=".35em"
+        style:background-color="red"
     >
-        <span
+        <div
+            bind:this={range}
             class="range"
-            style:height="3px"
-            style:background-color="white"
+            style:height="100%"
+            style:background-color="green"
         />
-    </span>
-    <span
+    </div>
+
+    <div
+        bind:this={thumb}
         class="thumb"
-        style:display="block"
         style:width="1.25em"
         style:height="1.25em"
         style:border-radius="50%"
-        style:background-color="white"
+        style:background-color="yellow"
+        style:transition="transform .25s ease"
     />
-</span>
-
-<style>
-    .thumb:focus {
-        transform: scale(1.25);
-    }
-</style>
+</div>

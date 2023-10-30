@@ -8,6 +8,7 @@
         Input,
         Dialog,
     } from "./lib";
+    import Slider from "./lib/input/slider/Slider.svelte";
 
     let dialog;
 </script>
@@ -201,6 +202,12 @@ package main
 func main() dsfj
     Just a test code block
 kfals</pre>
+    </div>
+
+    <br />
+
+    <div class="row" style="justify-content: center;">
+        <Input.Slider />
     </div>
 
     <br />
