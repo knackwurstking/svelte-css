@@ -13,9 +13,9 @@
     $: slider && thumb && initializeSlider();
 
     /** @type {string} */
-    export let width = "100%"; // TODO: using em instead of px
+    export let width = "100%";
     /** @type {string} */
-    export let height = "1.25em"; // TODO: using em instead of px
+    export let height = "1.25em";
 
     let cleanUp = [];
 
