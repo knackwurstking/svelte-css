@@ -14,7 +14,7 @@
     /** @type {HTMLElement} */
     let thumb;
 
-    $: !initialized && slider && thumb && initializeSlider();
+    $: !initialized && !!slider && !!thumb && initializeSlider();
 
     /******************************
      * Variable Export Definitions
@@ -27,7 +27,7 @@
 
     /** @type {number} */
     export let value;
-    $: typeof value === "number" && valueChange();
+    $: typeof value === "number" && !!thumb && valueChange();
 
     /** @type {string} */
     export let width = "100%";

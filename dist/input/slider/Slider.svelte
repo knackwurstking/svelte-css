@@ -14,7 +14,7 @@
     /** @type {HTMLElement} */
     let thumb;
 
-    $: !initialized && slider && thumb && initializeSlider();
+    $: !initialized && !!slider && !!thumb && initializeSlider();
 
     /******************************
      * Variable Export Definitions
@@ -27,7 +27,7 @@
 
     /** @type {number} */
     export let value;
-    $: typeof value === "number" && valueChange();
+    $: typeof value === "number" && !!thumb && valueChange();
 
     /** @type {string} */
     export let width = "100%";
@@ -57,7 +57,6 @@
         function moveThumb(width, range) {
             value = Math.round(100 / (width / range)) + min;
             if (initialized) dispatch("change", value);
-            console.debug("pointer event:", value, min, max);
         }
 
         /** @param {PointerEvent} ev */
@@ -108,6 +107,7 @@
     }
 
     function valueChange() {
+        console.debug("valueChange");
         if (!thumb) return;
         const thumbWidth = getComputedStyle(thumb).fontSize;
 
@@ -116,10 +116,10 @@
          * @param {number} range
          */
         function moveThumb(width, range) {
+            console.debug({ value, min, max, width, range });
             rangeWidth = `${100 / (width / range)}%`;
             thumbLeft = `calc(${(100 / (width / range))}% - (${thumbWidth} / 2))`;
             if (initialized) dispatch("change", value);
-            console.debug("valueChange:", value, min, max);
         }
 
         moveThumb(max-min, value-min);
