@@ -206,8 +206,12 @@ kfals</pre>
 
     <br />
 
-    <div class="row" style="justify-content: center;">
-        <Input.Slider />
+    <div class="row has-big-padding" style="justify-content: center;">
+        <Input.Slider
+            min={25}
+            max={125}
+            value={50}
+        />
     </div>
 
     <br />
