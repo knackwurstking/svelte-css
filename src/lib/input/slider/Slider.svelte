@@ -1,5 +1,5 @@
 <script>
-    import { onDestroy } from "svelte";
+    import { onDestroy, createEventDispatcher } from "svelte";
 
     /***********
      * Bindings
@@ -36,6 +36,8 @@
      * Variable Definitions
      ***********************/
 
+    const dispatch = createEventDispatcher();
+
     let cleanUp = [];
     let initialized = false;
     let rangeWidth;
@@ -57,6 +59,7 @@
             value = Math.round(100 / (width / range));
             rangeWidth = `${100 / (width / range)}%`;
             thumbLeft = `calc(${(100 / (width / range))}% - (${thumbWidth} / 2))`;
+            if (initialized) dispatch("change", value);
         }
 
         /** @param {PointerEvent} ev */
@@ -96,8 +99,6 @@
             move(ev);
         };
 
-        initialized = true;
-
         moveThumb(max-min, value-min);
         slider.addEventListener("pointerdown", start);
 
@@ -105,6 +106,8 @@
             slider.removeEventListener("pointerdown", start);
             end();
         });
+
+        initialized = true;
     }
 
     /********************
@@ -120,36 +123,42 @@
     style:position="relative"
     style:width={width}
     style:height={height}
-    style:display="flex"
-    style:align-items="center"
     style:cursor="pointer"
+    style:padding-left="1em"
+    style:padding-right="1em"
 >
-    <div
-        class="range-container"
+    <span
         style:width="100%"
-        style:height=".35em"
-        style:background-color="hsl(var(--secondary))"
-        style:border-radius="var(--radius)"
+        style:display="flex"
+        style:align-items="center"
     >
         <div
-            bind:this={range}
-            class="range"
-            style:width={rangeWidth || "0"}
-            style:height="100%"
-            style:background-color="hsl(var(--primary))"
+            class="range-container"
+            style:width="100%"
+            style:height=".35em"
+            style:background-color="hsl(var(--secondary))"
             style:border-radius="var(--radius)"
-        />
-    </div>
+        >
+            <div
+                bind:this={range}
+                class="range"
+                style:width={rangeWidth || "0"}
+                style:height="100%"
+                style:background-color="hsl(var(--primary))"
+                style:border-radius="var(--radius)"
+            />
+        </div>
 
-    <div
-        bind:this={thumb}
-        class="thumb"
-        style:position="absolute"
-        style:left={thumbLeft || "-.625em"}
-        style:width="1.25em"
-        style:height="1.25em"
-        style:border-radius="50%"
-        style:background-color="hsl(var(--primary))"
-        style:transition="transform .25s ease"
-    />
+        <div
+            bind:this={thumb}
+            class="thumb"
+            style:position="absolute"
+            style:left={thumbLeft || "-.625em"}
+            style:width="1.25em"
+            style:height="1.25em"
+            style:border-radius="50%"
+            style:background-color="hsl(var(--primary))"
+            style:transition="transform .25s ease"
+        />
+    </span>
 </div>
