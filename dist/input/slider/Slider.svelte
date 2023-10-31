@@ -107,7 +107,6 @@
     }
 
     function valueChange() {
-        console.debug("valueChange");
         if (!thumb) return;
         const thumbWidth = getComputedStyle(thumb).fontSize;
 
@@ -116,7 +115,6 @@
          * @param {number} range
          */
         function moveThumb(width, range) {
-            console.debug({ value, min, max, width, range });
             rangeWidth = `${100 / (width / range)}%`;
             thumbLeft = `calc(${(100 / (width / range))}% - (${thumbWidth} / 2))`;
             if (initialized) dispatch("change", value);
