@@ -175,3 +175,9 @@
         />
     </span>
 </div>
+
+<style>
+    * {
+        touch-action: none;
+    }
+</style>
