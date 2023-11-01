@@ -4,6 +4,7 @@
 export default class Text extends SvelteComponent<{
     [x: string]: any;
     title?: string;
+    invalid?: boolean;
     value?: string;
     placeholder?: string;
 }, {
@@ -20,6 +21,7 @@ declare const __propDef: {
     props: {
         [x: string]: any;
         title?: string;
+        invalid?: boolean;
         value?: string;
         placeholder?: string;
     };

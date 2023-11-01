@@ -6,10 +6,17 @@
     /** @type {string} */
     export let placeholder = "";
 
+    export let invalid = false;
+
     let focus = false;
 </script>
 
-<div {...$$restProps} class={"input " + $$restProps.class || ""} class:focus={focus}>
+<div
+    {...$$restProps}
+    class={"input " + $$restProps.class || ""}
+    class:focus={focus}
+    class:invalid={invalid}
+>
     <span class="title">{title}</span>
     <input
         bind:value
@@ -29,6 +36,10 @@
 
     .input.focus {
         border-color: hsl(var(--primary));
+    }
+
+    .input.invalid {
+        border-color: hsl(var(--destructive));
     }
 
     .input .title {
