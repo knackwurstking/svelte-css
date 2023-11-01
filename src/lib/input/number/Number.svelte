@@ -18,7 +18,12 @@
     let focus = false;
 </script>
 
-<div {...$$restProps} class={"input " + $$restProps.class || ""} class:focus={focus} class:invalid={invalid}>
+<div
+    {...$$restProps}
+    class={"input " + $$restProps.class || ""}
+    class:focus={focus}
+    class:invalid={invalid}
+>
     <span class="title">{title}</span>
     <input
         type="number"

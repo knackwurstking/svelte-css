@@ -1,10 +1,12 @@
 <script>
     /** @type {string} */
     export let title = "";
-    /** @type {string} */
-    export let value = "";
+
     /** @type {string} */
     export let placeholder = "";
+
+    /** @type {string} */
+    export let value = "";
 
     export let invalid = false;
 
