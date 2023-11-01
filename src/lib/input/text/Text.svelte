@@ -18,14 +18,17 @@
     .input {
         width: 100%;
         border-bottom: var(--border-width) solid hsl(var(--border));
+        border-radius: var(--radius);
     }
 
     .input .title {
         font-size: 0.85em;
         font-weight: 300;
         font-style: italic;
-        padding-left: var(--spacing);
-        text-decoration: underline;
+        padding-left: calc(var(--spacing) * 2);
+        padding-right: calc(var(--spacing) * 2);
+        border-bottom: var(--border-width) solid hsl(var(--border));
+        border-radius: var(--radius);
     }
 
     input {
