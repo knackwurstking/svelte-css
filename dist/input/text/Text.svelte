@@ -31,8 +31,7 @@
 
 <style>
     .input {
-        min-width: fit-content;
-        width: 100%;
+        width: fit-content;
 
         border-bottom: var(--border-width) solid hsl(var(--border));
 
@@ -56,8 +55,7 @@
     }
 
     input {
-        min-width: fit-content;
-        width: 100%;
+        width: fit-content;
 
         margin: 0;
         padding-top: calc(var(--spacing) / 1.5);
