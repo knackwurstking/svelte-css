@@ -39,8 +39,11 @@
 
 <style>
     .input {
+        min-width: fit-content;
         width: 100%;
+
         border-bottom: var(--border-width) solid hsl(var(--border));
+
         transition: border-color .25s linear;
     }
 
@@ -61,6 +64,7 @@
     }
 
     input {
+        min-width: fit-content;
         width: 100%;
 
         margin: 0;
