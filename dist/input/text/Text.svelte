@@ -9,7 +9,7 @@
     let focus = false;
 </script>
 
-<div {...$$restProps} class={"input " + $$restProps.class} class:focus={focus}>
+<div {...$$restProps} class={"input " + $$restProps.class || ""} class:focus={focus}>
     <span class="title">{title}</span>
     <input
         bind:value
