@@ -8,7 +8,6 @@
         Input,
         Dialog,
     } from "./lib";
-    import Slider from "./lib/input/slider/Slider.svelte";
 
     let dialog;
 </script>
@@ -129,11 +128,10 @@
 
     <div class="row" style="justify-content: center;">
         <div class="col has-margin" style="max-width: 20rem;">
-            <Text.Label
-                secondary="Test input"
-            >
-                <input value="Just some test input" />
-            </Text.Label>
+            <Input.Text
+                title="Just some test input"
+                placeholder="type something here..."
+            />
         </div>
     </div>
 
