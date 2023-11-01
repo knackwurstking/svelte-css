@@ -117,7 +117,6 @@
         function moveThumb(width, range) {
             rangeWidth = `${100 / (width / range)}%`;
             thumbLeft = `calc(${(100 / (width / range))}% - (${thumbWidth} / 2))`;
-            if (initialized) dispatch("change", value);
         }
 
         moveThumb(max-min, value-min);
