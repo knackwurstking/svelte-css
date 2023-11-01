@@ -1,34 +1,42 @@
 <script>
-    import { Secondary } from "../../text";
-
     /** @type {string} */
     export let title = "";
     /** @type {string} */
     export let value = "";
     /** @type {string} */
     export let placeholder = "";
+
+    let focus = false;
 </script>
 
-<div {...$$restProps} class={"input " + $$restProps.class}>
+<div {...$$restProps} class={"input " + $$restProps.class} class:focus={focus}>
     <span class="title">{title}</span>
-    <input bind:value {placeholder} on:change />
+    <input
+        bind:value
+        {placeholder}
+        on:change
+        on:focus={() => focus = true}
+        on:blur={() => focus = false}
+    />
 </div>
 
 <style>
     .input {
         width: 100%;
         border-bottom: var(--border-width) solid hsl(var(--border));
-        border-radius: var(--radius);
+        transition: border-color .25s linear;
+    }
+
+    .input.focus {
+        border-color: hsl(var(--primary));
     }
 
     .input .title {
         font-size: 0.85em;
         font-weight: 300;
         font-style: italic;
-        padding-left: calc(var(--spacing) * 2);
-        padding-right: calc(var(--spacing) * 2);
-        border-bottom: var(--border-width) solid hsl(var(--border));
-        border-radius: var(--radius);
+        padding-left: var(--spacing);
+        padding-right: var(--spacing);
     }
 
     input {
