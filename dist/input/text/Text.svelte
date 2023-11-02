@@ -24,6 +24,7 @@
         bind:value
         {placeholder}
         on:change
+        on:input
         on:focus={() => focus = true}
         on:blur={() => focus = false}
     />

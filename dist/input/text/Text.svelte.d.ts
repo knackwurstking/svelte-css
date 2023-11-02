@@ -9,6 +9,7 @@ export default class Text extends SvelteComponent<{
     placeholder?: string;
 }, {
     change: Event;
+    input: Event;
 } & {
     [evt: string]: CustomEvent<any>;
 }, {}> {
@@ -27,6 +28,7 @@ declare const __propDef: {
     };
     events: {
         change: Event;
+        input: Event;
     } & {
         [evt: string]: CustomEvent<any>;
     };
