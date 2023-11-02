@@ -56,7 +56,7 @@
          */
         function moveThumb(width, range) {
             value = Math.round(100 / (width / range)) + min;
-            if (initialized) dispatch("change", value);
+            if (initialized) dispatch("input", value);
         }
 
         /** @param {PointerEvent} ev */
@@ -117,6 +117,7 @@
         function moveThumb(width, range) {
             rangeWidth = `${100 / (width / range)}%`;
             thumbLeft = `calc(${(100 / (width / range))}% - (${thumbWidth} / 2))`;
+            if (initialized) dispatch("change", value);
         }
 
         moveThumb(max-min, value-min);

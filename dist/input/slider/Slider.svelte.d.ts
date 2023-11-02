@@ -8,6 +8,7 @@ export default class Slider extends SvelteComponent<{
     min?: number;
     max?: number;
 }, {
+    input: CustomEvent<any>;
     change: CustomEvent<any>;
 } & {
     [evt: string]: CustomEvent<any>;
@@ -26,6 +27,7 @@ declare const __propDef: {
         max?: number;
     };
     events: {
+        input: CustomEvent<any>;
         change: CustomEvent<any>;
     } & {
         [evt: string]: CustomEvent<any>;
