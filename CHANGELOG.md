@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.4.1
+
+- Fix group border-radius styles (add !important)
+
 ## v0.4.0
 
 - Add Ripple component (use:Ripple)
