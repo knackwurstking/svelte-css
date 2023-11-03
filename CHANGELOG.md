@@ -3,6 +3,7 @@
 ## v0.4.1
 
 - Fix group border-radius styles (add !important)
+- Set input (text, number) to 100% width
 
 ## v0.4.0
 
