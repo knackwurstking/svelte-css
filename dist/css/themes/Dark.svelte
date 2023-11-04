@@ -3,6 +3,7 @@
 
     onMount(() => {
         const style = document.createElement("style");
+        style.classList.add("theme");
         style.innerText = `
             :root {
                 --background: 240, 10%, 3.9%;
