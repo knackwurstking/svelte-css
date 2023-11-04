@@ -107,15 +107,12 @@
         display: none;
     }
 
-    .select:not(.open) .options .option.selected {
-        margin-right: 2.5em;
-    }
-
     .select .options .option {
-        padding: calc(var(--spacing));
-        user-select: none;
         height: 100%;
+        padding: calc(var(--spacing));
+        padding-right: 2.5em;
         transition: background-color .25s linear;
+        user-select: none;
     }
 
     .select.open .options .option.selected {
