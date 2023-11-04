@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.4.2
+
+- Change input/textarea focus style
+- Set color input cursor to color
+
 ## v0.4.1
 
 - Fix group border-radius styles (add !important)

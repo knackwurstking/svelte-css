@@ -164,6 +164,7 @@ textarea {
     border: var(--border-width, .1em) solid hsl(var(--border));
     border-radius: var(--radius);
     box-shadow: none;
+    transition: border-color .25s linear;
 }
 
 input {
@@ -190,22 +191,16 @@ input[type="checkbox"] {
 input[type="color"] {
     height: calc(var(--spacing) * 2 + 2em);
     padding: var(--spacing) var(--spacing);
+    cursor: pointer;
 }
 
 input:disabled {
     opacity: 0.25;
 }
 
-input,
-textarea {
-    outline-offset: .15em;
-    outline: .1em solid transparent;
-    margin: .25em;
-}
-
 input:focus:not([type=checkbox]),
 textarea:focus {
-    outline: var(--border-width, .1em) solid hsl(var(--border));
+    border-color: hsl(var(--primary));
 }
 
 input[aria-invalid="true"] {
