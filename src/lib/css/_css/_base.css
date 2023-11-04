@@ -165,6 +165,7 @@ textarea {
     border-radius: var(--radius);
     box-shadow: none;
     transition: border-color .25s linear;
+    outline: none !important;
 }
 
 input {
