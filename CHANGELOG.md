@@ -4,6 +4,8 @@
 
 - Change input/textarea focus style
 - Set color input cursor to color
+- Fix theme picker
+- Add select option padding-right (remove margin-right)
 
 ## v0.4.1
 
