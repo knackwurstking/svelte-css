@@ -8,6 +8,7 @@
     },
     "exports": {
         ".": {
+            "types": "./src/lib/index.js",
             "svelte": "./src/lib/index.js"
         }
     },
@@ -27,5 +28,6 @@
         "vite": "^4.4.2"
     },
     "svelte": "./src/lib/index.js",
+    "types": "./src/lib/index.js",
     "type": "module"
 }
