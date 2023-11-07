@@ -1,8 +1,9 @@
 <script>
-    /** @type {string} */
-    export let title = "";
+    /******************************
+     * Variable Export Definitions
+     ******************************/
 
-    /** @type {string} */
+    export let title = "";
     export let placeholder = "";
 
     /** @type {number} */
@@ -15,6 +16,10 @@
 
     export let invalid = false;
 
+    /***********************
+     * Variable Definitions
+     ***********************/
+
     let focus = false;
 </script>
 
@@ -24,7 +29,9 @@
     class:focus={focus}
     class:invalid={invalid}
 >
-    <span class="title">{title}</span>
+    {#if !!title}
+        <span class="title">{title}</span>
+    {/if}
     <input
         type="number"
         {placeholder}
