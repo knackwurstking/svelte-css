@@ -38,7 +38,7 @@
         class={"label " + ($$restProps.class || "")}
         class:row
     >
-        <span class="col">
+        <span class="col no-user-select">
             {#if !!primary}
                 <Primary>
                     <span>{primary}</span> <slot name="primary" />
@@ -73,7 +73,6 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        user-select: none;
     }
 
     .label.row > span:nth-child(1) {

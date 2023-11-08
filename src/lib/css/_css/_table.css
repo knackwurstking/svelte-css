@@ -1,6 +1,10 @@
 table {
     width: 100%;
     border-collapse: separate;
+
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: noen;
     user-select: none;
 }
 

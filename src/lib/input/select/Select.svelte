@@ -61,7 +61,7 @@
 
         {#each items as item}
             <div
-                class="option"
+                class="option no-user-select"
                 class:selected={(item.value === selected?.value)}
                 on:click={() => clickOption(item)}
             >
@@ -112,7 +112,6 @@
         padding: calc(var(--spacing));
         padding-right: 2.5em;
         transition: background-color .25s linear;
-        user-select: none;
     }
 
     .select.open .options .option.selected {
