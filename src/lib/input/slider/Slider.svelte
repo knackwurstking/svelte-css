@@ -133,6 +133,7 @@
 <div
     bind:this={slider}
     class="slider"
+    style={`--slider-color: hsl(var(--primary));` + $$restProps.style || ""}
     style:position="relative"
     style:width={width}
     style:height={height}
@@ -157,7 +158,7 @@
                 class="range"
                 style:width={rangeWidth || "0"}
                 style:height="100%"
-                style:background-color="hsl(var(--primary))"
+                style:background-color="var(--slider-color)"
                 style:border-radius="var(--radius)"
             />
         </div>
@@ -170,7 +171,7 @@
             style:width="1.25em"
             style:height="1.25em"
             style:border-radius="50%"
-            style:background-color="hsl(var(--primary))"
+            style:background-color="var(--slider-color)"
             style:transition="transform .25s ease"
         />
     </span>
