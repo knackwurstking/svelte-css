@@ -21,3 +21,8 @@
     -webkit-user-select: noen;
     user-select: none;
 }
+
+.no-overflow {
+    -ms-overflow-style: none;
+    overflow: none;
+}
