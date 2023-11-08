@@ -12,8 +12,7 @@
     style={
         "position: absolute;" +
         "top: var(--spacing);" +
-        "right: var(--spacing);" +
-        "border: none;"
+        "right: var(--spacing);"
     }
     on:click={() => dispatch("close")}
 >
