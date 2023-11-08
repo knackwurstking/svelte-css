@@ -32,8 +32,8 @@
 
         background-color: transparent;
 
-        border: var(--border-width, .1em) solid currentColor;
-        border-radius: var(--radius);
+        border: none;
+        border-radius: 50%;
 
         outline: none;
 
