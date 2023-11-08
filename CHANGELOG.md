@@ -9,6 +9,7 @@
     - .no-user-select
     - .no-overflow
 - collapse/expand exports to `Input.Select`
+- `--slider-color` to slider input component
 
 ### Changed
 
