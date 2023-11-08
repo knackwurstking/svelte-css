@@ -21,10 +21,3 @@
 .has-big-padding {
     padding: calc(var(--spacing) * 2);
 }
-
-.has-user-select-none {
-    -ms-user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: noen;
-    user-select: none;
-}

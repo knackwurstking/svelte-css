@@ -14,3 +14,10 @@
 .no-margin {
     margin: 0;
 }
+
+.no-user-select {
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: noen;
+    user-select: none;
+}
