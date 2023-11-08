@@ -10,3 +10,8 @@
 
 - Input.Month
 - Input.Date
+- Settings margin between article cards
+
+### Fixed
+
+- Footer row height
