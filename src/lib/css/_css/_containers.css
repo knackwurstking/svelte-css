@@ -11,6 +11,7 @@
     padding: var(--spacing);
     border: var(--border-width, 0.1em) solid hsl(var(--border));
     border-radius: var(--radius);
+    overflow: hidden;
 }
 
 .group {
