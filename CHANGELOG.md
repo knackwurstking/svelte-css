@@ -2,16 +2,13 @@
 
 ## [unreleased] v0.5.0
 
-### Changed
-
-- Input (Month/Date/Number/Text) remove .title if empty
-
 ### Added
 
-- Input.Month
-- Input.Date
-- Settings margin between article cards
+- input component for type month and date
+- css utils:
+    - .no-user-select
+    - .no-overflow
 
-### Fixed
+### Changed
 
-- Footer row height
+- icon button borders (round, no border)
