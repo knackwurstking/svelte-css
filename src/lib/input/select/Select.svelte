@@ -28,6 +28,18 @@
 
     let open = alwaysOpen;
 
+    /******************************
+     * Function Export Definitions
+     ******************************/
+
+    export async function expand() {
+        open = true;
+    }
+
+    export async function collapse() {
+        open = false;
+    }
+
     /***********************
      * Function Definitions
      ***********************/
