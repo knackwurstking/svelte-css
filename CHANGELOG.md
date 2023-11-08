@@ -8,6 +8,7 @@
 - css utils:
     - .no-user-select
     - .no-overflow
+- collapse/expand exports to `Input.Select`
 
 ### Changed
 
