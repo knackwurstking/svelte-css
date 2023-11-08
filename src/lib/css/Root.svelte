@@ -1,4 +1,5 @@
 <script>
+    import "./_css/_fonts.css";
     import "./_css/_base.css";
     import "./_css/_containers.css";
     import "./_css/_grid.css";
