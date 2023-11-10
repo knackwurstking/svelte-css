@@ -6,24 +6,40 @@
         style.classList.add("theme");
         style.innerText = `
             :root {
-                --background: 240, 10%, 3.9%;
-                --foreground: 0, 0%, 98%;
-                --card: 240, 10%, 3.9%;
-                --card-foreground: 0, 0%, 98%;
-                --popover: 240, 10%, 3.9%;
-                --popover-foreground: 0, 0%, 98%;
+                --hsl-color: 105;
+
+                --bg: var(--hsl-color), 10%, 6%;
+                --fg: 0, 0%, 98%;
+
+                --bg2: var(--hsl-color), 10%, 12%;
+                --fg2: 0, 0%, 98%;
+
                 --primary: 0, 0%, 98%;
-                --primary-foreground: 240, 5.9%, 10%;
-                --secondary: 240, 3.7%, 15.9%;
-                --secondary-foreground: 0, 0%, 98%;
-                --muted: 240, 3.7%, 15.9%;
-                --muted-foreground: 240, 5%, 64.9%;
-                --destructive: 0, 62.8%, 30.6%;
+                --primary-fg: var(--hsl-color), 10%, 6%;
+
+                --secondary: var(--hsl-color), 4%, 12%;
+                --secondary-fg: 0, 0%, 98%;
+
+                --muted: var(--hsl-color), 4%, 15%;
+                --muted-foreground: var(--hsl-color), 5%, 65%;
+
+                --destructive: 0, 63%, 30.6%;
                 --destructive-foreground: 0, 0%, 98%;
-                --border: 240, 3.7%, 15.9%;
-                --border-width: 1px;
+
+                --border: var(--hsl-color), 4%, 16%;
+                --border-width: .1em;
+
+                --font-size: calc(15px + 0.390625vw);
+                --font-family: system-ui, -apple-system, sans-serif;
+                --font-family-mono: monospace;
+                --line-height: 1.5;
                 --radius: 0.25em;
                 --spacing: 0.5em;
+
+                --debug: ;   /* TODO: yellow hsl */
+                --info: ;    /* TODO: yellow hsl */
+                --warning: ; /* TODO: yellow hsl */
+                --error: ;   /* TODO: yellow hsl */
             }
         `;
         const toRemove = document.head.querySelector("style.theme");
