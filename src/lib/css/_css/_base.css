@@ -191,7 +191,7 @@ textarea {
 
 div.spacer,
 span.spacer {
-    margin: var(--spacing);
+    margin: calc(var(--spacing) / 2);
 }
 
 /**
