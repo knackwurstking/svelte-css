@@ -1,7 +1,7 @@
 /* Container */
 
 .container {
-    width: fit-content;
+    width: 100%;
     max-width: 65em;
 
     margin: 0 auto;
@@ -9,7 +9,7 @@
 }
 
 .container-full {
-    width: fit-content;
+    width: 100%;
 
     margin: 0 auto;
     padding: var(--spacing);
@@ -64,4 +64,24 @@
 
 .group > *:not(:first-child,:last-child) {
     border-radius: 0 !important;
+}
+
+/* TopAppBar */
+
+.top-app-bar {
+    height: 3.5em;
+    width: 100%;
+
+    border-bottom: var(--border-width) var(--border-style) hsl(var(--border));
+    box-shadow: 0 0 .5em hsl(var(--border));
+}
+
+.top-app-bar > section {
+    height: 100%;
+
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    padding: auto var(--spacing);
 }
