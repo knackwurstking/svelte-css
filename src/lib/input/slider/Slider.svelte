@@ -131,9 +131,10 @@
 </script>
 
 <div
+    {...$$restProps}
     bind:this={slider}
-    class="slider"
-    style={`--slider-color: hsl(var(--primary));` + $$restProps.style || ""}
+    class={"slider " + ($$restProps.class || "")}
+    style={`--slider-color: hsl(var(--primary));` + ($$restProps.style || "")}
     style:position="relative"
     style:width={width}
     style:height={height}

@@ -25,7 +25,7 @@
 
 <div
     {...$$restProps}
-    class={"input " + $$restProps.class || ""}
+    class={"input " + ($$restProps.class || "")}
     class:focus={focus}
     class:invalid={invalid}
 >
