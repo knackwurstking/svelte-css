@@ -49,7 +49,7 @@
     .input {
         width: 100%;
 
-        border-bottom: var(--border-width) solid hsl(var(--border));
+        border-bottom: var(--border-width) var(--border-style) hsl(var(--border));
 
         transition: border-color .25s linear;
     }

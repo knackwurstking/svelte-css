@@ -6,7 +6,7 @@
         style.classList.add("theme");
         style.innerText = `
             :root {
-                --hsl-color: 105;
+                --hsl-color: 240;
 
                 --bg: var(--hsl-color), 10%, 6%;
                 --fg: 0, 0%, 98%;
@@ -28,11 +28,11 @@
 
                 --border: var(--hsl-color), 4%, 16%;
                 --border-width: .1em;
+                --border-style: solid;
 
                 --font-size: calc(15px + 0.390625vw);
                 --font-family: system-ui, -apple-system, sans-serif;
                 --font-family-mono: monospace;
-                --line-height: 1.5;
                 --radius: 0.25em;
                 --spacing: 0.5em;
 

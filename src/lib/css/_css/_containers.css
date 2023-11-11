@@ -1,18 +1,32 @@
+/* Container */
+
 .container {
+    width: fit-content;
     max-width: 65em;
+
     margin: 0 auto;
-    width: 100%;
     padding: var(--spacing);
 }
 
-.card {
-    background-color: hsl(var(--card));
-    color: hsl(var(--card-foreground));
+.container-full {
+    width: fit-content;
+
+    margin: 0 auto;
     padding: var(--spacing);
-    border: var(--border-width, 0.1em) solid hsl(var(--border));
+}
+
+/* Card */
+
+.card {
+    background-color: hsl(var(--bg2));
+    color: hsl(var(--fg2));
+    padding: var(--spacing);
+    border: var(--border-width, 0.1em) var(--border-style) hsl(var(--border));
     border-radius: var(--radius);
     overflow: hidden;
 }
+
+/* Group */
 
 .group {
     display: flex;

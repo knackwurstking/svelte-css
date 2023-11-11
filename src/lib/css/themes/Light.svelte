@@ -6,24 +6,40 @@
         style.classList.add("theme");
         style.innerText = `
             :root {
-                --background: 0, 0%, 100%;
-                --foreground: 240, 10%, 3.9%;
-                --card: 0, 0%, 100%;
-                --card-foreground: 240, 10%, 3.9%;
-                --popover: 0, 0%, 100%;;
-                --popover-foreground: 240, 10%, 3.9%;
-                --primary: 240, 5.9%, 10%;
-                --primary-foreground: 0, 0%, 98%;
-                --secondary: 240, 4.8%, 85.9%;
-                --secondary-foreground: 240, 5.9%, 10%;
-                --muted: 240, 4.8%, 95.9%;
-                --muted-foreground: 240, 3.8%, 46.1%;
+                --hsl-color: 240;
+
+                --bg: 0, 0%, 100%;
+                --fg: var(--hsl-color), 10%, 6%;
+
+                --bg2: var(--hsl-color), 0%, 88%;
+                --fg2: var(--hsl-color), 10%, 12%;
+
+                --primary: var(--hsl-color), 6%, 10%;
+                --primary-fg: var(--hsl-color), 0%, 98%;
+
+                --secondary: var(--hsl-color), 5%, 86%;
+                --secondary-fg: var(--hsl-color), 6%, 10%;
+
+                --muted: var(--hsl-color), 5%, 96%;
+                --muted-fg: var(--hsl-color), 4%, 46%;
+
                 --destructive: 0, 84.2%, 60.2%;
-                --destructive-foreground: 0, 0%, 98%;
-                --border: 240, 5.9%, 90%;
-                --border-width: 1px;
+                --destructive-fg: 0, 0%, 98%;
+
+                --border: var(--hsl-color), 6%, 90%;
+                --border-width: .1em;
+                --border-style: solid;
+
+                --font-size: calc(15px + 0.390625vw);
+                --font-family: system-ui, -apple-system, sans-serif;
+                --font-family-mono: monospace;
                 --radius: 0.25em;
                 --spacing: 0.5em;
+
+                --debug: ;   /* TODO: yellow hsl */
+                --info: ;    /* TODO: yellow hsl */
+                --warning: ; /* TODO: yellow hsl */
+                --error: ;   /* TODO: yellow hsl */
             }
         `;
         const toRemove = document.head.querySelector("style.theme");

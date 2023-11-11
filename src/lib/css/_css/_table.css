@@ -23,7 +23,7 @@ thead th {
 
 th, td {
     padding: var(--spacing);
-    border: var(--border-width, 0.1em) solid hsl(var(--border));
+    border: var(--border-width, 0.1em) var(--border-style) hsl(var(--border));
 }
 
 td {

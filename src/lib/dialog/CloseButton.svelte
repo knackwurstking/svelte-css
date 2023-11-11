@@ -9,11 +9,6 @@
 </script>
 
 <Button.Icon
-    style={
-        "position: absolute;" +
-        "top: var(--spacing);" +
-        "right: var(--spacing);"
-    }
     on:click={() => dispatch("close")}
 >
     <Close />

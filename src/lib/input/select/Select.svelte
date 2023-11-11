@@ -88,7 +88,7 @@
 <style>
     .select {
         font-size: 0.85em;
-        border: var(--border-width, .1em) solid hsl(var(--border));
+        border: var(--border-width, .1em) var(--border-style) hsl(var(--border));
         border-radius: var(--radius);
         width: 100%;
         overflow: hidden;
@@ -128,10 +128,10 @@
 
     .select.open .options .option.selected {
         background-color: hsl(var(--primary));
-        color: hsl(var(--primary-foreground));
+        color: hsl(var(--primary-fg));
     }
 
     .select.open .options .option:not(.selected):hover {
-        background-color: hsl(var(--foreground), .1);
+        background-color: hsl(var(--fg), .1);
     }
 </style>

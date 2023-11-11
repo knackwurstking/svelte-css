@@ -1,9 +1,9 @@
 .is-debug {
-    border: var(--border-width, .1em) solid red;
+    border: var(--border-width, .1em) var(--border-style) red;
 }
 
 .is-debug * {
-    border: var(--border-width, .1em) solid red;
+    border: var(--border-width, .1em) var(--border-style) red;
 }
 
 .is-hidden {

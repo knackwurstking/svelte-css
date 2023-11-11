@@ -63,10 +63,13 @@
     }
 
     dialog > article {
-        background-color: hsl(var(--popover));
-        color: hsl(var(--popover-foreground));
-        border: var(--border-width, .1em) solid hsl(var(--border));
+        background-color: hsl(var(--bg2));
+        color: hsl(var(--fg2));
+
+        border: var(--border-width, .1em) var(--border-style) hsl(var(--border));
         border-radius: var(--radius);
+
+        padding: 0;
     }
 
     dialog :global(> section),

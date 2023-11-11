@@ -1,12 +1,7 @@
 *,
 *::before,
 *::after {
-    position: relative;
     box-sizing: border-box;
-
-    margin: 0;
-    padding: 0;
-
     -webkit-tap-highlight-color: transparent;
 }
 
@@ -25,8 +20,6 @@ body {
 
     font-family: var(--font-family);
     font-size: 1rem;
-
-    line-height: var(--line-height);
 }
 
 hr {
@@ -58,9 +51,10 @@ h3,
 h4,
 h5,
 h6 {
-    font-weight: 700;
+    margin: 0;
 }
 
+/*
 h1 {
     font-size: calc(1em * 2);
 }
@@ -84,6 +78,7 @@ h5 {
 h6 {
     font-size: calc(1em * 0.75);
 }
+*/
 
 /**
  * button
@@ -97,6 +92,13 @@ button:focus {
  * code, pre, var, kbd, samp
  */
 
+pre,
+code,
+kbd,
+samp {
+    font-family: var(--font-family-mono);
+}
+
 code,
 pre {
     display: block;
@@ -104,11 +106,7 @@ pre {
     background-color: hsl(var(--muted));
     color: hsl(var(--muted-fg));
 
-    font-family: var(--font-family-mono);
-    font-size: 0.9em;
-    font-style: normal;
-
-    border: var(--border-width, .1em) solid hsl(var(--border));
+    border: var(--border-width, .1em) var(--border-style) hsl(var(--border));
     border-radius: var(--radius);
     padding: var(--spacing);
 }
@@ -117,14 +115,9 @@ code {
     display: inline-block;
 }
 
-pre {
-    border-radius: var(--radius);
-}
-
 /**
  * input, textarea, select
  */
-
 
 select,
 input,
@@ -134,10 +127,7 @@ textarea {
     background-color: var(--bg);
     color: var(--fg);
 
-    font-family: var(--font-family-mono);
-    font-size: 0.85em;
-
-    border: var(--border-width) solid hsl(var(--border));
+    border: var(--border-width) var(--border-style) hsl(var(--border));
     border-radius: var(--radius);
     transition: border-color .25s linear;
 
@@ -209,14 +199,14 @@ span.spacer {
 ul {
     list-style: none;
 
-    border: var(--border-width) solid hsl(var(--border));
+    border: var(--border-width) var(--border-style) hsl(var(--border));
     border-radius: var(--radius);
 
     overflow: hidden;
 }
 
 ul > * {
-    border-bottom: var(--border-width, .1em) solid hsl(var(--border));
+    border-bottom: var(--border-width, .1em) var(--border-style) hsl(var(--border));
 }
 
 ul > *:first-child {

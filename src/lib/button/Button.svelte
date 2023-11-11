@@ -23,7 +23,7 @@
 <style>
     .button {
         padding: var(--spacing) calc(var(--spacing) * 3);
-        border: var(--border-width, .1em) solid currentColor;
+        border: var(--border-width) var(--border-style) currentColor;
         border-radius: var(--radius);
         box-shadow: none;
         transition: background-color .2s ease;
@@ -36,19 +36,19 @@
 
     .button.full.primary:not(.outline, .none) {
         background-color: hsl(var(--primary));
-        color: hsl(var(--primary-foreground));
+        color: hsl(var(--primary-fg));
         border: none;
     }
 
     .button.full.secondary:not(.outline, .none) {
         background-color: hsl(var(--secondary));
-        color: hsl(var(--secondary-foreground));
+        color: hsl(var(--secondary-fg));
         border: none;
     }
 
     .button.full.destructive:not(.outline, .none) {
         background-color: hsl(var(--destructive));
-        color: hsl(var(--destructive-foreground));
+        color: hsl(var(--destructive-fg));
         border: none;
     }
 

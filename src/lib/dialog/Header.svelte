@@ -8,8 +8,10 @@
     export let title;
 </script>
 
-<header {...$$restProps}>
-    <h4>{title || ""}</h4>
+<header
+    {...$$restProps}
+>
+    <h3>{title || ""}</h3>
 
     <CloseButton on:close={() => dispatch("close")} />
 </header>
@@ -18,11 +20,15 @@
     header {
         height: calc(2.5rem + var(--spacing));
         padding: var(--spacing);
-        padding-right: calc(4rem + var(--spacing));
         margin-bottom: var(--spacing);
         border-top-right-radius: var(--radius);
         border-top-left-radius: var(--radius);
         display: flex;
         align-items: center;
+    }
+
+    header h3 {
+        padding-right: calc(4rem + var(--spacing));
+        margin: auto 0;
     }
 </style>
