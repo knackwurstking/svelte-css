@@ -33,7 +33,7 @@
 
 <div
     {...$$restProps}
-    class={"input " + $$restProps.class || ""}
+    class={"input " + ($$restProps.class || "")}
     class:focus={focus}
     class:invalid={invalid}
 >
@@ -48,7 +48,6 @@
         on:change
         on:input
         on:keyup={(ev) => {
-            console.debug(ev.key);
             if (ev.key === "Enter") {
                 click();
             }
@@ -60,12 +59,13 @@
     <Button.Icon
         style={
             "position: absolute;" +
+            "height: 100%;" +
             "bottom: 0;" +
             "right: 0;" +
-            "border-radius: var(--radius);" +
-            "border-bottom-left-radius: 0;" +
-            "border-top-left-radius: 0;" +
-            "border-left: var(--border-width) var(--border-style) hsl(var(--border));"
+            "padding: .25em;" +
+            "border-radius: 0;" +
+            "border-top-right-radius: var(--spacing);" +
+            "border-bottom-right-radius: var(--spacing);"
         }
         on:click={() => click()}
     >
@@ -79,7 +79,7 @@
         width: 100%;
 
         border-bottom: var(--border-width) var(--border-style) hsl(var(--border));
-        border-bottom-right-radius: var(--spacing);
+        border-radius: var(--spacing);
 
         transition: border-color .25s linear;
     }
