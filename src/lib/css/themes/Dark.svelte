@@ -31,8 +31,8 @@
                 --border-style: solid;
 
                 --font-size: calc(15px + 0.390625vw);
-                --font-family: system-ui, -apple-system, sans-serif;
-                --font-family-mono: monospace;
+                --font-family: "Fira Sans", system-ui, -apple-system, sans-serif;
+                --font-family-mono: "Fira Mono", monospace;
                 --radius: 0.25em;
                 --spacing: 0.5em;
 
