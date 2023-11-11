@@ -1,5 +1,15 @@
 # Changelog
 
+## [unreleased] v0.6.0
+
+### Added
+
+- normalize.css to `CSS.Root`
+
+### Changed
+
+- theme variables (dark/light)
+
 ## v0.5.0 2023-11-08
 
 ### Added
@@ -13,4 +23,4 @@
 
 ### Changed
 
-- icon button borders (round, no border)
+- icon button borders (round, no border)C
