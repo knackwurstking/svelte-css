@@ -8,7 +8,6 @@
         Input,
         Dialog,
     } from "./lib";
-    import HtmlSelect from "./lib/input/html-select/HTMLSelect.svelte";
 
     let dialog;
 </script>
