@@ -5,4 +5,5 @@ export * as Input from "./input";
 export * as Ripple from "./ripple";
 export * as Spacer from "./spacer";
 export * as Text from "./text";
+export * as TopAppBar from "./top-app-bar";
 export * as Utils from "./utils";
