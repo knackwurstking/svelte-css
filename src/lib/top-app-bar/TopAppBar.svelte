@@ -20,9 +20,16 @@
 
 <style>
     header {
+        z-index: 999;
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
 
         border-bottom: var(--border-width) var(--border-style) hsl(var(--border));
+
+        background-color: hsla(var(--bg), .4);
+        backdrop-filter: blur(5px);
     }
 
     header > div {
