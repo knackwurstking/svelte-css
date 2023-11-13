@@ -65,22 +65,3 @@
 .group > *:not(:first-child,:last-child) {
     border-radius: 0 !important;
 }
-
-/* TopAppBar */
-
-.top-app-bar {
-    height: 3.5em;
-    width: 100%;
-
-    border-bottom: var(--border-width) var(--border-style) hsl(var(--border));
-}
-
-.top-app-bar > section {
-    height: 100%;
-
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-
-    padding: auto var(--spacing);
-}
