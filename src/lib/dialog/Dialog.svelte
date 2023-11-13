@@ -54,7 +54,7 @@
 
     dialog::backdrop {
         background-color: hsl(0, 0%, 0%, 0.4);
-        backdrop-filter: blur(.5rem);
+        backdrop-filter: blur(5px);
     }
 
     dialog.fullscreen,
