@@ -1,6 +1,7 @@
 export * as Button from "./button";
 export * as CSS from "./css";
 export * as Dialog from "./dialog";
+export * as Drawer from "./drawer";
 export * as Input from "./input";
 export * as Ripple from "./ripple";
 export * as Spacer from "./spacer";
