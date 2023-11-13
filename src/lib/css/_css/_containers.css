@@ -18,8 +18,8 @@
 /* Card */
 
 .card {
-    background-color: hsl(var(--bg2));
-    color: hsl(var(--fg2));
+    background-color: hsl(var(--bg));
+    color: hsl(var(--fg));
     padding: var(--spacing);
     border: var(--border-width, 0.1em) var(--border-style) hsl(var(--border));
     border-radius: var(--radius);

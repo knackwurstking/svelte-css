@@ -11,9 +11,6 @@
                 --bg: 0, 0%, 100%;
                 --fg: var(--hsl-color), 10%, 6%;
 
-                --bg2: var(--hsl-color), 0%, 88%;
-                --fg2: var(--hsl-color), 10%, 12%;
-
                 --primary: var(--hsl-color), 6%, 10%;
                 --primary-fg: var(--hsl-color), 0%, 98%;
 
@@ -27,14 +24,14 @@
                 --destructive-fg: 0, 0%, 98%;
 
                 --border: var(--hsl-color), 6%, 90%;
-                --border-width: .1em;
+                --border-width: .01rem;
                 --border-style: solid;
 
                 --font-size: calc(15px + 0.390625vw);
                 --font-family: "Fira Sans", system-ui, -apple-system, sans-serif;
                 --font-family-mono: "Fira Mono", monospace;
-                --radius: 0.25em;
-                --spacing: 0.5em;
+                --radius: 0.25rem;
+                --spacing: .5em;
 
                 --debug: ;   /* TODO: yellow hsl */
                 --info: ;    /* TODO: yellow hsl */

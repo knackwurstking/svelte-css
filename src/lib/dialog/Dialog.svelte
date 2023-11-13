@@ -64,8 +64,8 @@
     }
 
     dialog > article {
-        background-color: hsl(var(--bg2));
-        color: hsl(var(--fg2));
+        background-color: hsl(var(--bg));
+        color: hsl(var(--fg));
 
         border: var(--border-width, .1em) var(--border-style) hsl(var(--border));
         border-radius: var(--radius);
