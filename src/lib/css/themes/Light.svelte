@@ -24,7 +24,7 @@
                 --destructive-fg: 0, 0%, 98%;
 
                 --border: var(--hsl-color), 6%, 90%;
-                --border-width: .01rem;
+                --border-width: 1px;
                 --border-style: solid;
 
                 --font-size: calc(15px + 0.390625vw);
