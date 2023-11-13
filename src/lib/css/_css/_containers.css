@@ -73,7 +73,6 @@
     width: 100%;
 
     border-bottom: var(--border-width) var(--border-style) hsl(var(--border));
-    box-shadow: 0 0 .5em hsl(var(--border));
 }
 
 .top-app-bar > section {
