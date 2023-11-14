@@ -12,8 +12,6 @@
     import "./_css/utils-is.css";
     import "./_css/utils-no.css";
 
-    import "./_css/_grid.css";
-
     import { onDestroy } from "svelte";
 
     import { ZincDark, ZincLight } from "./themes";
