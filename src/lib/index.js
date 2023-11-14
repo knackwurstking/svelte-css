@@ -1,4 +1,5 @@
 export * as Button from "./button";
+export * as Card from "./card";
 export * as CSS from "./css";
 export * as Dialog from "./dialog";
 export * as Drawer from "./drawer";
