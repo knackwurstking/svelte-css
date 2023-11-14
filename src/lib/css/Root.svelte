@@ -6,7 +6,6 @@
     import "./_css/base-colors.css";
     import "./_css/base-fonts.css";
 
-    import "./_css/card.css";
     import "./_css/container.css";
     import "./_css/group.css";
 
