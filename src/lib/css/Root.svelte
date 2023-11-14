@@ -20,7 +20,7 @@
     import { ZincDark, ZincLight } from "./themes";
 
     /** @type {"light" | "dark"} */
-    export let mode;
+    export let mode = undefined;
 
     /** @type {"zinc"} */
     export let variant = "zinc";
@@ -61,9 +61,9 @@
 </script>
 
 <svelte:head>
-    {#if variant+"-"+mode === "zinc-light"}
+    {#if variant+"-"+(mode || "") === "zinc-light"}
         <ZincLight />
-    {:else if variant+"-"+mode === "zinc-dark"}
+    {:else if variant+"-"+(mode || "") === "zinc-dark"}
         <ZincDark />
     {/if}
 </svelte:head>
