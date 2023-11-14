@@ -1,7 +1,7 @@
 <script>
     import { Ripple } from "..";
 
-    /** @type {"primary" | "secondary" | "destructive"} */
+    /** @type {"foreground" | "primary" | "secondary" | "destructive"} */
     export let color = "primary";
 
     /** @type {"full" | "outline" | "ghost"} */
@@ -58,6 +58,12 @@
         opacity: .2;
     }
 
+    .button.full.foreground:not(.outline, .none) {
+        background-color: hsl(var(--fg));
+        color: hsl(var(--bg));
+        border: none;
+    }
+
     .button.full.primary:not(.outline, .none) {
         background-color: hsl(var(--primary));
         color: hsl(var(--primary-fg));
@@ -88,6 +94,10 @@
         background-color: transparent;
     }
 
+    .button.outline.foreground {
+        color: hsl(var(--fg));
+    }
+
     .button.outline.primary {
         color: hsl(var(--primary));
     }
@@ -110,6 +120,10 @@
     .button.ghost {
         border-color: transparent;
         background-color: transparent;
+    }
+
+    .button.ghost.foreground {
+        color: hsl(var(--fg));
     }
 
     .button.ghost.primary {

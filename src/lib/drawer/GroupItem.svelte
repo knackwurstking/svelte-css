@@ -1,7 +1,6 @@
 <script>
     import { Button } from "..";
 
-    // TODO: set custom button color var(--fg)
     export let active = false;
 </script>
 
@@ -13,6 +12,7 @@
     <Button.Root
         style="width: 100%; height: 100%;"
         variant="ghost"
+        color="foreground"
         {active}
         on:click
     >
