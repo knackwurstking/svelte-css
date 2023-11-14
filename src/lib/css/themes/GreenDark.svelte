@@ -6,24 +6,31 @@
         style.classList.add("theme");
         style.innerText = `
             :root {
-                --hsl-color: 240;
+                --bg: 142.1, 14.3%, 4.1%;
+                --fg: 0, 0%, 95%;
 
-                --bg: 0, 0%, 100%;
-                --fg: var(--hsl-color), 10%, 6%;
+                --accent: 142.1, 6.5%, 15.1%;
+                --accent-fg: 0, 0%, 98%;
 
-                --primary: var(--hsl-color), 6%, 10%;
-                --primary-fg: var(--hsl-color), 0%, 98%;
+                --card: 142.1, 9.8%, 10%;
+                --card-foreground: 0, 0%, 95%;
 
-                --secondary: var(--hsl-color), 5%, 86%;
-                --secondary-fg: var(--hsl-color), 6%, 10%;
+                --popover: 0, 0%, 9%;
+                --popover-fg: 0, 0%, 95%;
 
-                --muted: var(--hsl-color), 5%, 96%;
-                --muted-fg: var(--hsl-color), 4%, 46%;
+                --primary: 142.1, 70.6%, 45.3%;
+                --primary-fg: 144.9, 80.4%, 10%;
 
-                --destructive: 0, 84.2%, 60.2%;
-                --destructive-fg: 0, 0%, 98%;
+                --secondary: 240, 3.7%, 15.9%;
+                --secondary-fg: 0, 0%, 98%;
 
-                --border: var(--hsl-color), 6%, 90%;
+                --muted: 0, 0%, 15%;
+                --muted-fg: 240, 5%, 64.9%;
+
+                --destructive: 0, 62.8%, 30.6%;
+                --destructive-fg: 0, 85.7%, 97.3%;
+
+                --border: 142.1, 3.7%, 15.9%;
                 --border-width: 1px;
                 --border-style: solid;
 

@@ -7,14 +7,17 @@
     import "./_css/_table.css";
     import "./_css/_utils-is.css";
     import "./_css/_utils-no.css";
-    import "./_css/_utils-has.css";
 
     import { onDestroy } from "svelte";
 
-    import { Dark, Light } from "./themes";
+    import { ZincDark, ZincLight, GreenDark, GreenLight } from "./themes";
 
     /** @type {"light" | "dark"} */
-    export let theme = "light";
+    export let mode;
+
+    /** @type {"zinc" | "green"} */
+    export let variant = "zinc";
+
     /** @type {boolean} */
     export let auto = false;
     $: typeof auto === "boolean" && enableAutoThemeSwitcher();
@@ -26,7 +29,7 @@
         if (auto) {
             if (window.matchMedia) {
                 const media = window.matchMedia("(prefers-color-scheme: dark)");
-                theme = media.matches ? "dark" : "light";
+                mode = media.matches ? "dark" : "light";
                 media.addEventListener("change", onDarkChange);
             }
         } else {
@@ -39,9 +42,9 @@
     /** @param {MediaQueryListEvent} ev */
     const onDarkChange = (ev) => {
         if (ev.matches) {
-            theme = "dark";
+            mode = "dark";
         } else {
-            theme = "light";
+            mode = "light";
         }
     };
 
@@ -51,9 +54,13 @@
 </script>
 
 <svelte:head>
-    {#if theme === "light"}
-        <Light />
-    {:else if theme === "dark"}
-        <Dark />
+    {#if variant+"-"+mode === "zinc-light"}
+        <ZincLight />
+    {:else if variant+"-"+mode === "zinc-dark"}
+        <ZincDark />
+    {:else if variant+"-"+mode === "green-light"}
+        <GreenLight />
+    {:else if variant+"-"+mode === "green-dark"}
+        <GreenDark />
     {/if}
 </svelte:head>

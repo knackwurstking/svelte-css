@@ -9,8 +9,8 @@
 }
 
 ::selection {
-    background-color: hsl(var(--primary));
-    color: hsl(var(--primary-fg));
+    background-color: hsl(var(--accent));
+    color: hsl(var(--accent-fg));
 }
 
 html {
@@ -109,7 +109,7 @@ pre {
     background-color: hsl(var(--muted));
     color: hsl(var(--muted-fg));
 
-    border: var(--border-width, .1em) var(--border-style) hsl(var(--border));
+    border: var(--border-width) var(--border-style) hsl(var(--border));
     border-radius: var(--radius);
     padding: var(--spacing);
 }
@@ -127,8 +127,8 @@ input,
 textarea {
     display: block;
 
-    background-color: var(--bg);
-    color: var(--fg);
+    background-color: transparent;
+    color: hsl(var(--fg));
 
     border: var(--border-width) var(--border-style) hsl(var(--border));
     border-radius: var(--radius);
@@ -213,9 +213,9 @@ ul {
 ul > * {
     padding: var(--spacing);
 
-    border-bottom: var(--border-width, .1em) var(--border-style) hsl(var(--border));
+    border-bottom: var(--border-width) var(--border-style) hsl(var(--border));
 }
 
 ul > *:first-child {
-    border-top: var(--border-width, .1em) var(--border-style) hsl(var(--border));
+    border-top: var(--border-width) var(--border-style) hsl(var(--border));
 }

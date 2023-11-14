@@ -1,7 +1,7 @@
 <script>
     import { Ripple } from "..";
 
-    /** @type {"primary" | "secondary" | "destructive"} */
+    /** @type {"normal"| "primary" | "secondary" | "destructive"} */
     export let color = "primary";
 
     export let ghost = false;
@@ -32,8 +32,8 @@
 
         background-color: transparent;
 
-        border: none;
-        border-radius: 50%;
+        border: var(--border-width) var(--border-style) hsl(var(--border));
+        border-radius: var(--radius);
 
         outline: none;
 
@@ -52,6 +52,11 @@
 
     .icon-button.ghost {
         border: none;
+    }
+
+    .icon-button.normal {
+        color: hsl(var(--fg));
+        border-color: hsl(var(--fg));
     }
 
     .icon-button.primary {

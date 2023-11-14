@@ -18,10 +18,10 @@
 /* Card */
 
 .card {
-    background-color: hsl(var(--bg));
-    color: hsl(var(--fg));
+    background-color: hsl(var(--card-bg));
+    color: hsl(var(--card-fg));
     padding: var(--spacing);
-    border: var(--border-width, 0.1em) var(--border-style) hsl(var(--border));
+    border: var(--border-width) var(--border-style) hsl(var(--border));
     border-radius: var(--radius);
     overflow: hidden;
 }
