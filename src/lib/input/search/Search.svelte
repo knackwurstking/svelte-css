@@ -63,9 +63,8 @@
             "bottom: 0;" +
             "right: 0;" +
             "padding: .25em;" +
-            "border-radius: 0;" +
-            "border-top-right-radius: var(--spacing);" +
-            "border-bottom-right-radius: var(--spacing);"
+            "border-top-left-radius: 0;" +
+            "border-bottom-left-radius: 0;"
         }
         ghost
         on:click={() => click()}
@@ -79,8 +78,8 @@
         position: relative;
         width: 100%;
 
-        border-bottom: var(--border-width) var(--border-style) hsl(var(--border));
-        border-radius: var(--spacing);
+        border: var(--border-width) var(--border-style) hsl(var(--border));
+        border-radius: var(--radius);
 
         transition: border-color .25s linear;
     }
