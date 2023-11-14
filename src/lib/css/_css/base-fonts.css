@@ -60,6 +60,12 @@ textarea {
     font-family: var(--font-family-mono);
 }
 
+select,
+input,
+textarea {
+    font-size: 0.95em;
+}
+
 table thead {
     font-family: var(--font-family-heading);
     font-size: 0.9em;
