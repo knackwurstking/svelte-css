@@ -1,8 +1,8 @@
 <script>
     import { Button } from "..";
 
-    // TODO: add active prop
     // TODO: set custom button color var(--fg)
+    export let active = false;
 </script>
 
 <li
@@ -13,6 +13,7 @@
     <Button.Root
         style="width: 100%; height: 100%;"
         variant="ghost"
+        {active}
         on:click
     >
         <slot style="width: 100%; height: 100%;" />
