@@ -67,7 +67,6 @@
             "border-top-right-radius: var(--spacing);" +
             "border-bottom-right-radius: var(--spacing);"
         }
-        color="normal"
         ghost
         on:click={() => click()}
     >
