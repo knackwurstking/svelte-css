@@ -1,33 +1,3 @@
-/* Container */
-
-.container {
-    width: 100%;
-    max-width: 65em;
-
-    margin: 0 auto;
-    padding: var(--spacing);
-}
-
-.container-full {
-    width: 100%;
-
-    margin: 0 auto;
-    padding: var(--spacing);
-}
-
-/* Card */
-
-.card {
-    background-color: hsl(var(--card-bg));
-    color: hsl(var(--card-fg));
-    padding: var(--spacing);
-    border: var(--border-width) var(--border-style) hsl(var(--border));
-    border-radius: var(--radius);
-    overflow: hidden;
-}
-
-/* Group */
-
 .group {
     display: flex;
     flex-direction: row;

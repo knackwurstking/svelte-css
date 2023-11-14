@@ -25,14 +25,14 @@
 
 <style>
     .button {
-        padding: var(--spacing) calc(var(--spacing) * 3);
+        padding: var(--spacing) calc(var(--spacing) * 1.5);
         border: var(--border-width) var(--border-style) currentColor;
         border-radius: var(--radius);
         box-shadow: none;
-        transition: background-color .2s ease;
         cursor: pointer;
         position: relative;
         overflow: hidden;
+        transition: background-color .2s ease;
     }
 
     /* variant: full */

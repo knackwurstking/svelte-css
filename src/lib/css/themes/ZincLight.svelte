@@ -10,14 +10,8 @@
                 --bg: 0, 0%, 100%;
                 --fg: 240, 10%, 3.9%;
 
-                --accent: 240, 4.8%, 95.9%;
-                --accent-fg: 240, 5.9%, 10%;
-
                 --card: 0, 0%, 100%;
                 --card-fg: 240, 10%, 3.9%;
-
-                --popover: 0, 0%, 100%;
-                --popover-fg: 240, 10%, 3.9%;
 
                 --primary: 240, 5.9%, 10%;
                 --primary-fg: 0, 0%, 98%;
@@ -36,8 +30,11 @@
                 --border-style: solid;
 
                 --font-size: calc(15px + 0.390625vw);
-                --font-family: "Fira Sans", system-ui, -apple-system, sans-serif;
-                --font-family-mono: "Fira Mono", monospace;
+
+                --font-family-base: sans;
+                --font-family-heading: serif;
+                --font-family-input: mono;
+
                 --radius: 0.25rem;
                 --spacing: .5em;
 
