@@ -10,12 +10,12 @@
 
     import { onDestroy } from "svelte";
 
-    import { ZincDark, ZincLight, GreenDark, GreenLight } from "./themes";
+    import { ZincDark, ZincLight } from "./themes";
 
     /** @type {"light" | "dark"} */
     export let mode;
 
-    /** @type {"zinc" | "green"} */
+    /** @type {"zinc"} */
     export let variant = "zinc";
 
     /** @type {boolean} */
@@ -58,9 +58,5 @@
         <ZincLight />
     {:else if variant+"-"+mode === "zinc-dark"}
         <ZincDark />
-    {:else if variant+"-"+mode === "green-light"}
-        <GreenLight />
-    {:else if variant+"-"+mode === "green-dark"}
-        <GreenDark />
     {/if}
 </svelte:head>

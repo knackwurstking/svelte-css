@@ -7,31 +7,31 @@
         style.classList.add("theme");
         style.innerText = `
             :root {
-                --bg: ;
-                --fg: ;
+                --bg: 0, 0%, 100%;
+                --fg: 240, 10%, 3.9%;
 
-                --accent: ;
-                --accent-foreground: ;
+                --accent: 240, 4.8%, 95.9%;
+                --accent-fg: 240, 5.9%, 10%;
 
-                --card: ;
-                --card-fg: ;
+                --card: 0, 0%, 100%;
+                --card-fg: 240, 10%, 3.9%;
 
-                --popover: ;
-                --popover-fg: ;
+                --popover: 0, 0%, 100%;
+                --popover-fg: 240, 10%, 3.9%;
 
-                --primary: ;
-                --primary-fg: ;
+                --primary: 240, 5.9%, 10%;
+                --primary-fg: 0, 0%, 98%;
 
-                --secondary: ;
-                --secondary-fg: ;
+                --secondary: 240, 4.8%, 95.9%;
+                --secondary-fg: 240, 5.9%, 10%;
 
-                --muted: ;
-                --muted-fg: ;
+                --muted: 240, 4.8%, 95.9%;
+                --muted-fg: 240, 3.8%, 46.1%; 
 
-                --destructive: ;
-                --destructive-fg: ;
+                --destructive: 0, 72.22%, 50.59%;
+                --destructive-fg: 0, 0%, 98%;
 
-                --border: ;
+                --border: 240, 5.9%, 90%;
                 --border-width: 1px;
                 --border-style: solid;
 
