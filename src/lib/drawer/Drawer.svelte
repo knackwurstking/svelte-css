@@ -5,6 +5,7 @@
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <div
     {...$$restProps}
+    class={"ui-drawer " + ($$restProps.class || "")}
     class:open
     on:click={(ev) => {
         ev.stopPropagation();

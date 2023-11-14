@@ -9,6 +9,9 @@
 </script>
 
 <Button.Icon
+    {...$$restProps}
+    class={"ui-dialog-close-button " + ($$restProps.class || "")}
+
     on:click={() => dispatch("close")}
 >
     <Close />

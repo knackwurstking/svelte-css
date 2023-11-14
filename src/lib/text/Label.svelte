@@ -11,7 +11,7 @@
 {#if useLabel}
     <label
         {...$$restProps}
-        class={"label " + ($$restProps.class || "")}
+        class={"ui-text-label " + ($$restProps.class || "")}
         class:row
     >
         <span class="col">
@@ -35,7 +35,7 @@
 {:else}
     <span
         {...$$restProps}
-        class={"label " + ($$restProps.class || "")}
+        class={"ui-text-label " + ($$restProps.class || "")}
         class:row
     >
         <span class="col no-user-select">
@@ -59,32 +59,32 @@
 {/if}
 
 <style>
-    .label {
+    .ui-text-label {
         width: 100%;
         padding: calc(var(--spacing) / 4) calc(var(--spacing) / 2);
     }
 
-    .label:not(.row) {
+    .ui-text-label:not(.row) {
         display: flex;
         flex-direction: column;
     }
 
-    .label > span:nth-child(1) {
+    .ui-text-label > span:nth-child(1) {
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
 
-    .label.row > span:nth-child(1) {
+    .ui-text-label.row > span:nth-child(1) {
         margin-right: var(--spacing);
         width: 100%;
     }
 
-    .label:not(.row) > span:nth-child(1) {
+    .ui-text-label:not(.row) > span:nth-child(1) {
         margin-left: calc(var(--spacing) / 2);
     }
 
-    .label > span:nth-child(2) {
+    .ui-text-label > span:nth-child(2) {
         display: flex;
         align-items: center;
     }

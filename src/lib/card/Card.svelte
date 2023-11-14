@@ -6,6 +6,9 @@
 
 <article
     {...$$restProps}
+
+    class={"ui-card " + ($$restProps.class || "")}
+
     style:padding="var(--spacing)"
     style:background-color={backgroundColor}
     style:color={color}

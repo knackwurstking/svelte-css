@@ -17,10 +17,13 @@
 
 <button
     {...$$restProps}
-    class={`button ${color || ""} ${variant || ""} ` +
+
+    class={`ui-button ${color || ""} ${variant || ""} ` +
         ($$restProps.class || "")}
     class:active
+
     use:Ripple.Root={noRipple ? null : ripple}
+
     on:click
 >
     <div class="background"></div>
@@ -28,7 +31,7 @@
 </button>
 
 <style>
-    .button {
+    .ui-button {
         padding: var(--spacing) calc(var(--spacing) * 1.5);
         border: var(--border-width) var(--border-style) currentColor;
         border-radius: var(--radius);
@@ -39,7 +42,7 @@
         transition: background-color .2s ease;
     }
 
-    .button .background {
+    .ui-button .background {
         background-color: currentColor;
         transition: background-color .25s ease;
         opacity: 0;
@@ -53,30 +56,30 @@
 
     /* variant: full */
 
-    .button.full.active .background {
+    .ui-button.full.active .background {
         transition: opacity .25s ease .4s;
         opacity: .2;
     }
 
-    .button.full.foreground:not(.outline, .none) {
+    .ui-button.full.foreground:not(.outline, .none) {
         background-color: hsl(var(--fg));
         color: hsl(var(--bg));
         border: none;
     }
 
-    .button.full.primary:not(.outline, .none) {
+    .ui-button.full.primary:not(.outline, .none) {
         background-color: hsl(var(--primary));
         color: hsl(var(--primary-fg));
         border: none;
     }
 
-    .button.full.secondary:not(.outline, .none) {
+    .ui-button.full.secondary:not(.outline, .none) {
         background-color: hsl(var(--secondary));
         color: hsl(var(--secondary-fg));
         border: none;
     }
 
-    .button.full.destructive:not(.outline, .none) {
+    .ui-button.full.destructive:not(.outline, .none) {
         background-color: hsl(var(--destructive));
         color: hsl(var(--destructive-fg));
         border: none;
@@ -84,65 +87,65 @@
 
     /* variant: outline */
 
-    .button.outline.active .background {
+    .ui-button.outline.active .background {
         transition: opacity .25s ease .4s;
         opacity: .2;
     }
 
-    .button.outline {
+    .ui-button.outline {
         border-color: currentColor;
         background-color: transparent;
     }
 
-    .button.outline.foreground {
+    .ui-button.outline.foreground {
         color: hsl(var(--fg));
     }
 
-    .button.outline.primary {
+    .ui-button.outline.primary {
         color: hsl(var(--primary));
     }
 
-    .button.outline.secondary {
+    .ui-button.outline.secondary {
         color: hsl(var(--secondary));
     }
 
-    .button.outline.destructive {
+    .ui-button.outline.destructive {
         color: hsl(var(--destructive));
     }
 
     /* variant: ghost */
 
-    .button.ghost.active .background {
+    .ui-button.ghost.active .background {
         transition: opacity .25s ease .4s;
         opacity: .2;
     }
 
-    .button.ghost {
+    .ui-button.ghost {
         border-color: transparent;
         background-color: transparent;
     }
 
-    .button.ghost.foreground {
+    .ui-button.ghost.foreground {
         color: hsl(var(--fg));
     }
 
-    .button.ghost.primary {
+    .ui-button.ghost.primary {
         color: hsl(var(--primary));
     }
 
-    .button.ghost.secondary {
+    .ui-button.ghost.secondary {
         color: hsl(var(--secondary));
     }
 
-    .button.ghost.destructive {
+    .ui-button.ghost.destructive {
         color: hsl(var(--destructive));
     }
 
     /* :disabled */
 
-    .button:disabled,
-    .button:disabled:hover,
-    .button:disabled:active {
+    .ui-button:disabled,
+    .ui-button:disabled:hover,
+    .ui-button:disabled:active {
         background-color: transparent;
         opacity: 0.25;
         cursor: default;

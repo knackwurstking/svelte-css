@@ -6,7 +6,7 @@
 
 <li
     {...$$restProps}
-    class={"no-border " + ($$restProps.class || "")}
+    class={"ui-drawer-group-item no-border " + ($$restProps.class || "")}
     style={"display: block;" + ($$restProps.stykle || "")}
 >
     <Button.Root

@@ -24,7 +24,11 @@
 </script>
 
 <select
+    {...$$restProps}
+    class={"ui-input-html-select " + ($$restProps.class || "")}
+
     value={selected?.value || undefined}
+
     on:change={(ev) => {
         selected = items.find(i => i.value === ev.currentTarget.value) || null;
         dispatch("change", selected);

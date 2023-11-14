@@ -33,7 +33,7 @@
 
 <div
     {...$$restProps}
-    class={"input " + ($$restProps.class || "")}
+    class={"ui-input-search " + ($$restProps.class || "")}
     class:focus={focus}
     class:invalid={invalid}
 >
@@ -74,7 +74,7 @@
 </div>
 
 <style>
-    .input {
+    .ui-input-search {
         position: relative;
         width: 100%;
 
@@ -84,15 +84,15 @@
         transition: border-color .25s linear;
     }
 
-    .input.focus {
+    .ui-input-search.focus {
         border-color: hsl(var(--primary));
     }
 
-    .input.invalid {
+    .ui-input-search.invalid {
         border-color: hsl(var(--destructive));
     }
 
-    .input .title {
+    .ui-input-search .title {
         font-size: 0.85em;
         font-weight: 300;
         font-style: italic;

@@ -10,6 +10,7 @@
 
 <div
     {...$$restProps}
+    class={"ui-grid-row " + ($$restProps.class || "")}
     style={`--gap: ${gap};` + ($$restProps.style || "")}
     style:width
     style:height

@@ -2,7 +2,7 @@
     export let height = "3.5em";
 </script>
 
-<header {...$$restProps} style:height={height}>
+<header {...$$restProps} class="ui-top-app-bar" style:height={height}>
     <div style="width: 100%;">
         <section class="left">
             <slot name="left" />

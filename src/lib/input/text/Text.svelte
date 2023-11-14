@@ -17,7 +17,7 @@
 
 <div
     {...$$restProps}
-    class={"input " + ($$restProps.class || "")}
+    class={"ui-input-text " + ($$restProps.class || "")}
     class:focus={focus}
     class:invalid={invalid}
 >
@@ -35,7 +35,7 @@
 </div>
 
 <style>
-    .input {
+    .ui-input-text {
         width: 100%;
 
         border-bottom: var(--border-width) var(--border-style) hsl(var(--border));
@@ -43,15 +43,15 @@
         transition: border-color .25s linear;
     }
 
-    .input.focus {
+    .ui-input-text.focus {
         border-color: hsl(var(--primary));
     }
 
-    .input.invalid {
+    .ui-input-text.invalid {
         border-color: hsl(var(--destructive));
     }
 
-    .input .title {
+    .ui-input-text .title {
         font-size: 0.85em;
         font-weight: 300;
         font-style: italic;

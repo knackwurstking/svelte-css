@@ -17,7 +17,12 @@
     }
 </script>
 
-<dialog {...$$restProps} bind:this={dialog} class:fullscreen>
+<dialog
+    {...$$restProps}
+    class={"ui-dialog " + ($$restProps.class || "")}
+    bind:this={dialog}
+    class:fullscreen
+>
     <article>
         <slot name="header" />
         <slot />

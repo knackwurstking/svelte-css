@@ -14,16 +14,19 @@
 
 <button
     {...$$restProps}
-    class={`icon-button ${color || ""} ` + ($$restProps.class || "")}
+
+    class={`ui-icon-button ${color || ""} ` + ($$restProps.class || "")}
     class:ghost
+
     use:Ripple.Root={noRipple ? null : { centered: true, ...ripple }}
+
     on:click
 >
     <slot />
 </button>
 
 <style>
-    .icon-button {
+    .ui-icon-button {
         position: relative;
         width: 2.5em;
         height: 2.5em;
@@ -45,40 +48,40 @@
         cursor: pointer;
     }
 
-    .icon-button :global(> *) {
+    .ui-icon-button :global(> *) {
         width: 100%;
         height: 100%;
     }
 
-    .icon-button.ghost {
+    .ui-icon-button.ghost {
         border: none;
     }
 
-    .icon-button.foreground {
+    .ui-icon-button.foreground {
         color: hsl(var(--fg));
         border-color: hsl(var(--fg));
     }
 
-    .icon-button.primary {
+    .ui-icon-button.primary {
         color: hsl(var(--primary));
         border-color: hsl(var(--primary));
     }
 
-    .icon-button.secondary {
+    .ui-icon-button.secondary {
         color: hsl(var(--secondary));
         border-color: hsl(var(--secondary));
     }
 
-    .icon-button.destructive {
+    .ui-icon-button.destructive {
         color: hsl(var(--destructive));
         border-color: hsl(var(--destructive));
     }
 
     /* :disabled */
 
-    .icon-button:disabled,
-    .icon-button:disabled:hover,
-    .icon-button:disabled:active {
+    .ui-icon-button:disabled,
+    .ui-icon-button:disabled:hover,
+    .ui-icon-button:disabled:active {
         background-color: transparent;
         opacity: 0.25;
         cursor: default;

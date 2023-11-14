@@ -10,6 +10,7 @@
 
 <header
     {...$$restProps}
+    class={"ui-dialog-header" + ($$restProps.class || "")}
 >
     <h3>{title || ""}</h3>
 

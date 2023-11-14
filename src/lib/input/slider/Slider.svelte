@@ -133,7 +133,7 @@
 <div
     {...$$restProps}
     bind:this={slider}
-    class={"slider " + ($$restProps.class || "")}
+    class={"ui-input-slider " + ($$restProps.class || "")}
     style={`--slider-color: hsl(var(--primary));` + ($$restProps.style || "")}
     style:position="relative"
     style:width={width}

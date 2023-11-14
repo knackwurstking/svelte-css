@@ -59,7 +59,7 @@
 
 <div
     {...$$restProps}
-    class={"select " + ($$restProps.class || "")}
+    class={"ui-input-select " + ($$restProps.class || "")}
     class:open
 >
     <!-- svelte-ignore a11y-click-events-have-key-events -->
@@ -86,7 +86,7 @@
 </div>
 
 <style>
-    .select {
+    .ui-input-select {
         font-size: 0.85em;
         border: var(--border-width, .1em) var(--border-style) hsl(var(--border));
         border-radius: var(--radius);
@@ -94,12 +94,12 @@
         overflow: hidden;
     }
 
-    .select .options {
+    .ui-input-select .options {
         cursor: pointer;
         display: block;
     }
 
-    .select .options .icon {
+    .ui-input-select .options .icon {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -111,27 +111,27 @@
         color: hsl(var(--primary));
     }
 
-    .select.open .options .icon {
+    .ui-input-select.open .options .icon {
         display: none;
     }
 
-    .select:not(.open) .options .option:not(.selected) {
+    .ui-input-select:not(.open) .options .option:not(.selected) {
         display: none;
     }
 
-    .select .options .option {
+    .ui-input-select .options .option {
         height: 100%;
         padding: calc(var(--spacing));
         padding-right: 2.5em;
         transition: background-color .25s linear;
     }
 
-    .select.open .options .option.selected {
+    .ui-input-select.open .options .option.selected {
         background-color: hsl(var(--primary));
         color: hsl(var(--primary-fg));
     }
 
-    .select.open .options .option:not(.selected):hover {
+    .ui-input-select.open .options .option:not(.selected):hover {
         background-color: hsl(var(--fg), .1);
     }
 </style>

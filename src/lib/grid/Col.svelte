@@ -9,6 +9,7 @@
 
 <div
     {...$$restProps}
+    class={"ui-grid-col " + ($$restProps.class || "")}
     style:width
     style:height
     style:flex
