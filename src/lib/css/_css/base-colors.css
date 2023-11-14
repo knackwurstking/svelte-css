@@ -1,6 +1,6 @@
 ::selection {
-    background-color: hsl(var(--primary-fg));
-    color: hsl(var(--primary));
+    background-color: hsl(var(--primary));
+    color: hsl(var(--primary-fg));
 }
 
 body {
