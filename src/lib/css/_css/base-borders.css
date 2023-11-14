@@ -27,19 +27,6 @@ input[aria-invalid="true"] {
     outline-color: hsl(var(--destructive));
 }
 
-ul {
-    border: none;
-    border-radius: var(--radius);
-}
-
-ul > * {
-    border-bottom: var(--border-width) var(--border-style) hsl(var(--border));
-}
-
-ul > *:first-child {
-    border-top: var(--border-width) var(--border-style) hsl(var(--border));
-}
-
 table {
     border-collapse: separate;
 }
