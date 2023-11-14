@@ -1,3 +1,5 @@
+/* TODO: Create a Grid library: "Grid.Row", "Grid.Col" - add gap (between cols and rows) prop */
+
 .row {
     display: flex;
     flex-flow: row wrap;
@@ -8,7 +10,8 @@
     flex: 1;
 }
 
-.col > .card {
+.col > .card,
+.col > article {
     margin: calc(var(--spacing) / 8);
     width: calc(100% - (var(--spacing) / 4));
     height: calc(100% - (var(--spacing) / 4));
