@@ -2,6 +2,8 @@
     import Primary from "./Primary.svelte";
     import Secondary from "./Secondary.svelte";
 
+    import { Grid } from "..";
+
     export let primary = "";
     export let secondary = "";
     export let useLabel = false;
@@ -14,7 +16,7 @@
         class={"ui-text-label " + ($$restProps.class || "")}
         class:row
     >
-        <span class="col">
+        <Grid.Col class="no-user-select">
             {#if !!primary}
                 <Primary>
                     <span>{primary}</span> <slot name="primary" />
@@ -26,7 +28,7 @@
                     <span>{secondary}</span> <slot name="secondary" />
                 </Secondary>
             {/if}
-        </span>
+        </Grid.Col>
 
         <span>
             <slot />
@@ -38,7 +40,7 @@
         class={"ui-text-label " + ($$restProps.class || "")}
         class:row
     >
-        <span class="col no-user-select">
+        <Grid.Col class="no-user-select">
             {#if !!primary}
                 <Primary>
                     <span>{primary}</span> <slot name="primary" />
@@ -50,7 +52,7 @@
                     <span>{secondary}</span> <slot name="secondary" />
                 </Secondary>
             {/if}
-        </span>
+        </Grid.Col>
 
         <span>
             <slot />
