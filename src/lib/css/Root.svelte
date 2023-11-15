@@ -12,6 +12,7 @@
     import "./_css/ui/dialog-footer.css";
     import "./_css/ui/dialog-header.css";
     import "./_css/ui/dialog.css";
+    import "./_css/ui/drawer.css";
     import "./_css/ui/group.css";
     import "./_css/ui/icon-button.css";
 
