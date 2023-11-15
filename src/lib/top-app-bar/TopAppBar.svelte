@@ -1,5 +1,5 @@
 <script>
-    export let height = "3.5em";
+    export let height = "3em";
 </script>
 
 <header {...$$restProps} class="ui-top-app-bar" style:height={height}>
@@ -38,12 +38,10 @@
         display: inline-flex;
         flex-wrap: nowrap;
         align-items: center;
-
-        padding: auto var(--spacing);
     }
 
     header section {
-        margin: auto var(--spacing);
+        margin: 0 var(--spacing);
     }
 
     header section.left {
