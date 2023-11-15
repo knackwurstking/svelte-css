@@ -15,6 +15,7 @@
     import "./_css/ui/drawer.css";
     import "./_css/ui/group.css";
     import "./_css/ui/icon-button.css";
+    import "./_css/ui/text.css";
 
     import "./_css/utils/flex.css";
     import "./_css/utils/is.css";
