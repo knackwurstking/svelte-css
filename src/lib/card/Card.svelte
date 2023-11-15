@@ -9,12 +9,13 @@
 
     class={"ui-card " + ($$restProps.class || "")}
 
-    style:padding="var(--spacing)"
     style:background-color={backgroundColor}
     style:color={color}
-    style:border={noBorder ? "none" : "var(--border-width) var(--border-style) hsl(var(--border))"}
-    style:border-radius="var(--radius)"
-    style:overflow="hidden"
+    style:border={
+        noBorder
+            ? "none"
+            : "var(--border-width) var(--border-style) hsl(var(--border))"
+    }
 >
     <slot />
 </article>
