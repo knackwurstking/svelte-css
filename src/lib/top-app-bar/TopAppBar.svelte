@@ -49,8 +49,8 @@
         flex-wrap: nowrap;
     }
 
-    header section:first-child > :global(> *),
-    header section:last-child > :global(> *) {
+    header section:first-child :global(> *),
+    header section:last-child :global(> *) {
         margin: 0 var(--spacing);
     }
 
