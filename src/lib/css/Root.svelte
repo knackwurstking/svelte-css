@@ -1,16 +1,17 @@
 <script>
     import "normalize.css";
 
-    import "./_css/base.css";
-    import "./_css/base-borders.css";
-    import "./_css/base-colors.css";
-    import "./_css/base-fonts.css";
+    import "./_css/base/main.css";
+    import "./_css/base/fonts.css";
+    import "./_css/base/colors.css";
+    import "./_css/base/borders.css";
 
-    import "./_css/container.css";
-    import "./_css/group.css";
+    import "./_css/ui/container.css";
+    import "./_css/ui/group.css";
 
-    import "./_css/utils-is.css";
-    import "./_css/utils-no.css";
+    import "./_css/utils/flex.css";
+    import "./_css/utils/is.css";
+    import "./_css/utils/no.css";
 
     import { onDestroy } from "svelte";
 

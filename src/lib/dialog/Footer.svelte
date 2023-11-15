@@ -1,4 +1,11 @@
-<footer {...$$restProps} class={"ui-dialog-footer " + ($$restProps.class || "")}>
+<footer
+    {...$$restProps}
+    class={
+        "ui-dialog-footer " +
+        "flex row nowrap justify-end " +
+        ($$restProps.class || "")
+    }
+>
     <slot />
 </footer>
 
@@ -8,8 +15,6 @@
         margin-top: var(--spacing);
         border-bottom-right-radius: var(--radius);
         border-bottom-left-radius: var(--radius);
-        display: flex;
-        justify-content: flex-end;
     }
 
     footer :global(> *) {

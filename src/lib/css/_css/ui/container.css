@@ -1,4 +1,4 @@
-.container {
+.ui-container {
     width: 100%;
     max-width: 65em;
 
@@ -6,7 +6,7 @@
     padding: var(--spacing);
 }
 
-.container-full {
+.ui-container-full {
     width: 100%;
 
     margin: 0 auto;
