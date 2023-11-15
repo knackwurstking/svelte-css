@@ -31,25 +31,25 @@
 .ui-button.full.foreground:not(.outline, .none) {
     background-color: hsl(var(--fg));
     color: hsl(var(--bg));
-    border: none;
+    border-color: transparent !important;
 }
 
 .ui-button.full.primary:not(.outline, .none) {
     background-color: hsl(var(--primary));
     color: hsl(var(--primary-fg));
-    border: none;
+    border-color: transparent !important;
 }
 
 .ui-button.full.secondary:not(.outline, .none) {
     background-color: hsl(var(--secondary));
     color: hsl(var(--secondary-fg));
-    border: none;
+    border-color: transparent !important;
 }
 
 .ui-button.full.destructive:not(.outline, .none) {
     background-color: hsl(var(--destructive));
     color: hsl(var(--destructive-fg));
-    border: none;
+    border-color: transparent !important;
 }
 
 /* variant: outline */
