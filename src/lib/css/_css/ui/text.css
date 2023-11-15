@@ -1,10 +1,10 @@
 .ui-text-primary {
     font-size: 1.1em;
-    font-weight: 400;
+    font-weight: normal;
 }
 
 .ui-text-secondary {
-    font-size: 0.85em;
-    font-weight: 300;
+    font-size: 0.9em;
+    font-weight: lighter;
     font-style: italic;
 }

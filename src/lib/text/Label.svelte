@@ -13,10 +13,25 @@
 {#if useLabel}
     <label
         {...$$restProps}
-        class={"ui-text-label " + ($$restProps.class || "")}
+        class={
+            "ui-text-label " +
+            !row ? "flex column" : "" +
+            ($$restProps.class || "")
+        }
         class:row
+        style={
+            "width: 100%;" +
+            "padding: calc(var(--spacing) / 4) calc(var(--spacing) / 2);"
+        }
     >
-        <Grid.Col class="no-user-select">
+        <Grid.Col
+            class={"flex column justify-center no-user-select"}
+            style={
+                row
+                    ? "margin-right: var(--spacing); width: 100%;"
+                    : "margin-left: calc(var(--spacing) / 2);"
+            }
+        >
             {#if !!primary}
                 <Primary>
                     <span>{primary}</span> <slot name="primary" />
@@ -30,17 +45,32 @@
             {/if}
         </Grid.Col>
 
-        <span>
+        <span class="flex align-center">
             <slot />
         </span>
     </label>
 {:else}
     <span
         {...$$restProps}
-        class={"ui-text-label " + ($$restProps.class || "")}
+        class={
+            "ui-text-label " +
+            !row ? "flex column" : "" +
+            ($$restProps.class || "")
+        }
         class:row
+        style={
+            "width: 100%;" +
+            "padding: calc(var(--spacing) / 4) calc(var(--spacing) / 2);"
+        }
     >
-        <Grid.Col class="no-user-select">
+        <Grid.Col
+            class={"flex column justify-center no-user-select"}
+            style={
+                row
+                    ? "margin-right: var(--spacing); width: 100%;"
+                    : "margin-left: calc(var(--spacing) / 2);"
+            }
+        >
             {#if !!primary}
                 <Primary>
                     <span>{primary}</span> <slot name="primary" />
@@ -54,40 +84,8 @@
             {/if}
         </Grid.Col>
 
-        <span>
+        <span class="flex align-center">
             <slot />
         </span>
     </span>
 {/if}
-
-<style>
-    .ui-text-label {
-        width: 100%;
-        padding: calc(var(--spacing) / 4) calc(var(--spacing) / 2);
-    }
-
-    .ui-text-label:not(.row) {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .ui-text-label > span:nth-child(1) {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .ui-text-label.row > span:nth-child(1) {
-        margin-right: var(--spacing);
-        width: 100%;
-    }
-
-    .ui-text-label:not(.row) > span:nth-child(1) {
-        margin-left: calc(var(--spacing) / 2);
-    }
-
-    .ui-text-label > span:nth-child(2) {
-        display: flex;
-        align-items: center;
-    }
-</style>
