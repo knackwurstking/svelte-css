@@ -18,6 +18,7 @@
     import "./_css/ui/text.css";
 
     import "./_css/utils/flex.css";
+    import "./_css/utils/has.css";
     import "./_css/utils/is.css";
     import "./_css/utils/no.css";
 

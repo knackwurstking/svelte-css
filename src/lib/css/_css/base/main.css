@@ -4,6 +4,12 @@
     box-sizing: border-box;
     -webkit-tap-highlight-color: transparent;
     position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    line-height: 1.5;
 }
 
 article {
@@ -42,11 +48,12 @@ button:focus {
 code,
 pre {
     display: block;
-    padding: var(--spacing);
+    padding: calc(var(--spacing) / 2);
 }
 
 code {
     display: inline-block;
+    padding: calc(var(--spacing));
 }
 
 /**
