@@ -11,6 +11,7 @@
 <Button.Icon
     {...$$restProps}
     class={"ui-dialog-close-button " + ($$restProps.class || "")}
+    ghost
 
     on:click={() => dispatch("close")}
 >
