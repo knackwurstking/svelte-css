@@ -11,8 +11,16 @@
 }
 
 .no-overflow {
-    -ms-overflow-style: none;
     overflow: hidden;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
 }
 
 .no-padding {
