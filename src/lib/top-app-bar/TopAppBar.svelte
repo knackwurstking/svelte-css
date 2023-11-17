@@ -1,20 +1,29 @@
 <script>
     export let height = "3em";
+    export let uiContainer = false;
 </script>
 
-<header {...$$restProps} class="ui-top-app-bar" style:height={height}>
-    <div style="width: 100%;">
-        <section class="left">
+<header
+    {...$$restProps}
+    class={"ui-top-app-bar flex " + ($$restProps.class || "")}
+    style:height={height}
+>
+    <div
+        class="flex nowrap align-center is-max-height"
+        class:ui-container={uiContainer}
+        class:ui-container-full={!uiContainer}
+    >
+        <span class="left">
             <slot name="left" />
-        </section>
+        </span>
 
-        <section class="center">
+        <span class="center">
             <slot name="center" />
-        </section>
+        </span>
 
-        <section class="right">
+        <span class="right">
             <slot name="right" />
-        </section>
+        </span>
     </div>
 </header>
 
@@ -32,33 +41,25 @@
         backdrop-filter: blur(5px);
     }
 
-    header > div {
-        height: 100%;
-
-        display: inline-flex;
-        flex-wrap: nowrap;
-        align-items: center;
-    }
-
-    header section {
+    header span {
         margin: 0 var(--spacing);
     }
 
-    header section.left {
+    header span.left {
         display: flex;
         flex-wrap: nowrap;
     }
 
-    header section:first-child :global(> *),
-    header section:last-child :global(> *) {
+    header span:first-child :global(> *),
+    header span:last-child :global(> *) {
         margin: 0 var(--spacing);
     }
 
-    header section.center {
+    header span.center {
         width: 100%;
     }
 
-    header section:last-child {
+    header span:last-child {
         display: flex;
         flex-wrap: nowrap;
     }
