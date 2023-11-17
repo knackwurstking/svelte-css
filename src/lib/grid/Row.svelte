@@ -4,7 +4,9 @@
     export let height = undefined;
     export let display = "flex";
     export let flexFlow = "row wrap";
-    export let justifyContent = "flex-start";
+    export let justify = "flex-start";
+    /** @type {string} */
+    export let align = undefined;
     export let gap = "0";
 </script>
 
@@ -16,7 +18,8 @@
     style:height
     style:display
     style:flex-flow={flexFlow}
-    style:justify-content={justifyContent}
+    style:justify-content={justify}
+    style:align-items={align}
 >
     <slot />
 </div>
