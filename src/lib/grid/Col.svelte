@@ -4,7 +4,7 @@
     /** @type {string} */
     export let height = undefined;
     export let flex = "1";
-    export let padding = "var(--spacing)";
+    export let padding = "calc(var(--spacing) / 2)";
 </script>
 
 <div
