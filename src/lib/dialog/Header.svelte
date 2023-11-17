@@ -12,7 +12,7 @@
     {...$$restProps}
     class={"ui-dialog-header " + ($$restProps.class || "")}
 >
-    <h3>{title || ""}</h3>
+    <h4>{title || ""}</h4>
 
     <CloseButton on:close={() => dispatch("close")} />
 </header>

@@ -11,7 +11,6 @@
     border-top-left-radius: var(--radius);
 }
 
-.ui-dialog-header h3 {
-    padding-right: calc(4em + var(--spacing));
+.ui-dialog-header h4 {
     margin: auto 0;
 }
