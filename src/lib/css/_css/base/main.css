@@ -20,6 +20,10 @@ section {
     padding: var(--spacing) 0;
 }
 
+figure {
+    overflow: auto;
+}
+
 /**
  * Text html tags
  */
