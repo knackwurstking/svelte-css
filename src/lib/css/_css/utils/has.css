@@ -22,3 +22,31 @@
     border-left: var(--border-width) var(--border-style) hsl(var(--border));
     border-radius: var(--radius);
 }
+
+.has-margin {
+    margin: var(--spacing);
+}
+
+.has-margin-x {
+    margin-right: var(--spacing);
+    margin-left: var(--spacing);
+}
+
+.has-margin-y {
+    margin-top: var(--spacing);
+    margin-bottom: var(--spacing);
+}
+
+.has-padding {
+    padding: var(--spacing);
+}
+
+.has-padding-x {
+    padding-right: var(--spacing);
+    padding-left: var(--spacing);
+}
+
+.has-padding-y {
+    padding-top: var(--spacing);
+    padding-bottom: var(--spacing);
+}

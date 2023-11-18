@@ -59,17 +59,17 @@ select {
 input,
 textarea {
     font-family: var(--font-family-mono);
+    font-size: .85em;
 }
 
-select,
-input,
-textarea {
+select {
     font-size: 0.95em;
 }
 
 table thead {
     font-family: var(--font-family-heading);
     font-size: 0.9em;
+    font-style: italic;
 }
 
 table tbody {

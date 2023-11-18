@@ -1,4 +1,6 @@
 <script>
+    import { FlexGrid } from "..";
+
     export let height = "3em";
     export let uiContainer = false;
 </script>
@@ -13,17 +15,17 @@
         class:ui-container={uiContainer}
         class:ui-container-full={!uiContainer}
     >
-        <span class="left">
+        <FlexGrid.Row class="justify-start" style="width: fit-content;" gap=".1em">
             <slot name="left" />
-        </span>
+        </FlexGrid.Row>
 
-        <span class="center">
+        <FlexGrid.Row class="justify-start" gap=".1em">
             <slot name="center" />
-        </span>
+        </FlexGrid.Row>
 
-        <span class="right">
+        <FlexGrid.Row class="justify-end" gap=".1em">
             <slot name="right" />
-        </span>
+        </FlexGrid.Row>
     </div>
 </header>
 
@@ -39,28 +41,5 @@
 
         background-color: hsla(var(--bg), .4);
         backdrop-filter: blur(5px);
-    }
-
-    header span {
-        margin: 0 var(--spacing);
-    }
-
-    header span.left {
-        display: flex;
-        flex-wrap: nowrap;
-    }
-
-    header span:first-child :global(> *),
-    header span:last-child :global(> *) {
-        margin: 0 var(--spacing);
-    }
-
-    header span.center {
-        width: 100%;
-    }
-
-    header span:last-child {
-        display: flex;
-        flex-wrap: nowrap;
     }
 </style>
