@@ -30,9 +30,9 @@
 
                 --font-size: calc(15px + 0.390625vw);
 
-                --font-family-base: sans;
-                --font-family-heading: serif;
-                --font-family-input: mono;
+                --font-family-base: "Times New Roman", sans-serif;
+                --font-family-heading: "Times New Roman", serif;
+                --font-family-input: "Courier New", monospace;
 
                 --radius: 0.25rem;
                 --spacing: .5em;
