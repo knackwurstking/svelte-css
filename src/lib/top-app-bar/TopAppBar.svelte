@@ -15,6 +15,7 @@
             "no-padding is-max-height align-center " +
             (uiContainer ? "ui-container ": "")
         }
+        style="padding: 0 var(--spacing)"
         gap=".1em"
     >
         <FlexGrid.Row class="justify-start" style="width: fit-content;" gap=".1em">
