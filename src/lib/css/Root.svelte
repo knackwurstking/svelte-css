@@ -28,10 +28,11 @@
 
     import { onDestroy } from "svelte";
 
-    import { ZincDark, ZincLight } from "./themes";
+    import { Zinc } from "./themes";
 
-    /** @type {"light" | "dark"} */
+    /** @type {"light" | "dark" | undefined | null} */
     export let mode = undefined;
+    $: !!mode && setMode();
 
     /** @type {"zinc"} */
     export let variant = "zinc";
@@ -58,7 +59,7 @@
     }
 
     /** @param {MediaQueryListEvent} ev */
-    const onDarkChange = (ev) => {
+    async function onDarkChange(ev) {
         if (ev.matches) {
             mode = "dark";
         } else {
@@ -66,15 +67,17 @@
         }
     };
 
+    async function setMode() {
+        document.body.setAttribute("data-theme", mode);
+    }
+
     onDestroy(() => {
         if (media) media.removeEventListener("change", onDarkChange);
     });
 </script>
 
 <svelte:head>
-    {#if variant+"-"+(mode || "") === "zinc-light"}
-        <ZincLight />
-    {:else if variant+"-"+(mode || "") === "zinc-dark"}
-        <ZincDark />
+    {#if variant === "zinc"}
+        <Zinc />
     {/if}
 </svelte:head>
