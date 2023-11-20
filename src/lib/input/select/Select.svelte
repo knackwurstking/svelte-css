@@ -59,8 +59,14 @@
 
 <div
     {...$$restProps}
+
     class={"ui-input-select " + ($$restProps.class || "")}
     class:open
+
+    style:height={open
+        ? `calc((1em * var(--line-height) + (var(--spacing) * 2)) * ${items.length})`
+        : "calc(1em * var(--line-height) + (var(--spacing) * 2))"
+    }
 >
     <!-- svelte-ignore a11y-click-events-have-key-events -->
     <!-- svelte-ignore a11y-no-static-element-interactions -->
@@ -87,16 +93,17 @@
 
 <style>
     .ui-input-select {
-        font-size: 0.85em;
-        border: var(--border-width, .1em) var(--border-style) hsl(var(--border));
+        font-size: 0.95em;
+        border: var(--border-width) var(--border-style) hsl(var(--border));
         border-radius: var(--radius);
         width: 100%;
         overflow: hidden;
+
+        transition: height .25s ease;
     }
 
     .ui-input-select .options {
         cursor: pointer;
-        display: block;
     }
 
     .ui-input-select .options .icon {
@@ -121,7 +128,7 @@
 
     .ui-input-select .options .option {
         height: 100%;
-        padding: calc(var(--spacing));
+        padding: var(--spacing);
         padding-right: 2.5em;
         transition: background-color .25s linear;
     }
