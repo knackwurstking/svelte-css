@@ -34,6 +34,8 @@
                 --font-family-heading: "Times New Roman", serif;
                 --font-family-input: "Courier New", monospace;
 
+                --line-height: 1.15;
+
                 --radius: 0.25rem;
                 --spacing: .5em;
 
