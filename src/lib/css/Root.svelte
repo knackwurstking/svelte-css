@@ -1,7 +1,4 @@
 <script>
-    // TODO: handle props: [data-theme=light/dark] for: "zinc", ...
-    // TODO: merge dark and light theme into one theme
-
     import "normalize.css";
 
     import "./_css/base/main.css";
@@ -32,7 +29,7 @@
 
     /** @type {"light" | "dark" | undefined | null} */
     export let mode = undefined;
-    $: !!mode && setMode();
+    $: (mode === "light" || mode === "dark") && setMode(mode);
 
     /** @type {"zinc"} */
     export let variant = "zinc";
@@ -44,11 +41,11 @@
     /** @type {MediaQueryList} */
     let media;
 
-    function enableAutoThemeSwitcher() {
+    async function enableAutoThemeSwitcher() {
         if (auto) {
             if (window.matchMedia) {
-                const media = window.matchMedia("(prefers-color-scheme: dark)");
-                mode = media.matches ? "dark" : "light";
+                media = window.matchMedia("(prefers-color-scheme: dark)");
+                onDarkChange(media);
                 media.addEventListener("change", onDarkChange);
             }
         } else {
@@ -61,13 +58,14 @@
     /** @param {MediaQueryListEvent} ev */
     async function onDarkChange(ev) {
         if (ev.matches) {
-            mode = "dark";
+            setMode("dark");
         } else {
-            mode = "light";
+            setMode("light");
         }
     };
 
-    async function setMode() {
+    /** @type {"dark" | "light"} */
+    async function setMode(mode) {
         document.body.setAttribute("data-theme", mode);
     }
 
