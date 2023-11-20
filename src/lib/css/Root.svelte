@@ -1,4 +1,7 @@
 <script>
+    // TODO: handle props: [data-theme=light/dark] for: "zinc", ...
+    // TODO: merge dark and light theme into one theme
+
     import "normalize.css";
 
     import "./_css/base/main.css";
