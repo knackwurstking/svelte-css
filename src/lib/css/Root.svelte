@@ -16,6 +16,7 @@
     import "./_css/ui/flex-grid.css";
     import "./_css/ui/group.css";
     import "./_css/ui/icon-button.css";
+    import "./_css/ui/spinner.css";
     import "./_css/ui/text.css";
 
     import "./_css/utils/flex.css";
