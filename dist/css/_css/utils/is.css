@@ -1,0 +1,32 @@
+.is-debug {
+    border: var(--border-width) var(--border-style) red;
+}
+
+.is-debug * {
+    border: var(--border-width) var(--border-style) red;
+}
+
+.is-text-center {
+    text-align: center;
+}
+
+.is-text-right {
+    text-align: right;
+}
+
+.is-text-left {
+    text-align: left;
+}
+
+.is-max {
+    width: 100%;
+    height: 100%;
+}
+
+.is-max-width {
+    width: 100%;
+}
+
+.is-max-height {
+    height: 100%;
+}

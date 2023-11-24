@@ -1,0 +1,72 @@
+<script>
+    /******************************
+     * Variable Export Definitions
+     ******************************/
+
+    export let title = "";
+    export let placeholder = "";
+    export let value = "";
+    export let invalid = false;
+
+    /***********************
+     * Variable Definitions
+     ***********************/
+
+    let focus = false;
+</script>
+
+<div
+    {...$$restProps}
+    class={"ui-input-text " + ($$restProps.class || "")}
+    class:focus={focus}
+    class:invalid={invalid}
+>
+    {#if !!title}
+        <span class="title">{title}</span>
+    {/if}
+    <input
+        bind:value
+        {placeholder}
+        on:change
+        on:input
+        on:focus={() => focus = true}
+        on:blur={() => focus = false}
+    />
+</div>
+
+<style>
+    .ui-input-text {
+        width: 100%;
+
+        border-bottom: var(--border-width) var(--border-style) hsl(var(--border));
+
+        transition: border-color .25s linear;
+    }
+
+    .ui-input-text.focus {
+        border-color: hsl(var(--primary));
+    }
+
+    .ui-input-text.invalid {
+        border-color: hsl(var(--destructive));
+    }
+
+    .ui-input-text .title {
+        font-size: 0.85em;
+        font-weight: 300;
+        font-style: italic;
+        padding-left: var(--spacing);
+        padding-right: var(--spacing);
+    }
+
+    input {
+        width: 100%;
+
+        margin: 0;
+        padding-top: calc(var(--spacing) / 1.5);
+
+        border: none;
+        outline-offset: 0 !important;
+        outline: none !important;
+    }
+</style>

@@ -1,0 +1,78 @@
+html {
+    font-size: var(--font-size);
+    line-height: var(--line-height, 1.15);
+}
+
+body {
+    font-family: var(--font-family-sans-serif);
+    font-size: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-family-serif);
+    font-style: italic;
+}
+
+h1 {
+    font-size: calc(1em * 2);
+}
+
+h2 {
+    font-size: calc(1em * 1.75);
+}
+
+h3 {
+    font-size: calc(1em * 1.5);
+}
+
+h4 {
+    font-size: calc(1em * 1.25);
+}
+
+h5 {
+    font-size: calc(1em * 1);
+}
+
+h6 {
+    font-size: calc(1em * 0.75);
+}
+
+pre,
+code,
+kbd,
+samp {
+    font-family: var(--font-family-monospace);
+    font-size: 0.95em;
+}
+
+button {
+    font-family: var(--font-family-serif);
+    font-size: 1.1em;
+}
+
+select {
+    font-family: var(--font-family-sans-serif);
+    font-size: 0.95em;
+}
+
+input,
+textarea {
+    font-family: var(--font-family-monospace);
+    font-size: .85em;
+}
+
+table thead {
+    font-family: var(--font-family-serif);
+    font-size: 0.9em;
+    font-style: italic;
+}
+
+table tbody {
+    font-family: var(--font-family-monospace);
+    font-size: 0.8em;
+}
