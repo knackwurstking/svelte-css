@@ -23,6 +23,7 @@
 - Theming mode and variant
 - Library packaging using svelte-kit now
 - CSS base fonts (sans-serif/serif/monospace)
+- Style changes
 
 ### Removed
 
