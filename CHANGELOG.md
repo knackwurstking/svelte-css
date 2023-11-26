@@ -4,29 +4,30 @@
 
 ### Added
 
-- "normalize.css" import to `CSS.Root`
-- `FlexGrid` component (replacing `Grid`)
-- `Input.Select` transition on open/close
-- css utils
-- css "ui" (component styles)
-- added some components
-    - `TopAppBar` 
-    - `Input.HTMLSelect`
-    - `Drawer`
-    - `Input.Search`
+- Import "normalize.css" on top of `CSS.Root`
+- New component `FlexGrid` (replacing `Grid`)
+- Transition for `Input.Select` open/close
+- CSS utils
+- CSS ui (component styles)
+- New component: `TopAppBar`
+- New component: `Drawer`
+- New component: `Input.HTMLSelect`
+- New component: `Input.Search`
 
-### Removed
+### Fixed
 
-- css utils: .has-margin/padding(-x/-y)
+- Code clean up
 
 ### Changed
 
-- theming: dark/light mode handling ("zink" variant)
-- using svelte-kit for packaging
-- fonts css and variables for sans-serif/serif/monospace
-- some css base font sizing
-- component styles
-- css class names for components ("ui-*")
+- Theming mode and variant
+- Library packaging using svelte-kit now
+- CSS base fonts (sans-serif/serif/monospace)
+
+### Removed
+
+- CSS utils: ".has-margin/padding(-x/-y)"
+
 
 ## v0.5.0 2023-11-08
 
