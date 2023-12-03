@@ -4,8 +4,7 @@
 
 ### Fixed
 
-- Code clean up: settings view
-- Missing top-app-bar styles
+- Missing top-app-bar styles (`CSS.Root`)
 
 ## v0.6.0 2023-11-26
 
