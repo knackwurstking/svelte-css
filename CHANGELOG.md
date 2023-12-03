@@ -1,5 +1,12 @@
 # Changelog
 
+## v0.6.1 [unreleased]
+
+### Fixed
+
+- Code clean up: settings view
+- Missing top-app-bar styles
+
 ## v0.6.0 2023-11-26
 
 ### Added
