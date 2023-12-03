@@ -18,6 +18,7 @@
     import "./_css/ui/icon-button.css";
     import "./_css/ui/spinner.css";
     import "./_css/ui/text.css";
+    import "./_css/ui/top-app-bar.css";
 
     import "./_css/utils/flex.css";
     import "./_css/utils/has.css";
