@@ -1,6 +1,6 @@
 {
     "name": "svelte-css",
-    "version": "0.6.0",
+    "version": "0.7.0",
     "scripts": {
         "dev": "vite dev --host",
         "build": "vite build && npm run package",
