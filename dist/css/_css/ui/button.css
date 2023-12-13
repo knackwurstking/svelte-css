@@ -23,6 +23,10 @@
 
 /* variant: full */
 
+.ui-button.full {
+    border: none;
+}
+
 .ui-button.full.active .background {
     transition: opacity .25s ease .4s;
     opacity: .2;
@@ -31,25 +35,21 @@
 .ui-button.full.foreground:not(.outline, .none) {
     background-color: hsl(var(--fg));
     color: hsl(var(--bg));
-    border-color: transparent !important;
 }
 
 .ui-button.full.primary:not(.outline, .none) {
     background-color: hsl(var(--primary));
     color: hsl(var(--primary-fg));
-    border-color: transparent !important;
 }
 
 .ui-button.full.secondary:not(.outline, .none) {
     background-color: hsl(var(--secondary));
     color: hsl(var(--secondary-fg));
-    border-color: transparent !important;
 }
 
 .ui-button.full.destructive:not(.outline, .none) {
     background-color: hsl(var(--destructive));
     color: hsl(var(--destructive-fg));
-    border-color: transparent !important;
 }
 
 /* variant: outline */
