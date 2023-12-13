@@ -3,6 +3,7 @@
 ## v0.7.0 [unreleased]
 
 - Update drawer components (`GroupItem` now is just a container)
+- Remove border from button variant "full"
 
 ## v0.6.1 2023-12-03
 
