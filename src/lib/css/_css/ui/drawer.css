@@ -35,3 +35,9 @@
     background-color: hsl(var(--bg));
     color: hsl(var(--fg));
 }
+
+.ui-drawer-group-title {
+}
+
+.ui-drawer-group-item {
+}

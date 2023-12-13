@@ -3,15 +3,10 @@
 /** @typedef {typeof __propDef.slots}  GroupItemSlots */
 export default class GroupItem extends SvelteComponent<{
     [x: string]: any;
-    active?: boolean;
 }, {
-    click: MouseEvent;
-} & {
     [evt: string]: CustomEvent<any>;
 }, {
-    default: {
-        style: string;
-    };
+    default: {};
 }> {
 }
 export type GroupItemProps = typeof __propDef.props;
@@ -21,17 +16,12 @@ import { SvelteComponent } from "svelte";
 declare const __propDef: {
     props: {
         [x: string]: any;
-        active?: boolean;
     };
     events: {
-        click: MouseEvent;
-    } & {
         [evt: string]: CustomEvent<any>;
     };
     slots: {
-        default: {
-            style: string;
-        };
+        default: {};
     };
 };
 export {};
