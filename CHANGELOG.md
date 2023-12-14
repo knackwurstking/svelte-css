@@ -6,6 +6,7 @@
 - Remove border from button variant "full"
 - Change fonts theming
 - Adding a minified css file containing all the styles (input components still missing)
+- Adding some css utils
 
 ## v0.6.1 2023-12-03
 
