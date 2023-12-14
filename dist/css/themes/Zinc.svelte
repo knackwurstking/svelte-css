@@ -30,9 +30,8 @@
 
                 --font-size: calc(15px + 0.390625vw);
 
-                --font-family-sans-serif: "Arial", sans-serif;
-                --font-family-serif: "Times New Roman", serif;
-                --font-family-monospace: "Courier New", monospace;
+                --font-family: "Times New Roman", serif;
+                --font-family-mono: "Courier New", monospace;
 
                 --line-height: 1.15;
 
@@ -73,9 +72,8 @@
 
                 --font-size: calc(15px + 0.390625vw);
 
-                --font-family-sans-serif: "Arial", sans-serif;
-                --font-family-serif: "Times New Roman", serif;
-                --font-family-monospace: "Courier New", monospace;
+                --font-family: "Times New Roman", serif;
+                --font-family-mono: "Courier New", monospace;
 
                 --line-height: 1.15;
 

@@ -4,7 +4,7 @@ html {
 }
 
 body {
-    font-family: var(--font-family-sans-serif);
+    font-family: var(--font-family);
     font-size: 1rem;
 }
 
@@ -14,8 +14,10 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: var(--font-family-serif);
+    font-family: var(--font-family);
     font-style: italic;
+    font-weight: bolder;
+    text-shadow: .1em .1em .1em hsla(var(--primary), .2);
 }
 
 h1 {
@@ -46,33 +48,33 @@ pre,
 code,
 kbd,
 samp {
-    font-family: var(--font-family-monospace);
+    font-family: var(--font-family-mono);
     font-size: 0.95em;
 }
 
 button {
-    font-family: var(--font-family-serif);
+    font-family: var(--font-family);
     font-size: 1.1em;
 }
 
 select {
-    font-family: var(--font-family-sans-serif);
+    font-family: var(--font-family);
     font-size: 0.95em;
 }
 
 input,
 textarea {
-    font-family: var(--font-family-monospace);
+    font-family: var(--font-family-mono);
     font-size: .85em;
 }
 
 table thead {
-    font-family: var(--font-family-serif);
+    font-family: var(--font-family);
     font-size: 0.9em;
     font-style: italic;
 }
 
 table tbody {
-    font-family: var(--font-family-monospace);
+    font-family: var(--font-family-mono);
     font-size: 0.8em;
 }
