@@ -4,6 +4,7 @@
 
 - Update drawer components (`GroupItem` now is just a container)
 - Remove border from button variant "full"
+- Change fonts theming
 
 ## v0.6.1 2023-12-03
 
