@@ -6,20 +6,20 @@
         style.classList.add("theme");
         style.innerText = `
             [data-theme=light] {
-                --bg: 0, 0%, 100%;
-                --fg: 240, 10%, 3.9%;
+                --bg: 240, 10%, 96.1%;
+                --fg: 0, 10%, 3.9%;
 
-                --card: 0, 0%, 100%;
-                --card-fg: 240, 10%, 3.9%;
+                --card: 240, 10%, 96.1%;
+                --card-fg: 0, 10%, 3.9%;
 
                 --primary: 240, 5.9%, 10%;
                 --primary-fg: 0, 0%, 98%;
 
                 --secondary: 240, 4.8%, 95.9%;
-                --secondary-fg: 240, 5.9%, 10%;
+                --secondary-fg: 0, 5.9%, 10%;
 
                 --muted: 240, 4.8%, 95.9%;
-                --muted-fg: 240, 3.8%, 46.1%; 
+                --muted-fg: 0, 3.8%, 46.1%; 
 
                 --destructive: 0, 72.22%, 50.59%;
                 --destructive-fg: 0, 0%, 98%;
@@ -54,14 +54,14 @@
                 --card: 240, 10%, 3.9%;
                 --card-fg: 0, 0%, 98%;
 
-                --primary: 0, 0%, 98%;
-                --primary-fg: 240, 5.9%, 10%;
+                --primary: 240, 5.9%, 98%;
+                --primary-fg: 0, 0%, 10%;
 
                 --secondary: 240, 3.7%, 15.9%;
                 --secondary-fg: 0, 0%, 98%;
 
                 --muted: 240, 3.7%, 15.9%;
-                --muted-fg: 240, 5%, 64.9%;
+                --muted-fg: 0, 5%, 64.9%;
 
                 --destructive: 0, 62.8%, 30.6%;
                 --destructive-fg: 0, 0%, 98%;
