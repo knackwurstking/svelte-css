@@ -35,3 +35,7 @@
     -ms-touch-action: none;
     touch-action: none;
 }
+
+.no-radius {
+    border-radius: 0;
+}

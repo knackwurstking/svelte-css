@@ -30,3 +30,28 @@
 .is-max-height {
     height: 100%;
 }
+
+.is-primary {
+    color: hsl(var(--primary-fg));
+    background-color: hsl(var(--primary));
+}
+
+.is-color-primary {
+    color: hsl(var(--primary));
+}
+
+.is-lighter {
+    font-weight: lighter;
+}
+
+.is-normal {
+    font-weight: normal;
+}
+
+.is-bold {
+    font-weight: bold;
+}
+
+.is-bolder {
+    font-weight: bolder;
+}
