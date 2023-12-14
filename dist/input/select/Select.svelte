@@ -1,4 +1,6 @@
 <script>
+    // TODO: move styles to css
+
     import { createEventDispatcher } from "svelte";
 
     import ChevronDown from "svelte-material-icons/ChevronDown.svelte";

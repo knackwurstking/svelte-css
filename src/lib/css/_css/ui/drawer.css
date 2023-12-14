@@ -25,7 +25,7 @@
 
     position: absolute;
     top: 0;
-    left: 0;
+    left: -100%;
     width: 18em;
     max-width: 100%;
     height: 100%;
@@ -36,9 +36,17 @@
     color: hsl(var(--fg));
 }
 
+.ui-drawer.open aside {
+    left: 0;
+}
+
 .ui-drawer-group-title {
 }
 
 .ui-drawer-group-item {
     padding: var(--spacing) calc(var(--spacing) * 1.5);
+    border: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
 }

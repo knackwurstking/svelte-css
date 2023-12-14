@@ -1,4 +1,6 @@
 <script>
+    // TODO: move styles to css
+
     import { onDestroy, createEventDispatcher } from "svelte";
 
     /***********

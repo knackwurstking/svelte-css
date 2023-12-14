@@ -1,11 +1,14 @@
 .ui-grid {
+    --gap: 0;
+
     width: 100%;
     height: fit-content;
+    display: flex;
     flex-flow: column nowrap;
 }
 
 .ui-grid > * {
-    margin: var(--gap, 0) 0;
+    margin: var(--gap) 0;
 }
 
 .ui-grid > *:first-child {
@@ -19,11 +22,12 @@
 .ui-grid-row {
     width: 100%;
     justify-content: flex-start;
+    display: flex;
     flex-flow: row nowrap;
 }
 
 .ui-grid-row > * {
-    margin: 0 var(--gap, 0);
+    margin: 0 var(--gap);
 }
 
 .ui-grid-row > *:first-child {
@@ -36,4 +40,5 @@
 
 .ui-grid-col {
     padding: 0;
+    flex: 1;
 }

@@ -1,6 +1,6 @@
 <li
     {...$$restProps}
-    class={"ui-drawer-group-item no-border flex row nowrap " + ($$restProps.class || "")}
+    class={"ui-drawer-group-item " + ($$restProps.class || "")}
 >
     <slot />
 </li>

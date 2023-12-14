@@ -6,8 +6,30 @@
     width: 100%;
     height: 3em;
 
+    display: flex;
+
     border-bottom: var(--border-width) var(--border-style) hsl(var(--border));
 
     background-color: hsla(var(--bg), .4);
     backdrop-filter: blur(5px);
+}
+
+.ui-top-app-bar > .ui-grid-row {
+    --gap: .1em;
+    padding: 0 var(--spacing);
+    height: 100%;
+    align-items: center;
+}
+
+.ui-top-app-bar > .ui-grid-row > .ui-grid-row {
+    --gap: .1em;
+    justify-content: flex-start;
+}
+
+.ui-top-app-bar > .ui-grid-row > .ui-grid-row:first-child {
+    width: fit-content;
+}
+
+.ui-top-app-bar > .ui-grid-row > .ui-grid-row:last-child {
+    justify-content: flex-end;
 }
