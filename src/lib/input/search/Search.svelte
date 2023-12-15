@@ -41,7 +41,7 @@
     class:invalid={invalid}
 >
     {#if !!title}
-        <span class="title">{title}</span>
+        <span class="title ui-text-secondary">{title}</span>
     {/if}
 
     <input
@@ -101,9 +101,6 @@
     }
 
     .ui-input-search .title {
-        font-size: 0.85em;
-        font-weight: 300;
-        font-style: italic;
         padding-left: var(--spacing);
         padding-right: var(--spacing);
     }
@@ -118,5 +115,7 @@
         border: none;
         outline-offset: 0 !important;
         outline: none !important;
+
+        font-size: 0.95em;
     }
 </style>

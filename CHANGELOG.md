@@ -2,13 +2,16 @@
 
 ## v0.7.0 [unreleased]
 
-- Update drawer components (`GroupItem` now is just a container)
-- Remove border from button variant "full"
+- Updated drawer components (`GroupItem` now is just a container)
+- Removed border from button variant "full"
 - Change fonts theming
-- Adding a minified css file containing all the styles (input components still missing)
-- Adding some css utils
-- Update Input component: Search (dispatch and blur on submit)
+- Add a minified css file containing all the styles (input components still missing)
+- Add some css utils
 - Change backdrop-filter for drawer to 5px (from .5rem)
+- `Input.Search` improvements
+    - Add ".ui-text-secondary" to ".title"
+    - Blur on submit
+    - Events "change" and "input" dispatch with value as detail data
 
 ## v0.6.1 2023-12-03
 
