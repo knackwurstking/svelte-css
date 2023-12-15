@@ -8,8 +8,8 @@ export default class Search extends SvelteComponent<{
     value?: string;
     placeholder?: string;
 }, {
-    change: Event;
-    input: Event;
+    change: CustomEvent<any>;
+    input: CustomEvent<any>;
     submit: CustomEvent<any>;
 } & {
     [evt: string]: CustomEvent<any>;
@@ -28,8 +28,8 @@ declare const __propDef: {
         placeholder?: string;
     };
     events: {
-        change: Event;
-        input: Event;
+        change: CustomEvent<any>;
+        input: CustomEvent<any>;
         submit: CustomEvent<any>;
     } & {
         [evt: string]: CustomEvent<any>;

@@ -4,6 +4,7 @@
 export default class Icon extends SvelteComponent<{
     [x: string]: any;
     ripple?: Ripple.RippleOptions;
+    click?: () => void;
     ghost?: boolean;
     color?: "foreground" | "primary" | "secondary" | "destructive";
     noRipple?: boolean;
@@ -14,6 +15,7 @@ export default class Icon extends SvelteComponent<{
 }, {
     default: {};
 }> {
+    get click(): () => void;
 }
 export type IconProps = typeof __propDef.props;
 export type IconEvents = typeof __propDef.events;
@@ -24,6 +26,7 @@ declare const __propDef: {
     props: {
         [x: string]: any;
         ripple?: import("../ripple").RippleOptions;
+        click?: () => void;
         ghost?: boolean;
         color?: "foreground" | "primary" | "secondary" | "destructive";
         noRipple?: boolean;

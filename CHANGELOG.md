@@ -7,6 +7,8 @@
 - Change fonts theming
 - Adding a minified css file containing all the styles (input components still missing)
 - Adding some css utils
+- Update Input component: Search (dispatch and blur on submit)
+- Change backdrop-filter for drawer to 5px (from .5rem)
 
 ## v0.6.1 2023-12-03
 

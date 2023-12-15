@@ -7,6 +7,15 @@
 
     import { Button } from "../..";
 
+    /**
+     * @type {HTMLInputElement}
+     */
+    let input
+    /**
+     * @type {Button.Icon}
+     */
+    let submit
+
     /******************************
      * Variable Export Definitions
      ******************************/
@@ -23,14 +32,6 @@
     const dispatch = createEventDispatcher();
 
     let focus = false;
-
-    /***********************
-     * Function Definitions
-     ***********************/
-
-    async function click() {
-        dispatch("submit", value);
-    }
 </script>
 
 <div
@@ -44,14 +45,15 @@
     {/if}
 
     <input
+        bind:this={input}
         bind:value
         type="search"
         {placeholder}
-        on:change
-        on:input
+        on:change={() => dispatch("change", value)}
+        on:input={() => dispatch("input", value)}
         on:keyup={(ev) => {
             if (ev.key === "Enter") {
-                click();
+                submit.click()
             }
         }}
         on:focus={() => focus = true}
@@ -59,6 +61,7 @@
     />
 
     <Button.Icon
+        bind:this={submit}
         style={
             "position: absolute;" +
             "height: 100%;" +
@@ -69,7 +72,10 @@
             "border-bottom-left-radius: 0;"
         }
         ghost
-        on:click={() => click()}
+        on:click={() => {
+            dispatch("submit", value)
+            input.blur()
+        }}
     >
         <TextSearch />
     </Button.Icon>

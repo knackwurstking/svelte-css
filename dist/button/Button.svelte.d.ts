@@ -4,6 +4,7 @@
 export default class Button extends SvelteComponent<{
     [x: string]: any;
     ripple?: Ripple.RippleOptions;
+    click?: () => void;
     color?: "foreground" | "primary" | "secondary" | "destructive";
     variant?: "full" | "outline" | "ghost";
     noRipple?: boolean;
@@ -15,6 +16,7 @@ export default class Button extends SvelteComponent<{
 }, {
     default: {};
 }> {
+    get click(): () => void;
 }
 export type ButtonProps = typeof __propDef.props;
 export type ButtonEvents = typeof __propDef.events;
@@ -25,6 +27,7 @@ declare const __propDef: {
     props: {
         [x: string]: any;
         ripple?: import("../ripple").RippleOptions;
+        click?: () => void;
         color?: "foreground" | "primary" | "secondary" | "destructive";
         variant?: "full" | "outline" | "ghost";
         noRipple?: boolean;

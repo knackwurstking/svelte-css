@@ -30,3 +30,8 @@
 .has-padding {
     padding: var(--spacing);
 }
+
+.has-bg-blur {
+    background-color: hsla(var(--bg), .4);
+    backdrop-filter: blur(5px);
+}

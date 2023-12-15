@@ -1,6 +1,11 @@
 <script>
     import { Ripple } from "..";
 
+    /**
+     * @type {HTMLButtonElement}
+     */
+    let button
+
     /** @type {"foreground" | "primary" | "secondary" | "destructive"} */
     export let color = "primary";
 
@@ -10,9 +15,15 @@
     export let ripple = {};
 
     export let noRipple = false;
+
+    export function click() {
+        button.click()
+    }
 </script>
 
 <button
+    bind:this={button}
+
     {...$$restProps}
 
     class={`ui-icon-button ${color || ""} ` + ($$restProps.class || "")}
