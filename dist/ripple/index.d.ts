@@ -1,5 +1,5 @@
 export { rippleStart as Start } from "./start";
-export { rippleStop as stop } from "./stop";
+export { rippleStop as Stop } from "./stop";
 export { ripple as Root } from "./ripple";
 export type RippleOptions = {
     color?: string;
