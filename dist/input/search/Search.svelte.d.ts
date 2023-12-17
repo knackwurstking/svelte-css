@@ -7,6 +7,7 @@ export default class Search extends SvelteComponent<{
     invalid?: boolean;
     value?: string;
     placeholder?: string;
+    disableSubmit?: boolean;
 }, {
     change: CustomEvent<any>;
     input: CustomEvent<any>;
@@ -26,6 +27,7 @@ declare const __propDef: {
         invalid?: boolean;
         value?: string;
         placeholder?: string;
+        disableSubmit?: boolean;
     };
     events: {
         change: CustomEvent<any>;

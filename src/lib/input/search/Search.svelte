@@ -24,6 +24,7 @@
     export let placeholder = "";
     export let value = "";
     export let invalid = false;
+    export let disableSubmit = false;
 
     /***********************
      * Variable Definitions
@@ -39,6 +40,7 @@
     class={"ui-input-search " + ($$restProps.class || "")}
     class:focus={focus}
     class:invalid={invalid}
+    class:no-submit={disableSubmit}
 >
     {#if !!title}
         <span class="title ui-text-secondary">{title}</span>
@@ -53,32 +55,34 @@
         on:input={() => dispatch("input", value)}
         on:keyup={(ev) => {
             if (ev.key === "Enter") {
-                submit.click()
+                if (submit) submit.click()
             }
         }}
         on:focus={() => focus = true}
         on:blur={() => focus = false}
     />
 
-    <Button.Icon
-        bind:this={submit}
-        style={
-            "position: absolute;" +
-            "height: 100%;" +
-            "bottom: 0;" +
-            "right: 0;" +
-            "padding: .25em;" +
-            "border-top-left-radius: 0;" +
-            "border-bottom-left-radius: 0;"
-        }
-        ghost
-        on:click={() => {
-            dispatch("submit", value)
-            input.blur()
-        }}
-    >
-        <TextSearch />
-    </Button.Icon>
+    {#if !disableSubmit}
+        <Button.Icon
+            bind:this={submit}
+            style={
+                "position: absolute;" +
+                "height: 100%;" +
+                "bottom: 0;" +
+                "right: 0;" +
+                "padding: .25em;" +
+                "border-top-left-radius: 0;" +
+                "border-bottom-left-radius: 0;"
+            }
+            ghost
+            on:click={() => {
+                dispatch("submit", value)
+                input.blur()
+            }}
+        >
+            <TextSearch />
+        </Button.Icon>
+    {/if}
 </div>
 
 <style>
@@ -110,12 +114,13 @@
 
         margin: 0;
         padding-top: calc(var(--spacing) / 1.5);
-        padding-right: calc(2.5em + var(--spacing));
 
         border: none;
         outline-offset: 0 !important;
         outline: none !important;
+    }
 
-        font-size: 0.95em;
+    .ui-input-search:not(.no-submit) input {
+        padding-right: calc(2.5em + var(--spacing));
     }
 </style>
