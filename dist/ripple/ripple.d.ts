@@ -3,10 +3,10 @@
  * @type {import(".").RippleOptions}
  */
 /**
- * @param {Element} el
+ * @param {Element | HTMLElement | Node} el
  * @param {RippleOptions} options
  */
-export function ripple(el: Element, options?: RippleOptions): {
+export function ripple(el: Element | HTMLElement | Node, options?: RippleOptions): {
     /**
      * @param {RippleOptions} _options
      */

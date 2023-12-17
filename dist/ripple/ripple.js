@@ -7,7 +7,7 @@ import { rippleStop } from "./stop";
  */
 
 /**
- * @param {Element} el
+ * @param {Element | HTMLElement | Node} el
  * @param {RippleOptions} options 
  */
 export function ripple(el, options = {}) {
