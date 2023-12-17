@@ -29,7 +29,7 @@
     class={`ui-icon-button ${color || ""} ` + ($$restProps.class || "")}
     class:ghost
 
-    use:Ripple.Root={noRipple ? null : { centered: true, ...ripple }}
+    use:Ripple.Root={(noRipple || ($$restProps?.disabled === true)) ? null : { centered: true, ...ripple }}
 
     on:click
 >

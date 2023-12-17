@@ -33,7 +33,7 @@
         ($$restProps.class || "")}
     class:active
 
-    use:Ripple.Root={noRipple ? null : ripple}
+    use:Ripple.Root={(noRipple || ($$restProps?.disabled === true)) ? null : ripple}
 
     on:click
 >
