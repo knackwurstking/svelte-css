@@ -65,7 +65,7 @@ select {
 input,
 textarea {
     font-family: var(--font-family-mono);
-    font-size: .85em;
+    font-size: .95em;
 }
 
 table thead {
