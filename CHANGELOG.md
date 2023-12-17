@@ -2,16 +2,20 @@
 
 ## v0.7.0 [unreleased]
 
-- Updated drawer components (`GroupItem` now is just a container)
-- Removed border from button variant "full"
-- Change fonts theming
 - Add a minified css file containing all the styles (input components still missing)
 - Add some css utils
+- Change fonts theming
 - Change backdrop-filter for drawer to 5px (from .5rem)
+- Changed base html input/textarea font-size to .95em
+- Fixed Ripple still working if a button is disabled
+- Removed border from button variant "full"
+- Updated `Drawer` components (css styles, `GroupItem`)
+
 - `Input.Search` improvements
     - Add ".ui-text-secondary" to ".title"
     - Blur on submit
     - Events "change" and "input" dispatch with value as detail data
+    - Add `disableSubmit` prop (this will remove the icon and the submit event)
 
 ## v0.6.1 2023-12-03
 
